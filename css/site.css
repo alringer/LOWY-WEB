@@ -1,0 +1,277 @@
+/*------------------------------------*    MAIN
+\*------------------------------------*/
+/* global box-sizing */
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+/* html element 62.5% font-size for REM use */
+html {
+  font-size: 62.5%; }
+
+body {
+  font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.5rem; }
+
+/* clear */
+.clear:before,
+.clear:after {
+  content: ' ';
+  display: table; }
+
+.clear:after {
+  clear: both; }
+
+.clear {
+  *zoom: 1; }
+
+img {
+  max-width: 100%;
+  vertical-align: bottom; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a:focus {
+  outline: 0; }
+
+a:hover,
+a:active {
+  outline: 0; }
+
+input:focus {
+  outline: 0;
+  border: 1px solid #04A4CC; }
+
+/*------------------------------------*    STRUCTURE
+\*------------------------------------*/
+/* wrapper */
+.wrapper {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+  position: relative; }
+
+/* header */
+/* logo */
+/* nav */
+/* sidebar */
+/* footer */
+/*------------------------------------*    PAGES
+\*------------------------------------*/
+/*------------------------------------*    IMAGES
+\*------------------------------------*/
+/*------------------------------------*	TYPOGRAPHY
+\*------------------------------------*/
+@font-face {
+  font-family: 'Font-Name';
+  src: url("fonts/font-name.eot");
+  src: url("fonts/font-name.eot?#iefix") format("embedded-opentype"), url("fonts/font-name.woff") format("woff"), url("fonts/font-name.ttf") format("truetype"), url("fonts/font-name.svg#font-name") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*------------------------------------*    RESPONSIVE
+\*------------------------------------*/
+/*------------------------------------*    MISC
+\*------------------------------------*/
+::selection {
+  background: #04A4CC;
+  color: #FFF;
+  text-shadow: none; }
+
+::-webkit-selection {
+  background: #04A4CC;
+  color: #FFF;
+  text-shadow: none; }
+
+::-moz-selection {
+  background: #04A4CC;
+  color: #FFF;
+  text-shadow: none; }
+
+/*------------------------------------*    WORDPRESS CORE
+\*------------------------------------*/
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
+  background: #FFF;
+  border: 1px solid #F0F0F0;
+  max-width: 96%;
+  padding: 5px 3px 10px;
+  text-align: center; }
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption .wp-caption-text,
+.gallery-caption {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+/*------------------------------------*    PRINT
+\*------------------------------------*/
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr, img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  @page {
+    margin: 0.5cm; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+.heading--center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.position--relative {
+  position: relative; }
+
+.position--absolute {
+  position: absolute; }
+
+.can-edit {
+  bottom: 0;
+  right: 0; }
+
+.menu-nav {
+  padding: 0;
+  list-style: none;
+  margin: 0; }
+
+.menu-item {
+  display: inline;
+  font-size: 1.5rem; }
+  .menu-item.current-menu-item {
+    border-bottom: 2px solid #ccc; }
+
+.navbar {
+  padding: 1.5rem 1rem; }
+
+.list {
+  padding: 0; }
+  .list--unstyled {
+    list-style: none; }
+  .list--inline > li {
+    display: inline-block; }
+  .list--home-hero {
+    transform: translateY(-4rem); }
+  .list--grid-order {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0; }
+    .list--grid-order > li {
+      display: inline; }
+      .list--grid-order > li:nth-child(1) {
+        order: 1; }
+      .list--grid-order > li:nth-child(2) {
+        order: 2; }
+
+@media screen and (min-width: 768px) {
+  .list--grid-order {
+    flex-direction: row; }
+    .list--grid-order > li:nth-child(1) {
+      order: 2;
+      width: 50%; }
+    .list--grid-order > li:nth-child(2) {
+      order: 1;
+      width: 50%; } }
+
+.hero {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .hero--home {
+    height: 60rem; }
+    @media screen and (min-width: 1440px) {
+      .hero--home {
+        height: 60rem;
+        background-image: url("/wp-content/uploads/2018/05/hero@2x.jpg") !important;
+        background-position: top center; } }
+
+.hero--home h1 {
+  font-size: 4.5rem;
+  color: #fff; }

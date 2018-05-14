@@ -1,0 +1,16 @@
+// position
+
+.position {
+
+    &--relative {
+        position: relative;
+    }
+    &--absolute {
+        position: absolute;
+    }
+}
+
+.can-edit {
+    bottom: 0;
+    right: 0;
+}
