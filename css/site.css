@@ -214,7 +214,7 @@ a img.aligncenter {
 
 .can-edit {
   bottom: 0;
-  right: 0; }
+  left: 0; }
 
 .menu-nav {
   padding: 0;
@@ -268,7 +268,7 @@ a img.aligncenter {
     height: 60rem; }
     @media screen and (min-width: 1440px) {
       .hero--home {
-        height: 60rem;
+        height: 80rem;
         background-image: url("/wp-content/uploads/2018/05/hero@2x.jpg") !important;
         background-position: top center; } }
 
