@@ -31,8 +31,6 @@ sort($pages);
                 </div>
             </li>
         
-        <?php
-        ?>
         
     <?php endforeach; ?>
         </ul>
