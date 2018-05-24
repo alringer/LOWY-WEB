@@ -32,21 +32,29 @@
 		<div class="main-contaniner">
 
 			<!-- header -->
-			<header class="header clear" role="banner">
+			<header class="header header--main header--gradient clear" role="banner">
 
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img"> -->
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logos/lmri-logo.svg" alt="Logo" class="logo-img">
 						</a>
+						<span class="header__hamburger">
+							<span></span>
+						</span>
 					</div>
 					<!-- /logo -->
 
 					<!-- nav -->
-					<nav class="navbar navbar-light bg-light" role="navigation">
+					<nav class="navbar navbar-light" role="navigation">
+						<div class="visible--xs">
+							<?php get_template_part('searchform'); ?>
+						</div>
 						<?php html5blank_nav(); ?>
-						<?php get_template_part('searchform'); ?>
+						<div class="hidden--xs display--desktop">
+							<?php get_template_part('searchform'); ?>
+						</div>
 					</nav>
 					<!-- /nav -->
 

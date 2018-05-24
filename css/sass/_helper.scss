@@ -14,3 +14,42 @@
     bottom: 0;
     left: 0;
 }
+
+.visible {
+    &--xs {
+        display: none;
+    }
+}
+
+.hidden {
+    &--xs {
+        display: block;
+    }
+}
+
+.display {
+    &--desktop {
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .visible {
+        &--xs {
+            display: block;
+        }
+    }
+    .hidden {
+        &--xs {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .display {
+        &--desktop {
+            display: inline;
+        }
+    }
+}

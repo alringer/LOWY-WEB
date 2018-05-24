@@ -1,11 +1,1 @@
-(function ($, root, undefined) {
-	
-	$(function () {
-		
-		'use strict';
-		
-		// DOM ready, take it away
-		
-	});
-	
-})(jQuery, this);
+!function($,e,n){$(function(){"use strict";window.main_nav={elements:{nav_hamburger:$(".header__hamburger"),main_header:$(".header--main"),main_nav_item:$(".menu-nav > li.menu-item-has-children"),last_scroll_top:0},methods:{_on_hamburger_click:function(){$(this).toggleClass("active"),window.main_nav.elements.main_header.toggleClass("header--active"),window.main_nav.elements.main_header.toggleClass("header--gradient")}}},window.main_nav.elements.nav_hamburger.on("click",window.main_nav.methods._on_hamburger_click),window.main_nav.elements.main_nav_item.on("click",function(){$(this).toggleClass("open-active")}),$(window).scroll(function(){var e=$(this).scrollTop();e>window.main_nav.elements.last_scroll_top?(console.log("scroll happened down"),window.main_nav.elements.last_scroll_top>100&&window.main_nav.elements.main_header.addClass("header--black")):(console.log("scroll happened up"),window.main_nav.elements.last_scroll_top<100&&window.main_nav.elements.main_header.removeClass("header--black")),window.main_nav.elements.last_scroll_top=e,console.log("scroll happened",window.main_nav.elements.last_scroll_top)})})}(jQuery,this);

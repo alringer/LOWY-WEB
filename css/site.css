@@ -1,4 +1,5 @@
-/*------------------------------------*    MAIN
+/*------------------------------------*\
+    MAIN
 \*------------------------------------*/
 /* global box-sizing */
 *,
@@ -51,7 +52,8 @@ input:focus {
   outline: 0;
   border: 1px solid #04A4CC; }
 
-/*------------------------------------*    STRUCTURE
+/*------------------------------------*\
+    STRUCTURE
 \*------------------------------------*/
 /* wrapper */
 .wrapper {
@@ -60,16 +62,18 @@ input:focus {
   margin: 0 auto;
   position: relative; }
 
-/* header */
 /* logo */
 /* nav */
 /* sidebar */
 /* footer */
-/*------------------------------------*    PAGES
+/*------------------------------------*\
+    PAGES
 \*------------------------------------*/
-/*------------------------------------*    IMAGES
+/*------------------------------------*\
+    IMAGES
 \*------------------------------------*/
-/*------------------------------------*	TYPOGRAPHY
+/*------------------------------------*\
+	TYPOGRAPHY
 \*------------------------------------*/
 @font-face {
   font-family: 'Font-Name';
@@ -78,9 +82,11 @@ input:focus {
   font-weight: normal;
   font-style: normal; }
 
-/*------------------------------------*    RESPONSIVE
+/*------------------------------------*\
+    RESPONSIVE
 \*------------------------------------*/
-/*------------------------------------*    MISC
+/*------------------------------------*\
+    MISC
 \*------------------------------------*/
 ::selection {
   background: #04A4CC;
@@ -97,7 +103,8 @@ input:focus {
   color: #FFF;
   text-shadow: none; }
 
-/*------------------------------------*    WORDPRESS CORE
+/*------------------------------------*\
+    WORDPRESS CORE
 \*------------------------------------*/
 .alignnone {
   margin: 5px 20px 20px 0; }
@@ -162,7 +169,8 @@ a img.aligncenter {
   margin: 0;
   padding: 0 4px 5px; }
 
-/*------------------------------------*    PRINT
+/*------------------------------------*\
+    PRINT
 \*------------------------------------*/
 @media print {
   * {
@@ -216,19 +224,169 @@ a img.aligncenter {
   bottom: 0;
   left: 0; }
 
+.visible--xs {
+  display: none; }
+
+.hidden--xs {
+  display: block; }
+
+@media screen and (max-width: 767px) {
+  .visible--xs {
+    display: block; }
+  .hidden--xs {
+    display: none; } }
+
+@media screen and (min-width: 1024px) {
+  .display--desktop {
+    display: inline; } }
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 2rem 1.5rem;
+  transition: background-color 0.33s ease; }
+  .header--main .navbar {
+    display: none; }
+  .header--gradient {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+    /* IE6-9 */ }
+  .header--black {
+    background-color: #000; }
+  .header--active {
+    background-color: rgba(41, 81, 104, 0.9); }
+    .header--active .navbar {
+      display: block; }
+  .header__hamburger {
+    position: relative;
+    top: 1rem;
+    right: 0;
+    float: right;
+    width: 4.4rem;
+    height: 2.2rem;
+    cursor: pointer; }
+    .header__hamburger span {
+      position: absolute;
+      top: 1rem;
+      right: 0;
+      width: 3.1rem;
+      height: 0.4rem;
+      background-color: #fff;
+      border-radius: 0.25rem;
+      transition: all 0.33s ease-in-out; }
+      .header__hamburger span:before, .header__hamburger span:after {
+        content: '';
+        position: absolute;
+        width: 3.1rem;
+        height: 0.4rem;
+        background-color: #fff;
+        border-radius: 0.25rem;
+        transition: all 0.33s ease-in-out; }
+      .header__hamburger span:before {
+        top: -1rem;
+        right: 1.5rem; }
+      .header__hamburger span:after {
+        top: 1rem;
+        right: 1.5rem; }
+    .header__hamburger.active span {
+      background-color: transparent;
+      right: 1rem; }
+      .header__hamburger.active span:before {
+        top: 0;
+        right: 0;
+        transform: rotate(-45deg); }
+      .header__hamburger.active span:after {
+        top: 0;
+        left: 0;
+        transform: rotate(45deg); }
+
+@media screen and (min-width: 1024px) {
+  .header .logo {
+    display: inline-block; }
+  .header__hamburger {
+    display: none; }
+  .header--main .navbar {
+    display: inline-block; } }
+
 .menu-nav {
   padding: 0;
   list-style: none;
   margin: 0; }
+  .menu-nav > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
+    .menu-nav > li a {
+      color: #fff; }
+    .menu-nav > li ul {
+      padding: 0; }
+      .menu-nav > li ul.sub-menu {
+        display: none; }
+        .menu-nav > li ul.sub-menu li {
+          font-size: 1.8rem; }
+          .menu-nav > li ul.sub-menu li a {
+            font-weight: 400; }
+      .menu-nav > li ul li {
+        padding-left: 0;
+        padding-right: 0; }
 
 .menu-item {
-  display: inline;
-  font-size: 1.5rem; }
-  .menu-item.current-menu-item {
-    border-bottom: 2px solid #ccc; }
+  display: block;
+  font-size: 2rem;
+  padding: 10px; }
+  .menu-item-has-children {
+    position: relative; }
+    .menu-item-has-children:hover {
+      cursor: pointer; }
+    .menu-item-has-children:after {
+      content: '';
+      position: absolute;
+      top: 1.5rem;
+      right: 0.5rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      background-image: url("../img/icons/expand.svg");
+      background-repeat: no-repeat;
+      background-position: center; }
+    .menu-item-has-children.open-active:after {
+      background-image: url("../img/icons/collapse.svg"); }
+    .menu-item-has-children.open-active .sub-menu {
+      display: block; }
 
 .navbar {
-  padding: 1.5rem 1rem; }
+  padding: 1.5rem 0; }
+  .navbar form {
+    position: relative; }
+    .navbar form input {
+      height: 4.4rem;
+      font-size: 1.4rem;
+      padding-right: 4.5rem;
+      position: relative; }
+    .navbar form button {
+      display: block; }
+      .navbar form button.search-icon-btn {
+        position: absolute;
+        right: 1.3rem;
+        top: 1.1rem;
+        height: 2.4rem;
+        width: 2.4rem;
+        padding: 0; }
+
+@media screen and (min-width: 576px) {
+  .navbar form .form-control {
+    display: block;
+    width: 100%; } }
+
+@media screen and (min-width: 1024px) {
+  .menu-item {
+    display: inline; } }
 
 .list {
   padding: 0; }
