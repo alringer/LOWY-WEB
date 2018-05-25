@@ -33,7 +33,7 @@
 
 			<!-- header -->
 			<header class="header header--main header--gradient clear" role="banner">
-
+				<div class="header__inner">
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
@@ -48,15 +48,16 @@
 
 					<!-- nav -->
 					<nav class="navbar navbar-light" role="navigation">
-						<div class="visible--xs">
+						<div class="visible--xs visible--sm">
 							<?php get_template_part('searchform'); ?>
 						</div>
 						<?php html5blank_nav(); ?>
-						<div class="hidden--xs display--desktop">
+						<div class="hidden--xs hidden--sm display--desktop">
 							<?php get_template_part('searchform'); ?>
 						</div>
 					</nav>
 					<!-- /nav -->
+				</div>
 
 			</header>
 			<!-- /header -->

@@ -29,11 +29,11 @@
 
 .display {
     &--desktop {
-
+        // do nothing in mobile
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 727px) {
     .visible {
         &--xs {
             display: block;
@@ -45,11 +45,24 @@
         }
     }
 }
+@media screen and (max-width: 1023px) {
+    .visible {
+        &--sm {
+            display: block;
+        }
+    }
+    .hidden {
+        &--sm {
+            display: none;
+        }
+    }
+}
 
 @media screen and (min-width: 1024px) {
     .display {
         &--desktop {
-            display: inline;
+            display: inline-block;
+            min-height: 44px;
         }
     }
 }
