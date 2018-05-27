@@ -610,7 +610,10 @@ a img.aligncenter {
   color: #fff;
   font-size: 1.4rem; }
   .footer__heading {
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem; }
+  .footer__subheading {
+    margin-bottom: 0; }
   .footer__logo-list {
     margin-bottom: 2.5rem; }
     .footer__logo-list > li {
@@ -624,10 +627,49 @@ a img.aligncenter {
       .footer__logo-list > li:nth-child(2) {
         transform: translateY(0.4rem);
         font-family: serif; }
+  .footer__community {
+    margin-bottom: 1.3rem; }
+    .footer__community__thumb {
+      width: 6.4rem;
+      height: 6.4rem;
+      display: inline-block;
+      padding-right: 1rem; }
+    .footer__community .footer__community__desc {
+      display: inline-block;
+      max-width: 20.2rem;
+      transform: translateY(0.5rem); }
+      .footer__community .footer__community__desc .read-more {
+        color: #42a5f5; }
+        .footer__community .footer__community__desc .read-more:hover .icn--arrow {
+          transform: translateX(5px); }
 
 @media screen and (min-width: 768px) {
   .footer__logo-list > li {
     font-size: 2rem; } }
+
+.icn {
+  position: relative;
+  display: inline-block; }
+  .icn--arrow {
+    width: 15px;
+    height: 1px;
+    background-color: #42a5f5;
+    vertical-align: middle;
+    transition: 0.1s linear all; }
+    .icn--arrow:after, .icn--arrow:before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 1px;
+      background-color: #42a5f5; }
+    .icn--arrow:after {
+      right: 0;
+      top: -2px;
+      transform: rotate(45deg); }
+    .icn--arrow:before {
+      right: 0;
+      top: 2px;
+      transform: rotate(-45deg); }
 
 .hero--home h1 {
   font-size: 4.5rem;

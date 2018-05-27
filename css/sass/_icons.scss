@@ -1,0 +1,28 @@
+.icn {
+    position: relative;
+    display: inline-block;
+    &--arrow {
+        width: 15px;
+        height: 1px;
+        background-color: #42a5f5;
+        vertical-align: middle;
+        transition: 0.1s linear all;
+        &:after, &:before {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 1px;
+            background-color: #42a5f5;
+        }
+        &:after {
+            right: 0;
+            top: -2px;
+            transform: rotate(45deg);
+        }
+        &:before {
+            right: 0;
+            top: 2px;
+            transform: rotate(-45deg);
+        }
+    }
+}

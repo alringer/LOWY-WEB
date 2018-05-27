@@ -17,20 +17,24 @@
 							<div class="footer__desc">
 								<?php
 								// footer content
-									get_template_part('partials/home/main-footer', 'page'); 
+									get_template_part('partials/home/footer-main', 'page'); 
 								?>
 							</div>
 						</div>
 						<div class="col-12 col-md-6 col-xl-4">
-							<h3 class="footer__heading">Hello there</h3>
+							
 							<div class="footer__desc">
 								<?php
 								// footer content
-									get_template_part('partials/home/main-footer', 'page'); 
+									get_template_part('partials/home/footer-community', 'page'); 
 								?>
 							</div>
 						</div>
 						<div class="col-12  col-md-6 col-xl-4">
+
+						<div class="sidebar-widget">
+							<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-3')) ?>
+						</div>
 						<h3 class="footer__heading">Hello there</h3>
 							<!-- copyright -->
 							<p class="copyright">

@@ -5,6 +5,10 @@
     font-size: 1.4rem;
     &__heading {
         font-size: 2.4rem;
+        margin-bottom: 2.4rem;
+    }
+    &__subheading {
+        margin-bottom: 0;
     }
 
     &__logo-list {
@@ -25,6 +29,31 @@
             }
         }
 
+    }
+    &__community {
+        margin-bottom: 1.3rem;
+        &__thumb {
+            width: 6.4rem;
+            height: 6.4rem;
+            display: inline-block;
+            padding-right: 1rem;
+        }
+
+        .footer__community__desc {
+            display: inline-block;
+            max-width: 20.2rem;
+            transform: translateY(0.5rem);
+
+            .read-more {
+                color: #42a5f5;
+                &:hover {
+                    .icn--arrow {
+                        transform: translateX(5px);
+                    }
+                }
+            }
+
+        }
     }
 }
 
