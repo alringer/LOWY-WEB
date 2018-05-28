@@ -23,11 +23,13 @@
 						</div>
 						<div class="col-12 col-md-6 col-xl-4">
 							
-							<div class="footer__desc">
-								<?php
-								// footer content
-									get_template_part('partials/home/footer-community', 'page'); 
-								?>
+							<div class="footer__community-wrap">
+								<div class="footer__desc">
+									<?php
+									// footer content
+										get_template_part('partials/home/footer-community', 'page'); 
+									?>
+								</div>
 							</div>
 						</div>
 						<div class="col-12  col-md-6 col-xl-4">

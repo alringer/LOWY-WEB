@@ -192,6 +192,9 @@
 
 @media screen and (min-width: 1200px) {
     .header {
+        .logo {
+            margin-right: 3rem;
+        }
         &__inner {
             max-width: 114rem;
         }

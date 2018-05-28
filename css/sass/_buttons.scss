@@ -1,10 +1,10 @@
 .btn {
     &--desktop {
-        color: #295168;
+        color: $dark-grey-blue;
         font-size: 1.4rem;
     }
     &--form-submit {
-        background-color: #feb25f;
-        color: #295168;
+        background-color: $pale-orange;
+        color: $dark-grey-blue;
     }
 }
