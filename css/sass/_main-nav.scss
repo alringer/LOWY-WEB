@@ -5,9 +5,19 @@
 	left: 0;
 	right: 0;
     z-index: 10;
-    padding: 2rem 1.5rem; 
+    padding: 2rem 0; 
     transition: background-color 0.33s ease;
     min-height: 8rem;
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        width: 100%;
+        transition: 0.33s ease-in-out all;
+        z-index: -1;
+    }
     
     &--main {
         .navbar {
@@ -23,11 +33,39 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
     }
     &--black {
-        background-color: #000;
+        &:after {
+            height: 8.5rem;
+            background-color: #000;
+        }
+
+        .navbar form {
+            button.btn--desktop {
+                width: 1.6rem;
+                height: 2rem;
+            }
+            &.show-form {
+                .search-logo-desktop {
+                    width: 2.7rem;
+                    height: 2.9rem;
+                    top: 0.9rem;
+                }
+                
+            }
+            .search-logo-desktop {
+                width: 1.7rem;
+                height: 1.9rem;
+                position: absolute;
+                top: 11px;
+                background-size: contain;
+            }
+        }
     }
 
     &--active {
         background-color: rgba(41,81,104, 0.9);
+        &:after {
+            background-color: transparent;
+        }
         .header__inner {
             height: 100vh;
             overflow: auto; 
@@ -103,15 +141,19 @@
 
     .logo {
         position: fixed;
+        top: 2rem;
         left: 1.5rem;
         right: 1.5rem;
         z-index: 10;
+        max-width: 75rem;
+        margin: 0 auto;
         
     }
 }
 
 @media screen and (min-width: 768px) {
     .header {
+        padding: 1.5rem 0;
         &__inner {
             max-width: 72rem;
             margin: 0 auto;

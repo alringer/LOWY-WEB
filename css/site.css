@@ -254,9 +254,18 @@ a img.aligncenter {
   left: 0;
   right: 0;
   z-index: 10;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
   transition: background-color 0.33s ease;
   min-height: 8rem; }
+  .header:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+    transition: 0.33s ease-in-out all;
+    z-index: -1; }
   .header--main .navbar {
     display: none; }
   .header--gradient {
@@ -268,10 +277,26 @@ a img.aligncenter {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
     /* IE6-9 */ }
-  .header--black {
+  .header--black:after {
+    height: 8.5rem;
     background-color: #000; }
+  .header--black .navbar form button.btn--desktop {
+    width: 1.6rem;
+    height: 2rem; }
+  .header--black .navbar form.show-form .search-logo-desktop {
+    width: 2.7rem;
+    height: 2.9rem;
+    top: 0.9rem; }
+  .header--black .navbar form .search-logo-desktop {
+    width: 1.7rem;
+    height: 1.9rem;
+    position: absolute;
+    top: 11px;
+    background-size: contain; }
   .header--active {
     background-color: rgba(41, 81, 104, 0.9); }
+    .header--active:after {
+      background-color: transparent; }
     .header--active .header__inner {
       height: 100vh;
       overflow: auto; }
@@ -323,14 +348,19 @@ a img.aligncenter {
         transform: rotate(45deg); }
   .header .logo {
     position: fixed;
+    top: 2rem;
     left: 1.5rem;
     right: 1.5rem;
-    z-index: 10; }
+    z-index: 10;
+    max-width: 75rem;
+    margin: 0 auto; }
 
 @media screen and (min-width: 768px) {
-  .header__inner {
-    max-width: 72rem;
-    margin: 0 auto; } }
+  .header {
+    padding: 1.5rem 0; }
+    .header__inner {
+      max-width: 72rem;
+      margin: 0 auto; } }
 
 @media screen and (min-width: 1024px) {
   .header .logo {
@@ -431,8 +461,8 @@ a img.aligncenter {
         position: absolute;
         opacity: 0;
         transition: 0.33s ease-in opacity;
-        width: 3.6rem;
-        height: 3.8rem;
+        width: 2.6rem;
+        height: 2.8rem;
         color: transparent; }
   .navbar .search-logo-desktop {
     display: none; }
@@ -496,31 +526,34 @@ a img.aligncenter {
   .navbar form {
     min-height: 4.4rem;
     min-width: 3.7rem;
-    top: 1.5rem; }
+    top: 1.5rem;
+    right: 1.5rem; }
     .navbar form input.form-control {
       position: absolute;
       opacity: 0;
       transition: 0.3s ease opacity;
       padding: 0;
-      width: 3.3rem;
+      width: 2.3rem;
       height: 3rem; }
     .navbar form .search-icon-btn {
       display: none; }
     .navbar form .search-logo-desktop {
       display: block;
-      width: 3.7rem;
+      width: 2.7rem;
       height: 3.9rem;
       position: absolute;
       top: 0;
       background-image: url("../img/icons/search-lg.svg");
       background-repeat: no-repeat;
-      background-position: center; }
+      background-position: center;
+      transition: 0.33s ease all;
+      background-size: contain; }
       .navbar form .search-logo-desktop:hover {
         cursor: pointer; }
     .navbar form.show-form {
       position: absolute;
-      top: 1rem;
-      right: -4.3rem;
+      top: 1.3rem;
+      right: -3.9rem;
       min-width: 5rem;
       padding-right: 5.8rem; }
       .navbar form.show-form input {
@@ -533,7 +566,7 @@ a img.aligncenter {
         width: 100%;
         height: 4.4rem; }
       .navbar form.show-form .search-logo-desktop {
-        top: 0.5rem;
+        top: 0.4rem;
         right: 0.8rem;
         background-image: url("../img/icons/close.svg"); }
       .navbar form.show-form button.btn--desktop {
@@ -604,6 +637,10 @@ a img.aligncenter {
   color: #295168;
   font-size: 1.4rem; }
 
+.btn--form-submit {
+  background-color: #feb25f;
+  color: #295168; }
+
 .footer {
   background-color: #295168;
   padding: 3rem 0 4.8rem;
@@ -627,6 +664,8 @@ a img.aligncenter {
       .footer__logo-list > li:nth-child(2) {
         transform: translateY(0.4rem);
         font-family: serif; }
+  .footer__desc {
+    margin-bottom: 5rem; }
   .footer__community {
     margin-bottom: 1.3rem; }
     .footer__community__thumb {
@@ -642,6 +681,21 @@ a img.aligncenter {
         color: #42a5f5; }
         .footer__community .footer__community__desc .read-more:hover .icn--arrow {
           transform: translateX(5px); }
+  .footer__subscribe form {
+    position: relative;
+    max-width: 276px; }
+    .footer__subscribe form input {
+      width: 100%;
+      padding: 0 15px;
+      padding-right: 110px;
+      height: 44px;
+      font-size: 1.4rem; }
+    .footer__subscribe form button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 44px;
+      width: 110px; }
 
 @media screen and (min-width: 768px) {
   .footer__logo-list > li {

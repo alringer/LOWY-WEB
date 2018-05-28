@@ -30,6 +30,11 @@
         }
 
     }
+
+    &__desc {
+        margin-bottom: 5rem;
+    }
+
     &__community {
         margin-bottom: 1.3rem;
         &__thumb {
@@ -53,6 +58,28 @@
                 }
             }
 
+        }
+    }
+    &__subscribe {
+        form {
+            position: relative;
+            max-width: 276px;
+            input {
+                width: 100%;
+                padding: 0 15px;
+                padding-right: 110px;
+                height: 44px;
+                font-size: 1.4rem;
+
+
+            }
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 44px;
+                width: 110px;
+            }
         }
     }
 }

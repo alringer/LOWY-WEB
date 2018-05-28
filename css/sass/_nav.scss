@@ -112,8 +112,8 @@
                 position: absolute;
                 opacity: 0;
                 transition: 0.33s ease-in opacity;
-                width: 3.6rem;
-                height: 3.8rem;
+                width: 2.6rem;
+                height: 2.8rem;
                 color: transparent;
             }
        }
@@ -211,13 +211,14 @@
             min-height: 4.4rem;
             min-width: 3.7rem;
             top: 1.5rem;
+            right: 1.5rem;
             
             input.form-control {
                 position: absolute;
                 opacity: 0;
                 transition: 0.3s ease opacity;
                 padding: 0;
-                width: 3.3rem;
+                width: 2.3rem;
                 height: 3rem;
 
             }
@@ -227,21 +228,25 @@
 
             .search-logo-desktop {
                 display: block;
-                width: 3.7rem;
+                width: 2.7rem;
                 height: 3.9rem;
                 position: absolute;
                 top: 0;
                 background-image: url('../img/icons/search-lg.svg');
                 background-repeat: no-repeat;
                 background-position: center;
+                transition: 0.33s ease all;
+                background-size: contain;
                 &:hover {
                     cursor: pointer;
                 }
+
+                
             }
             &.show-form {
                 position: absolute;
-                top: 1rem;
-                right: -4.3rem;
+                top: 1.3rem;
+                right: -3.9rem;
                 min-width: 5rem;
                 padding-right: 5.8rem;
                 input {
@@ -256,7 +261,7 @@
 
                 }
                 .search-logo-desktop {
-                    top: 0.5rem;
+                    top: 0.4rem;
                     right: 0.8rem;
                     background-image: url('../img/icons/close.svg');
                 }
