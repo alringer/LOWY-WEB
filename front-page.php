@@ -15,4 +15,8 @@
 // Page content if needed
 	get_template_part('partials/home/content', 'page'); 
 ?>
+<?php
+	// Hero section list
+	get_template_part('partials/home/reach-out', 'page'); 
+?>
 <?php get_footer(); ?>

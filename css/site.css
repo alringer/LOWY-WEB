@@ -702,6 +702,12 @@ a img.aligncenter {
   .footer__logo-list > li {
     font-size: 2rem; } }
 
+@media screen and (min-width: 1024px) {
+  .footer__heading {
+    margin-bottom: 1.4rem; }
+  .footer__desc {
+    margin-bottom: 0; } }
+
 @media screen and (min-width: 1200px) {
   .footer__community-wrap {
     padding-left: 4rem;
@@ -735,3 +741,25 @@ a img.aligncenter {
 .hero--home h1 {
   font-size: 4.5rem;
   color: #fff; }
+
+.reach-out {
+  height: 50rem;
+  padding: 6.8rem 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .reach-out__title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem; }
+  .reach-out__content {
+    font-size: 1.6rem;
+    line-height: 1.94; }
+
+@media screen and (min-width: 768px) {
+  .reach-out {
+    padding: 16.8rem 0 14rem; } }
+
+@media screen and (min-width: 1200px) {
+  .reach-out {
+    padding: 16.8rem 0 16.8rem; } }
