@@ -378,8 +378,6 @@ a img.aligncenter {
       height: auto; } }
 
 @media screen and (min-width: 1200px) {
-  .header .logo {
-    margin-right: 3rem; }
   .header__inner {
     max-width: 114rem; } }
 

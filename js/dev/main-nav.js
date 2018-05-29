@@ -47,7 +47,6 @@
                         }, window.main_nav.elements.animation_speed) : window.main_nav.elements.search_form.removeAttr('style');
                     },
                     _on_mouse_over_nav_item_has_children: function(){
-                        console.log('mouse over');
                       window.main_nav.elements.main_nav_item.removeClass('open-active');
                       $(this).addClass('open-active');
                     },
@@ -87,7 +86,10 @@
             window.main_nav.elements.main_nav_item
             .mouseover(window.main_nav.methods._on_mouse_over_nav_item_has_children)
             .mouseout(window.main_nav.methods._on_mouse_leave_nav_item_has_children);
+            console.log($(this).scrollTop());
+
         }
+        $(this).scrollTop() > window.main_nav.elements.searchbar_offset ? window.main_nav.elements.main_header.addClass('header--black') : window.main_nav.elements.main_header.removeClass('header--black');
           
           $(window).resize(function(){
               if ($(window).width() > window.main_nav.elements.desktop_size) { 
