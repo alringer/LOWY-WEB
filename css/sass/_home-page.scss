@@ -5,3 +5,43 @@
     }
 }
 
+.home {
+    &__card-grid {
+        padding: 1.2rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        margin-bottom: 3rem;
+        
+        
+        // transition: ease .33s all;
+        // &:hover {
+        //     box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.2);
+        //     background-color: red;
+        // }
+        p {
+            line-height: 1.94;
+            // padding-bottom: 2rem;           
+        }
+         &__content-wrap {
+             background-color: #fff;
+             &:after {
+                 position: absolute;
+                 content: '';
+                 top: -1rem;
+                 left: 50%;
+                 transform: translate(-50%, -50%);
+                 width: 0;
+                 height: 0;
+                 border-style: solid;
+                 border-width: 0 10px 10px 10px;
+                 border-color: transparent transparent #ffffff transparent;
+             }
+         }
+        .read-more {
+            color: #42a5f5;
+            font-size: 1.3rem;
+        }
+    }
+    &__about-card {
+        
+    }
+}

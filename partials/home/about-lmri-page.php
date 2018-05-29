@@ -1,7 +1,7 @@
- <?php $pages = get_pages( array( 'child_of' => 24 ) ); ?>
+ <?php $about_lmri_pages = get_pages( array( 'child_of' => 6 ) ); ?>
 <?php
 // sorts by page added
-sort($pages);
+sort($about_lmri_pages);
 ?>
 
 <?php 
@@ -11,22 +11,22 @@ sort($pages);
 <section class="container">
 
  <div class="row">
-    <div class="col-xs-12">
-        <ul class="list--grid-order">
+    <div class="col-12">
+        <ul class="list--grid-order home__card-grid about-card ">
 
 
-    <?php foreach ( $pages as $page ) : ?>
+    <?php foreach ( $about_lmri_pages as $about_lmri_page ) : ?>
 
             <li>
-                <?php echo '<img src="'.get_the_post_thumbnail_url($page->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
+                <?php echo '<img src="'.get_the_post_thumbnail_url($about_lmri_page->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
             </li>
-            <li class="position--relative">
-                <h3><?php echo apply_filters( 'the_title', $page->post_title, $page->ID )  ?></h3>
-                <?php echo apply_filters( 'the_excerpt', wp_trim_words( $page->post_content, 21, "" ) ); ?>
-                <a href="<?php echo get_permalink($page->ID); ?>"> Read More...  </a>
-                <div class="position--absolute can-edit">
+            <li class="position--relative home__card-grid__content-wrap">
+                <h3><?php echo apply_filters( 'the_title', $about_lmri_page->post_title, $about_lmri_page->ID )  ?></h3>
+                <?php echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $about_lmri_page->post_content, 21, "" ) ) .'</p>'; ?>
+                <a href="<?php echo get_permalink($about_lmri_page->ID); ?>" class="read-more"> Read More  </a>
+                <div class=" ">
                     <?php if($canBeEdited) {
-                        echo '<a href=" '.get_edit_post_link($page->ID, 'none').' ">Edit</a>';
+                        echo '<a href=" '.get_edit_post_link($about_lmri_page->ID, 'none').' ">Edit</a>';
                     } ?>
                 </div>
             </li>
