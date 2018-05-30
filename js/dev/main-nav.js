@@ -19,8 +19,8 @@
                   animation_speed: 300,
                   last_item_id: '',
                   window_offset_top: 100,
-                  searchbar_offset: 60,
-                  desktop_size: 1024
+                  searchbar_offset: 40,
+                  desktop_size: 1023
               },
               methods: {
                   _on_hamburger_click: function() {

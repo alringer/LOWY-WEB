@@ -167,7 +167,7 @@
     .header {
         .logo {
             display: inline-block;
-            margin-right: 2rem;
+            // margin-right: 2rem;
             position: initial;
         }
         &__hamburger {
@@ -182,7 +182,7 @@
             }
         }
         &__inner {
-            max-width: 96rem;
+            max-width: 99rem;
             .header--active & {
                 height: auto;
             }
@@ -194,7 +194,16 @@
     .header {
 
         &__inner {
-            max-width: 114rem;
+            max-width: 120rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .header {
+
+        &__inner {
+            max-width: 130rem;
         }
     }
 }
