@@ -216,6 +216,7 @@ a img.aligncenter {
   bottom: 0;
   left: 0; }
 
+/* Fonts */
 .menu-nav {
   padding: 0;
   list-style: none;
@@ -269,9 +270,31 @@ a img.aligncenter {
     @media screen and (min-width: 1440px) {
       .hero--home {
         height: 80rem;
-        background-image: url("/wp-content/uploads/2018/05/hero@2x.jpg") !important;
         background-position: top center; } }
 
 .hero--home h1 {
   font-size: 4.5rem;
   color: #fff; }
+
+.home__card-grid {
+  padding: 1.2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem; }
+  .home__card-grid p {
+    line-height: 1.94; }
+  .home__card-grid__content-wrap {
+    background-color: #fff; }
+    .home__card-grid__content-wrap:after {
+      position: absolute;
+      content: '';
+      top: -1rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent #ffffff transparent; }
+  .home__card-grid .read-more {
+    color: #42a5f5;
+    font-size: 1.3rem; }
