@@ -4,6 +4,10 @@
 	get_template_part('partials/home/hero', 'page'); 
 ?>
 <?php
+// Page content if needed
+	get_template_part('partials/home/content', 'page'); 
+?>
+<?php
 	// About LMRI card
 	get_template_part('partials/home/about-lmri', 'page'); 
 ?>
@@ -11,10 +15,7 @@
 	// 
 	get_template_part('partials/home/grid-middle-section', 'page'); 
 ?>
-<?php
-// Page content if needed
-	get_template_part('partials/home/content', 'page'); 
-?>
+
 <?php
 	// Hero section list
 	get_template_part('partials/home/reach-out', 'page'); 
