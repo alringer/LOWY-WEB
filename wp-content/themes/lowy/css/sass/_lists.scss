@@ -33,6 +33,23 @@
             }
         }
     }
+    &__item-pad {
+        padding: 1.2rem;
+ 
+    }
+    &__item-image-pos {
+        overflow: hidden;
+        min-height: 18.5rem;
+        img {
+            position: absolute;
+            top: 0;
+            max-width: none;
+            width: 51rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    
 }
 
 @media screen and (min-width: $screen-min-sm) {
@@ -62,6 +79,11 @@
                 &:nth-child(2) {
                     order: 1;
                 }
+            }
+        }
+        &__item-image-pos {
+            img {
+                width: 58rem;
             }
         }
     }
