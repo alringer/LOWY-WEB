@@ -196,6 +196,17 @@ if (function_exists('register_sidebar'))
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
+
+     // Define Sidebar Widget Area 3
+     register_sidebar(array(
+        'name' => __('Widget Area 3', 'html5blank'),
+        'description' => __('Description for this widget-area...', 'html5blank'),
+        'id' => 'widget-area-3',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
 }
 
 // Remove wp_head() injected Recent Comment styles
@@ -516,6 +527,14 @@ function the_excerpt_max_charlength($charlength) {
 		echo $excerpt;
 	}
 }
+
+
+function replace_core_jquery_version() {
+    wp_deregister_script( 'jquery' );
+    // Change the URL if you want to load a local copy of jQuery from your own server.
+    wp_register_script( 'jquery', "https://code.jquery.com/jquery-3.1.1.min.js", array(), '3.1.1' );
+}
+add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
 
 
 ?>

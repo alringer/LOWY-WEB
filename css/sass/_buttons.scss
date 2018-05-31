@@ -1,0 +1,10 @@
+.btn {
+    &--desktop {
+        color: $dark-grey-blue;
+        font-size: 1.4rem;
+    }
+    &--form-submit {
+        background-color: $pale-orange;
+        color: $dark-grey-blue;
+    }
+}
