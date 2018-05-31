@@ -34,22 +34,25 @@
 			<!-- header -->
 			<header class="header header--main header--gradient clear" role="banner">
 				<div class="header__inner">
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logos/lmri-logo.svg" alt="Logo" class="logo-img">
-						</a>
-						<span class="header__hamburger">
-							<span></span>
-						</span>
-					</div>
-					<!-- /logo -->
-
-					<!-- nav -->
-					<nav class="navbar navbar-light" role="navigation">
+					<ldiv class="header__logo-wrap">
+						<!-- logo -->
+						<div class="logo">
+							<a href="<?php echo home_url(); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logos/lmri-logo.svg" alt="Logo" class="logo-img">
+							</a>
+							<span class="header__hamburger">
+								<span></span>
+							</span>
+						</div>
+						<!-- /logo -->
 						<div class="visible--xs visible--sm">
 							<?php get_template_part('searchform'); ?>
 						</div>
+					</ldiv>
+					
+
+					<!-- nav -->
+					<nav class="navbar navbar-light" role="navigation">
 						<?php html5blank_nav(); ?>
 						<div class="hidden--xs hidden--sm display--desktop">
 							<?php get_template_part('searchform'); ?>
