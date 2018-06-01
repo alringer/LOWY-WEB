@@ -17,7 +17,7 @@
         <div class="row">
             <!-- visible on tablet and desktop -->
             <div class="col-12 d-block d-sm-none d-lg-block d-xl-block">
-                <?php  get_template_part('partials/home/clinical-research', 'page'); ?>
+                <?php  get_template_part('partials/home/about-mactel', 'page'); ?>
                
             </div>
             <!-- end of visible on tablet and desktop -->
