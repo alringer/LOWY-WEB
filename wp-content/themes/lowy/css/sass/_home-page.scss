@@ -46,7 +46,7 @@
 
 .reach-out {
     height: 50rem;
-    padding: 6.8rem 0;
+    padding: 11rem 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,6 +70,7 @@
         }
         p {
             margin-bottom: 2.5rem;
+            line-height: 1.94;
         }
         .img-margin-top-mobile {
             margin-top: 3rem;
@@ -126,6 +127,9 @@
             }
             .img-margin-top-mobile {
                 margin-top: 5rem;
+            }
+            p {
+                margin-bottom: 3rem;
             }
         }
     }
@@ -195,6 +199,9 @@
             .img-margin-bottom-desktop {
                 margin-bottom: 5rem;
             }
+            p {
+                margin-bottom: 4.3rem;
+            }
         }
     }
 }
@@ -205,8 +212,8 @@
     }
     .perspective {
         &--wrap {
-            .img-margin-top-mobile {
-                margin-top: 8rem;
+            .img-margin-bottom-desktop {
+                margin-bottom: 8rem;
             }
         }
     }

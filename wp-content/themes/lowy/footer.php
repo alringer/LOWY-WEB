@@ -10,7 +10,7 @@
 										<img src="<?php echo get_template_directory_uri(); ?>/img/logos/lmri-logo.svg" alt="Logo" class="logo-img">
 									</a>
 								</li>
-								<li>
+								<li class="serif-txt">
 									LOWY MEDICAL <br> RESEARCH INSTITUTE
 								</li>
 							</ul>
