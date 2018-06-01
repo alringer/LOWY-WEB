@@ -86,5 +86,21 @@
                 width: 58rem;
             }
         }
+        &--grid-order-img-right {
+            flex-direction: row;
+            >li {
+                &:nth-child(1) {
+                    order: 2;
+                    width: 50%;
+                }
+                &:nth-child(2) {
+                    order: 1;
+                    width: 50%;
+                }
+            }
+            img {
+                width: 37rem;
+            }
+        }
     }
 }
