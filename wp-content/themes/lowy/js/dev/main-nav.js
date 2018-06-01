@@ -14,6 +14,7 @@
                   main_nav_item: $('.menu-nav > li.menu-item-has-children'),
                   search_form_icon: $('.search-logo-desktop'),
                   search_form: $('.form-search'),
+                  news_item: $(".menu-nav > li.menu-item-has-children:contains('News')"),
                   window_width: $(window).width(),
                   last_scroll_top: 0,
                   animation_speed: 300,
@@ -86,7 +87,7 @@
             window.main_nav.elements.main_nav_item
             .mouseover(window.main_nav.methods._on_mouse_over_nav_item_has_children)
             .mouseout(window.main_nav.methods._on_mouse_leave_nav_item_has_children);
-            console.log($(this).scrollTop());
+            // console.log($(this).scrollTop());
 
         }
         $(this).scrollTop() > window.main_nav.elements.searchbar_offset ? window.main_nav.elements.main_header.addClass('header--black') : window.main_nav.elements.main_header.removeClass('header--black');
@@ -101,7 +102,8 @@
               } else {
                 window.main_nav.elements.main_header.addClass('header--xs');
               }
-          })
+          });
+          window.main_nav.elements.news_item.addClass('menu-item-news');
 		
 	});
 	
