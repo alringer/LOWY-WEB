@@ -1,5 +1,4 @@
 <?php 
-    $canBeEdited = current_user_can('editor') || current_user_can('administrator');
     $perspective_page_id = 60;
     $eye_donation_page_id = 99;
     //$perspective_pages = get_pages( array( $perspective_page_id, $eye_donation_page_id));

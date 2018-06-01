@@ -21,7 +21,11 @@
 ?>
 
 <?php
-	// Reach out
+	// Featured
+	get_template_part('partials/home/featured-cat', 'page'); 
+?>
+<?php
+	// Perspective
 	get_template_part('partials/home/perspective', 'page'); 
 ?>
 <?php
