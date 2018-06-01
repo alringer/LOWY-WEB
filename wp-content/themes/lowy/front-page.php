@@ -15,14 +15,17 @@
 	// grid middle section
 	get_template_part('partials/home/grid-middle-section', 'page'); 
 ?>
-
 <?php
 	// grid last section
 	get_template_part('partials/home/grid-bottom-section', 'page'); 
 ?>
 
 <?php
-	// Hero section list
+	// Reach out
+	get_template_part('partials/home/perspective', 'page'); 
+?>
+<?php
+	// Reach out
 	get_template_part('partials/home/reach-out', 'page'); 
 ?>
 <?php get_footer(); ?>

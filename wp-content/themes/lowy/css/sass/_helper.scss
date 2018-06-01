@@ -33,6 +33,14 @@
     }
 }
 
+
+.section {
+    &-tb-pad {
+       padding-top: 7rem;
+       padding-bottom: 7rem; 
+    }
+}
+
 @media screen and (max-width: 727px) {
     .visible {
         &--xs {

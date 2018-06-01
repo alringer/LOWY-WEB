@@ -37,7 +37,7 @@
              }
          }
         .read-more {
-            color: #42a5f5;
+            color: $dark-sky-blue;
             font-size: 1.3rem;
         }
     }
@@ -60,6 +60,27 @@
         line-height: 1.94;
     }
 }
+
+.perspective {
+    &--wrap {
+        h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin: 2rem 0 2.4rem; 
+        }
+        p {
+            margin-bottom: 2.5rem;
+        }
+        .img-margin-top-mobile {
+            margin-top: 3rem;
+        }
+        .img-margin-bottom-desktop {
+            margin-bottom: 0;
+        }
+        
+    }
+}
+
 
 @media screen and (min-width: 768px) {
     .reach-out {
@@ -94,6 +115,17 @@
                     border-color: transparent transparent #ffffff transparent; // border-color: transparent transparent red transparent; 
                     transform: rotate(-90deg) translate(-50%, -50%);
                 }
+            }
+        }
+    }
+
+    .perspective {
+        &--wrap {
+            h2 {
+                margin: 4rem 0 3rem; 
+            }
+            .img-margin-top-mobile {
+                margin-top: 5rem;
             }
         }
     }
@@ -149,7 +181,20 @@
             //         border-width: 0 20px 20px 20px;
             //     }
             // }
+        }
+    }
             
+    .perspective {
+        &--wrap {
+            h2 {
+                margin: 0.5rem 0 3.5rem; 
+            }
+            .img-margin-top-mobile {
+                margin-top: 0;
+            }
+            .img-margin-bottom-desktop {
+                margin-bottom: 5rem;
+            }
         }
     }
 }
@@ -157,5 +202,12 @@
 @media screen and (min-width: 1200px) {
     .reach-out {
         padding: 16.8rem 0 16.8rem;
+    }
+    .perspective {
+        &--wrap {
+            .img-margin-top-mobile {
+                margin-top: 8rem;
+            }
+        }
     }
 }
