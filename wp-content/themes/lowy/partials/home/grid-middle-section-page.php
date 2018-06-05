@@ -8,8 +8,8 @@
      
     </div>
     <!-- not visible on mobile -->
-    <div class="col-12 col-md-6 d-none d-md-block d-lg-none"> 
-        <?php  get_template_part('partials/home/clinical-research', 'page'); ?>
+    <div class="col-12 col-md-6 d-none d-sm-block d-md-block d-lg-none"> 
+        <?php  get_template_part('partials/home/about-mactel', 'page'); ?>
        
     </div>
     <!-- end not visible on mobile -->
@@ -22,7 +22,7 @@
             </div>
             <!-- end of visible on tablet and desktop -->
             <div class="col-12">
-                <?php  get_template_part('partials/home/clinical-research', 'page'); ?>
+                <?php  get_template_part('partials/home/lab-research', 'page'); ?>
                 
             </div>
         </div>

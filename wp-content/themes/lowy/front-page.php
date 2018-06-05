@@ -12,8 +12,13 @@
 	get_template_part('partials/home/about-lmri', 'page'); 
 ?>
 <?php
-	// 
+	// grid middle section
 	get_template_part('partials/home/grid-middle-section', 'page'); 
+?>
+
+<?php
+	// grid last section
+	get_template_part('partials/home/grid-bottom-section', 'page'); 
 ?>
 
 <?php
