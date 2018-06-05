@@ -26,7 +26,7 @@
              &:after {
                  position: absolute;
                  content: '';
-                 top: -1rem;
+                 top: -.4rem;
                  left: 50%;
                  transform: translate(-50%, -50%);
                  width: 0;
@@ -41,9 +41,6 @@
             font-size: 1.3rem;
         }
     }
-    // &__about-card {
-
-    // }
 }
 
 
@@ -67,6 +64,93 @@
 @media screen and (min-width: 768px) {
     .reach-out {
         padding: 16.8rem 0 14rem;
+    }
+    .home {
+        &__card-grid {
+            &__content-wrap-right-arrow {
+                &:after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 95%;
+                    border-width: 0 15px 15px 15px;
+                    border-color: transparent transparent #ffffff transparent;
+                    // border-color: transparent transparent red transparent; 
+                    transform: rotate(90deg) translate(-50%, -50%);
+                }
+            }
+            &__content-wrap {
+                &:after {
+                    border-width: 0 15px 15px 15px;
+                }
+            }
+            &__content-wrap-left-arrow {
+                &:after {
+                    position: absolute;
+                    content: '';
+                    top: 42%;
+                    left: -4%;
+                    border-width: 0 15px 15px 15px;
+                    border-color: transparent transparent #ffffff transparent; // border-color: transparent transparent red transparent; 
+                    transform: rotate(-90deg) translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .home {
+        &__card-grid {
+            &__content-wrap-right-arrow {
+                &:after {
+                    left: 95%;
+                }
+            }
+            &__content-wrap-right-arrow-about-mactel {
+                &:after {
+                    top: 53%;
+                    left: 91%;
+                    transform: rotate(90deg) translate(-50%, -50%);
+                }
+            }
+            &__content-wrap-left-arrow-news-media {
+                &:after {
+                    top: 41%;
+                    left: -4%;
+                    border-width: 0 20px 20px 20px;
+                    transform: rotate(-90deg) translate(-50%, -50%);
+                }
+            }
+            &__content-wrap {
+                background-color: #fff;
+                &:after {
+                    border-width: 0 20px 20px 20px;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home {
+        &__card-grid {
+            &__content-wrap-right-arrow-about-mactel {
+                &:after {
+                    top: 53%;
+                    left: 93%;
+                    transform: rotate(90deg) translate(-50%, -50%);
+                }
+            }
+            // &__content-wrap-right-arrow {
+            //     &:after {
+            //         left: 95%;
+            //         border-width: 0 20px 20px 20px;
+            //     }
+            // }
+            
+        }
     }
 }
 

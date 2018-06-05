@@ -20,7 +20,7 @@
                 <?php echo '<img src="'.get_the_post_thumbnail_url($about_mactel_research_page->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
             </li>
 
-            <li class="position--relative home__card-grid__content-wrap list__item-pad">
+            <li class="position--relative home__card-grid__content-wrap list__item-pad home__card-grid__content-wrap-left-arrow">
 
                 <h3><?php echo apply_filters( 'the_title', $about_mactel_research_page->post_title, $about_mactel_research_page->ID )  ?></h3>
 
