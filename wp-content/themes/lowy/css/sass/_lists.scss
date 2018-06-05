@@ -81,6 +81,7 @@
     &__clinical-research-content-pad {
         padding: 0px;
     }
+    
 }
 
 @media screen and (min-width: $screen-min-sm) {
@@ -159,6 +160,11 @@
                 }
             }
         }
+        &__home-grid-contact-us-content {
+            p {
+                padding-bottom: 3rem;
+            }
+        }
     }
 }
 
@@ -197,6 +203,28 @@
         &__clinical-research-content-pad {
             padding-bottom: 3.1rem;
         }
+        &__item-heart-image-pos {
+            min-height: 11.2rem;
+        }
+
+        &__home-grid-contact-us-content {
+            padding-bottom: 0 !important;
+            h3 {
+                padding-bottom: 0;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+        &__news-media-content-no-pad {
+            h3 {
+                padding-top: 3.6rem;
+                padding-bottom: 3rem;
+            }
+            p {
+                padding-bottom: 3.4rem
+            }
+        }
     }
 }
 
@@ -204,6 +232,11 @@
     .list {
         &__clinical-research-content-pad {
             padding-bottom: 6.1rem;
+        }
+        &__news-media-content-no-pad {
+            p {
+                padding-bottom: 6.5rem;
+            }
         }
     }
 }
