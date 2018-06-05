@@ -50,15 +50,6 @@
             max-width: 20.2rem;
             transform: translateY(0.5rem);
 
-            .read-more {
-                color: #42a5f5;
-                &:hover {
-                    .icn--arrow {
-                        transform: translateX(1rem);
-                    }
-                }
-            }
-
         }
     }
     &__subscribe {

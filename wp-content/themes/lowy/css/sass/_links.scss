@@ -1,6 +1,12 @@
 .read-more {
     color: $dark-sky-blue;
     font-size: 1.3rem;
+    &:hover {
+        color: $dark-sky-blue;
+        .icn--arrow {
+            transform: translateX(1rem);
+        }
+    }
 }
 .read-more-btn {
     background-color: $dark-sky-blue;

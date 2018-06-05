@@ -13,7 +13,6 @@
     <div class="footer__community__desc">
         <h3 class="footer__subheading"><?php the_title(); ?></h3>
         <a href="<?php the_permalink() ?>" rel="bookmark" class="read-more">Read More <span class="icn icn--arrow"></span> </a>
-        <!-- <p><?php the_content(); ?></p> -->
     </div>
 </div>
 <?php endwhile; ?> 

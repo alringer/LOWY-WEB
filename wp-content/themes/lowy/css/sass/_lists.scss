@@ -82,6 +82,15 @@
         padding: 0px;
     }
     
+
+    &--featured {
+        > li {
+            display: inline-block;
+            width: 24.4rem;
+            vertical-align: top;
+            margin-right: 2rem;
+        }
+    }
 }
 
 @media screen and (min-width: $screen-min-sm) {
@@ -113,61 +122,14 @@
                 }
             }
         }
-        &__item-image-pos {
-            img {
-                width: 64rem;
-            }
-        }
-        &__item-clinical-image-pos {
-            img {
-                width: 35rem;
-            }
-        }
-        &__item-lab-research-image-pos {
-            img {
-                width: 39rem;
-            }
-        }
-        &--grid-order-img-right {            
-            img {
-                width: 33rem;
-            }
-        }
-        &--tablet-img-top {
-            flex-direction: column;
-            >li {
-                &:nth-child(1) {
-                    order: 1;
-                    width: 100%;
-                }
-
-                &:nth-child(2) {
-                    order: 2;
-                    width: 100%;
+        &--featured {
+            > li {
+                width: 34rem;
+                margin-right: 5.6rem;
+                &:last-child {
+                    margin-right: 0;
                 }
             }
-        }
-        &--grid-order-img-left {
-            flex-direction: row;
-            >li {
-                &:nth-child(1) {
-                    order: 1;
-                    width: 48%;
-                }
-                &:nth-child(2) {
-                    order: 2;
-                    width: 50%;
-                }
-            }
-        }
-        &__home-grid-contact-us-content {
-            p {
-                padding-bottom: 3rem;
-            }
-        }
-        &__item-pad {
-            // padding: 2rem 1.6rem 1.2rem;
-            padding-left: 2.7rem;
         }
     }
 }

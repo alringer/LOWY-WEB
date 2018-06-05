@@ -36,7 +36,7 @@
 			<!-- header -->
 			<header class="header header--main header--gradient clear" role="banner">
 				<div class="header__inner">
-					<ldiv class="header__logo-wrap">
+					<div class="header__logo-wrap">
 						<!-- logo -->
 						<div class="logo">
 							<a href="<?php echo home_url(); ?>">
@@ -50,7 +50,7 @@
 						<div class="visible--xs visible--sm">
 							<?php get_template_part('searchform'); ?>
 						</div>
-					</ldiv>
+					</div>
 					
 
 					<!-- nav -->
