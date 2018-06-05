@@ -44,7 +44,7 @@
                     background-image: url(../img/icons/search-lg.svg);
                     background-repeat: no-repeat;
                     background-position: center;
-                    transition: 0.33s ease all;
+                    transition: 0.2s ease all;
                     background-size: contain;
                     &:hover {
                         cursor: pointer;
@@ -84,7 +84,6 @@
                     background-image: url('../img/icons/collapse.svg');   
                 }
                 .sub-menu {
-                    // display: block;
                     position: initial;
                     opacity: 1;
                     li {
@@ -227,7 +226,7 @@
             display: inline-block;
            a {
                opacity: 1;
-               transition: 300ms ease opacity;
+               transition: 0.2s ease opacity;
                &.active-search {
                 opacity: 0;
                 }
@@ -257,25 +256,6 @@
                 display: none;
             }
             
-
-            // .search-logo-desktop {
-            //     display: block;
-            //     width: 2.7rem;
-            //     height: 3.9rem;
-            //     position: absolute;
-            //     top: 0;
-            //     right: 0;
-            //     background-image: url('../img/icons/search-lg.svg');
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-            //     transition: 0.33s ease all;
-            //     background-size: contain;
-            //     &:hover {
-            //         cursor: pointer;
-            //     }
-
-                
-            // }
             &.show-form {
                 position: absolute;
                 top: 1.3rem;
@@ -301,6 +281,7 @@
                     width: 2.9rem;
                     height: 2.9rem;
                     background-image: url('../img/icons/close.svg');
+                    background-repeat: no-repeat;
                     opacity: 1;
                     
                     &:hover {

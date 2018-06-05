@@ -48,15 +48,12 @@
                         e.preventDefault();
                         var menu_width = $('.menu-nav').width(); 
                         $(this).addClass('active-search');
-                       
-                        console.log('this is it', window.main_nav.elements.searchbar_offset);
-                        // menu_width = $('.menu-nav').width();
-                        
+
                         window.main_nav.elements.search_form.addClass('show-form');
-                        window.main_nav.elements.search_form.hasClass('show-form') ? window.main_nav.elements.search_form.animate({
+                        window.main_nav.elements.search_form.animate({
                           width: menu_width,
                           opacity: 1
-                        }, window.main_nav.elements.animation_speed) : window.main_nav.elements.search_form.removeAttr('style');
+                        }, window.main_nav.elements.animation_speed);
                     },
                     _on_mouse_over_nav_item_has_children: function(){
                       window.main_nav.elements.main_nav_item.removeClass('open-active');
@@ -90,25 +87,22 @@
           window.main_nav.elements.main_nav_item.on('click', window.main_nav.methods._on_menu_item_click);
           window.main_nav.elements.search_form_icon.on('click', window.main_nav.methods._on_search_icon_click);
           window.main_nav.elements.close_search_icon.on('click', function(){
-              var menu_width = 0;
-            window.main_nav.elements.search_form.hasClass('show-form') ? window.main_nav.elements.search_form.animate({
-                width: menu_width,
+            window.main_nav.elements.search_form.animate({
+                width: 0,
                 opacity: 0
-              }, window.main_nav.elements.animation_speed) : window.main_nav.elements.search_form.removeAttr('style');
-              window.main_nav.elements.search_form.removeClass('show-form');
-              window.main_nav.elements.search_form_icon.removeClass('active-search');
+              }, window.main_nav.elements.animation_speed, function(){
+                window.main_nav.elements.search_form.removeClass('show-form');
+                window.main_nav.elements.search_form_icon.removeClass('active-search');
+              });
+              
+              window.main_nav.elements.search_form.removeAttr('style');
           });
 
-        //   window.main_nav.elements.main_nav_item
-        //     .mouseover(window.main_nav.methods._on_mouse_over_nav_item_has_children);
-        //     .mouseout(window.main_nav.methods._on_mouse_leave_nav_item_has_children);
 
         if ($(window).width() > window.main_nav.elements.desktop_size) {
             window.main_nav.elements.main_nav_item
             .mouseover(window.main_nav.methods._on_mouse_over_nav_item_has_children)
             .mouseout(window.main_nav.methods._on_mouse_leave_nav_item_has_children);
-            // console.log($(this).scrollTop());
-
         }
         // sets bg color to black if scrolled down and reload the page
         $(this).scrollTop() > window.main_nav.elements.searchbar_offset ? window.main_nav.elements.main_header.addClass('header--black') : window.main_nav.elements.main_header.removeClass('header--black');
