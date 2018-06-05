@@ -11,7 +11,7 @@ sort($about_lmri_pages);
 <section class="container">
     <div class="row">
         <div class="col-12">
-            <ul class="list--grid-order home__card-grid home__about-card ">
+            <ul class=" list--home-grid list--grid-order home__card-grid home__about-card ">
                 <?php foreach ( $about_lmri_pages as $about_lmri_page ) : ?>
                     <!-- <li style="background-image: url('<?php //echo get_the_post_thumbnail_url($about_lmri_page->ID, 'post-thumbnail') ?>')"> -->
                     <li class="position--relative  list__item-image-pos">

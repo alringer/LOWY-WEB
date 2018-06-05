@@ -1,5 +1,10 @@
 .list {
     padding: 0;
+    &--home-grid {
+        h3 {
+            padding-bottom: 1.5rem;
+        }
+    }
 
     &--unstyled {
         list-style: none;
@@ -34,7 +39,7 @@
         }
     }
     &__item-pad {
-        padding: 1.2rem;
+        padding: 2rem 1.2rem 1.2rem;
  
     }
     &__item-image-pos {
@@ -49,7 +54,33 @@
             transform: translateX(-50%);
         }
     }
-    
+    &__item-clinical-image-pos {
+        overflow: hidden;
+        min-height: 18.5rem;
+        img {
+            position: absolute;
+            top: 0;
+            max-width: none;
+            width: 51rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__item-lab-research-image-pos {
+        overflow: hidden;
+        min-height: 18.5rem;
+        img {
+            position: absolute;
+            top: 0;
+            max-width: none;
+            width: 51rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__clinical-research-content-pad {
+        padding: 0px;
+    }
 }
 
 @media screen and (min-width: $screen-min-sm) {
@@ -83,10 +114,57 @@
         }
         &__item-image-pos {
             img {
-                width: 58rem;
+                width: 64rem;
             }
         }
-        &--grid-order-img-right {
+        &__item-clinical-image-pos {
+            img {
+                width: 35rem;
+            }
+        }
+        &__item-lab-research-image-pos {
+            img {
+                width: 39rem;
+            }
+        }
+        &--grid-order-img-right {            
+            img {
+                width: 33rem;
+            }
+        }
+        &--tablet-img-top {
+            flex-direction: column;
+            >li {
+                &:nth-child(1) {
+                    order: 1;
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    order: 2;
+                    width: 100%;
+                }
+            }
+        }
+        &--grid-order-img-left {
+            flex-direction: row;
+            >li {
+                &:nth-child(1) {
+                    order: 1;
+                    width: 50%;
+                }
+                &:nth-child(2) {
+                    order: 2;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .list {
+        &--tablet-img-top {
             flex-direction: row;
             >li {
                 &:nth-child(1) {
@@ -98,9 +176,34 @@
                     width: 50%;
                 }
             }
+        }
+        &--reverse-order {
+            >li {
+                &:nth-child(1) {
+                    order: 1;
+                    width: 46%;
+                }
+                &:nth-child(2) {
+                    order: 2;
+                    width: 54%;
+                }
+            }
+        }
+        &--grid-order-img-right {
             img {
                 width: 37rem;
             }
+        }
+        &__clinical-research-content-pad {
+            padding-bottom: 3.1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .list {
+        &__clinical-research-content-pad {
+            padding-bottom: 6.1rem;
         }
     }
 }
