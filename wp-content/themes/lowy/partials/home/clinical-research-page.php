@@ -1,7 +1,7 @@
 <?php $clinical_research_page = get_page(11); ?>
 <?php
 // sorts by page added
-sort($clinical_research_pages);
+// sort($clinical_research_pages);
 // $clinical_research_i = 0;
 // $clinical_research_limit = 1;
 ?>
@@ -11,15 +11,15 @@ sort($clinical_research_pages);
 ?>
        
        
-<ul class="list--unstyled list--grid-order-img-up home__card-grid about-card ">
+<ul class="list  list--home-grid list--unstyled list--grid-order-img-up home__card-grid about-card list__clinical-research-content-pad">
     <?php //foreach ( $clinical_research_pages as $clinical_research_page ) : ?>
     <?php //if($clinical_research_i < $clinical_research_limit) : ?>
 
-            <li>
+            <li class="position--relative  list__item-clinical-image-pos">
                 <?php echo '<img src="'.get_the_post_thumbnail_url($clinical_research_page->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
             </li>
 
-            <li class="position--relative home__card-grid__content-wrap">
+            <li class="position--relative home__card-grid__content-wrap list__item-pad">
 
                 <h3><?php echo apply_filters( 'the_title', $clinical_research_page->post_title, $clinical_research_page->ID )  ?></h3>
 
