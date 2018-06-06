@@ -39,7 +39,7 @@
         }
     }
     &__item-pad {
-        padding: 2rem 1.2rem 1.2rem;
+        padding: 2rem 1.6rem 1.2rem;
  
     }
     &__item-image-pos {
@@ -152,7 +152,7 @@
             >li {
                 &:nth-child(1) {
                     order: 1;
-                    width: 50%;
+                    width: 48%;
                 }
                 &:nth-child(2) {
                     order: 2;
@@ -164,6 +164,10 @@
             p {
                 padding-bottom: 3rem;
             }
+        }
+        &__item-pad {
+            // padding: 2rem 1.6rem 1.2rem;
+            padding-left: 2.7rem;
         }
     }
 }
@@ -187,7 +191,7 @@
             >li {
                 &:nth-child(1) {
                     order: 1;
-                    width: 46%;
+                    width: 49%;
                 }
                 &:nth-child(2) {
                     order: 2;
@@ -220,9 +224,14 @@
             h3 {
                 padding-top: 3.6rem;
                 padding-bottom: 3rem;
+                padding-left: 3rem;
             }
             p {
+                padding-left: 3rem;
                 padding-bottom: 3.4rem
+            }
+            a {
+                padding-left: 3rem;                
             }
         }
     }

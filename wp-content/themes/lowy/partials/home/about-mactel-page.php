@@ -24,7 +24,7 @@
                 <h3><?php echo apply_filters( 'the_title', $about_mactel_research_page->post_title, $about_mactel_research_page->ID )  ?></h3>
 
                 <?php
-                echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $about_mactel_research_page->post_content, 20, "" ) ) .'</p>'; 
+                echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $about_mactel_research_page->post_content, 19, "" ) ) .'</p>'; 
                 ?>
 
                 <a href="<?php echo get_permalink($about_mactel_research_page->ID); ?>" class="read-more"> Read More  </a>
