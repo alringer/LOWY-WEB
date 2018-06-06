@@ -1,5 +1,5 @@
-/* codekit-prepend '../lib/jquery-3.3.1.slim.min.js */
-
+/* codekit-prepend '../lib/jquery-3.3.1.slim.min.js'; */
+// @codekit-prepend '../dev/home-carousel.js';
 (function ($, root, undefined) {
 	
 	$(function () {

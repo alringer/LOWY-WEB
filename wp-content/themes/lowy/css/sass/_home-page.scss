@@ -136,14 +136,23 @@
             font-weight: 300;
             text-transform: capitalize;
         }
+        #featuredCatCarousel {
+            .carousel-indicators {
+                bottom: -3.2rem;
+                li {
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
     }
     &__outter-wrap {
         overflow: auto;
     }
     &__inner-wrap {
-        width: 84rem;
-        margin: 0 auto;
-        padding: 0 0 0 2.7rem;
+        // width: 84rem;
+        // margin: 0 auto;
+        // padding: 0 0 0 2.7rem;
     }
     &__card-content {
         padding: 2.5rem 1rem 1rem;
@@ -152,7 +161,7 @@
         background-color: #fff;
     }
     &__card-img {
-        height: 22.4rem;
+        //height: 22.4rem;
         overflow: hidden;
         img {
             width: 100%;
@@ -242,9 +251,9 @@
     }
 
     .featured {
-        &__inner-wrap {
-            width: 117.5rem;
-        }
+        // &__inner-wrap {
+        //     width: 117.5rem;
+        // }
         &__card-content {
             height: 16.4rem;
         }
