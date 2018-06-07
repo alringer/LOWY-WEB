@@ -20,7 +20,8 @@ sort($about_lmri_pages);
                     <li class="position--relative home__card-grid__content-wrap list__item-pad home__card-grid__content-wrap-right-arrow ">
                         <h3><?php echo apply_filters( 'the_title', $about_lmri_page->post_title, $about_lmri_page->ID )  ?></h3>
                         <?php echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $about_lmri_page->post_content, 21, "" ) ) .'</p>'; ?>
-                        <a href="<?php echo get_permalink($about_lmri_page->ID); ?>" class="read-more"> Read More  </a>
+                        <a href="<?php echo get_permalink($about_lmri_page->ID); ?>" class="read-more"> Read More <span class="icn icn--arrow"></span> </a>
+
                         <div class=" ">
                             <?php if($canBeEdited) {
                                 echo '<a href=" '.get_edit_post_link($about_lmri_page->ID, 'none').' ">Edit</a>';

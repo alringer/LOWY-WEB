@@ -22,7 +22,7 @@
                 echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $contact_us_page->post_content, 3, "" ) ) .'</p>'; 
                 ?>
 
-                <a href="<?php echo get_permalink($contact_us_page->ID); ?>" class="read-more"> Read More  </a>
+                <a href="<?php echo get_permalink($contact_us_page->ID); ?>" class="read-more"> Read More  <span class="icn icn--arrow"></span></a>
 
                 <div class=" ">
                     <?php if($canBeEdited) {

@@ -28,7 +28,7 @@
                 echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $about_mactel_research_page->post_content, 20, "" ) ) .'</p>'; 
                 ?>
 
-                <a href="<?php echo get_permalink($about_mactel_research_page->ID); ?>" class="read-more"> Read More  </a>
+                <a href="<?php echo get_permalink($about_mactel_research_page->ID); ?>" class="read-more"> Read More <span class="icn icn--arrow"></span> </a>
 
                 <div class=" ">
                     <?php if($canBeEdited) {
