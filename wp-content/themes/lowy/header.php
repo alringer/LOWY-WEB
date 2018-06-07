@@ -12,6 +12,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,500,700" rel="stylesheet">
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<?php wp_head(); ?>
 		
@@ -34,7 +36,7 @@
 			<!-- header -->
 			<header class="header header--main header--gradient clear" role="banner">
 				<div class="header__inner">
-					<ldiv class="header__logo-wrap">
+					<div class="header__logo-wrap">
 						<!-- logo -->
 						<div class="logo">
 							<a href="<?php echo home_url(); ?>">
@@ -48,7 +50,7 @@
 						<div class="visible--xs visible--sm">
 							<?php get_template_part('searchform'); ?>
 						</div>
-					</ldiv>
+					</div>
 					
 
 					<!-- nav -->

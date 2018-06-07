@@ -1,18 +1,25 @@
 .hero {
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+
 
     &--home {
-        height: 60rem;
+        height: 47rem;
+    }
+}
 
-        // @media screen and (min-width: $screen-min-sm) {
-        //     height: 45rem;
-        // }
-
-        @media screen and (min-width: 1440px) {
+@media screen and (min-width: 375px) {
+    .hero {
+        &--home {
+            height: 60rem;
+        }
+    }
+}
+@media screen and (min-width: 1440px) {
+    .hero {
+        &--home {
             height: 80rem;
-            // background-image: url("/wp-content/uploads/2018/05/hero@2x.jpg") !important;
             background-position: top center;
         }
     }

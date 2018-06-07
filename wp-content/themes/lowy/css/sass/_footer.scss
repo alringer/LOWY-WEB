@@ -25,7 +25,7 @@
             }
             &:nth-child(2) {
                 transform: translateY(0.4rem);
-                font-family: serif;
+                //font-family: serif;
             }
         }
 
@@ -49,15 +49,6 @@
             display: inline-block;
             max-width: 20.2rem;
             transform: translateY(0.5rem);
-
-            .read-more {
-                color: #42a5f5;
-                &:hover {
-                    .icn--arrow {
-                        transform: translateX(1rem);
-                    }
-                }
-            }
 
         }
     }

@@ -38,26 +38,25 @@
             background-color: #000;
         }
 
+        .menu-nav > li.search-logo-desktop a {
+            width: 1.7rem;
+            height: 1.5rem;
+            top: 2.9rem;
+        }
+
         .navbar form {
             button.btn--desktop {
                 width: 1.6rem;
                 height: 2rem;
             }
-            &.show-form {
-                .search-logo-desktop {
-                    width: 2.7rem;
-                    height: 2.9rem;
-                    top: 0.9rem;
-                }
-                
-            }
-            .search-logo-desktop {
-                width: 1.7rem;
-                height: 1.9rem;
-                position: absolute;
-                top: 11px;
-                background-size: contain;
-            }
+            
+            // .search-logo-desktop {
+            //     width: 1.7rem;
+            //     height: 1.9rem;
+            //     position: absolute;
+            //     top: 11px;
+            //     background-size: contain;
+            // }
         }
     }
 
@@ -203,8 +202,8 @@
     .header {
         .logo {
             display: inline-block;
-            // margin-right: 2rem;
             position: initial;
+            margin-right: 3rem;
         }
         &__hamburger {
             display: none;
@@ -229,24 +228,43 @@
             left: 0;
             right: auto;
             padding: 0;
+            display: inline-block;
         }
     }
 }
 
 @media screen and (min-width: 1200px) {
     .header {
+        .logo {
+            margin-right: 8rem;
+        }
 
         &__inner {
-            max-width: 112rem;
+            max-width: 117rem;
         }
     }
 }
 
 @media screen and (min-width: 1400px) {
     .header {
+        .logo {
+            margin-right: 7rem;
+        }
 
         &__inner {
-            max-width: 130rem;
+            max-width: 132rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .header {
+        .logo {
+            margin-right: 16rem;
+        }
+
+        &__inner {
+            max-width: 140rem;
         }
     }
 }

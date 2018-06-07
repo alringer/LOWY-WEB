@@ -34,6 +34,23 @@
                     padding-right: 0;
                 }
             }
+            &.search-logo-desktop {
+                a {
+                    display: inline-block;
+                    width: 2.7rem;
+                    height: 3.9rem;
+                    position: absolute;
+                    top: 14px;
+                    background-image: url(../img/icons/search-lg.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    transition: 0.2s ease all;
+                    background-size: contain;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
 
@@ -67,7 +84,6 @@
                     background-image: url('../img/icons/collapse.svg');   
                 }
                 .sub-menu {
-                    // display: block;
                     position: initial;
                     opacity: 1;
                     li {
@@ -86,6 +102,7 @@
 .navbar {
     padding: 14rem 0 1.5rem;
     form {
+        font-size: 1.6rem;
        button {
            
            &.btn--desktop {
@@ -93,10 +110,11 @@
                 position: absolute;
                 right: 0.4rem;
                 opacity: 0;
-                transition: 0.33s ease-in opacity;
                 width: 2.6rem;
                 height: 2.8rem;
                 color: transparent;
+                visibility: hidden;
+                transition: 0.33s ease-in opacity;
             }
        }
     }
@@ -204,6 +222,17 @@
         }
     }
     .navbar {
+        .search-logo-desktop {
+            display: inline-block;
+           a {
+               opacity: 1;
+               transition: 0.2s ease opacity;
+               &.active-search {
+                opacity: 0;
+                }
+           }
+        
+        }
         form {
             min-height: 4.4rem;
             min-width: 3.7rem;
@@ -219,34 +248,18 @@
                 padding: 0;
                 width: 2.3rem;
                 height: 3rem;
+                font-size: 1.6rem;
+                visibility: hidden;
 
             }
             .search-icon-btn {
                 display: none;
             }
-
-            .search-logo-desktop {
-                display: block;
-                width: 2.7rem;
-                height: 3.9rem;
-                position: absolute;
-                top: 0;
-                right: 0;
-                background-image: url('../img/icons/search-lg.svg');
-                background-repeat: no-repeat;
-                background-position: center;
-                transition: 0.33s ease all;
-                background-size: contain;
-                &:hover {
-                    cursor: pointer;
-                }
-
-                
-            }
+            
             &.show-form {
                 position: absolute;
                 top: 1.3rem;
-                right: -3.9rem;
+                right: 0rem;
                 min-width: 5rem;
                 padding-right: 5.8rem;
                 input {
@@ -258,12 +271,22 @@
                     padding-left: 1rem;
                     width: 100%;
                     height: 4.4rem;
+                    visibility: visible;
 
                 }
-                .search-logo-desktop {
-                    top: 0.4rem;
-                    right: 0.8rem;
+                .search-form-desktop-icon {
+                    display: inline-block;
+                    position: absolute;
+                    right: 0;
+                    width: 2.9rem;
+                    height: 2.9rem;
                     background-image: url('../img/icons/close.svg');
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
                 button {
                     &.btn--desktop {
@@ -274,6 +297,7 @@
                         height: 4.6rem;
                         color: $dark-grey-blue;
                         opacity: 1;
+                        visibility: visible;
                         transition: 0.1s ease-out opacity;
                     }
                 }
@@ -286,31 +310,47 @@
 @media screen and (min-width: 1200px) {
     .menu {
         &-nav {
-            width: 100rem;
+            width: 99rem;
             > li {
                 padding: 0 2rem;
-                margin-right: 2rem;
+                margin-right: 1rem;
             }
         }
     }
     .navbar {
         form {
             right: 2rem;
+            &.show-form {
+                right: 6.6rem;
+                .search-form-desktop-icon {
+                    opacity: 1;
+                    top: 0.8rem;
+                    right: 0.5rem;
+                }
+            }
         }
     }
 }
 @media screen and (min-width: 1400px) {
     .menu {
         &-nav {
-            width: 116rem;
+            width: 112rem;
             > li {
-                margin-right: 4rem;
+                margin-right: 3rem;
             }
         }
     }
     .navbar {
         form {
-            right: 4rem;
+            right: 3rem;
+            &.show-form {
+                .search-form-desktop-icon {
+                    opacity: 1;
+                    top: 0.8rem;
+                    right: 1.5rem;
+                }
+                
+            }
         }
     }
 }
