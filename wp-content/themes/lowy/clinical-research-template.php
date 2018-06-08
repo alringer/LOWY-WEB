@@ -7,50 +7,78 @@
 <?php /* Template Name: clinical research template */ get_header(); ?>
 
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<main role="main">
+	<!--  Hero section -->
+	<section>
+		<div class="hero hero--templates" style="background-image: url(<?php echo $clinical_research_hero_img_url;?><?php echo $clinical_research_hero_img; ?>)">
+		</div>
+	</section>
+	<!-- End Hero Section -->
 
-			<img src="<?php echo $clinical_research_hero_img_url;?><?php echo $clinical_research_hero_img; ?>" />
-			
-			<h1><?php the_title(); ?></h1>
+	<!-- template content section -->
+	<section class="single-page-template--content">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1><?php the_title(); ?></h1>
+				<!-- Clinical research Post -->
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+					<!-- article -->
+						<!-- <article id="post-<?php //the_ID(); ?>" <?php //post_class(); ?>> -->
+						<?php the_content(); ?>
+						<br class="clear">
+						<?php edit_post_link(); ?>
+						<!-- </article> -->
+					<?php endwhile; ?>
+				<?php else: ?>
+ 				<!-- End Clinical research post -->
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<!-- article -->
+				<article>
+					<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+				</article>
+				<!-- /article -->
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- end template content section -->
 
-				<?php the_content(); ?>
+	<!-- Line between sections -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="single-page-template__line">
+					
+				</div>
+			</div>
+		</div>
+	</div> 
+	<!-- End Line between sections -->
+		
+	<!-- 2nd section template content -->
+	<?php get_template_part('partials/clinical-research/how-to-participate', 'page'); ?>
+	<!-- end 2nd section template content -->
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+	<!-- Line between sections -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="single-page-template__line">
+					
+				</div>
+			</div>
+		</div>
+	</div> 
+	<!-- End Line between sections -->
 
-				<br class="clear">
 
-				<?php edit_post_link(); ?>
-
-			</article>
-			<!-- /article -->
-
-		<?php endwhile; ?>
-
-		<?php else: ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
-
-		</section>
-		<!-- /section -->
 </main>
 
-<?php get_sidebar(); ?>
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
 
 

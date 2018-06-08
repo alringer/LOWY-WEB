@@ -1,11 +1,13 @@
 .hero {
-    // background-position: center center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-
-
     &--home {
         height: 47rem;
+        padding: 2rem;
+    }
+    &--templates {
+        min-height: 30rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
     }
 }
 
@@ -24,3 +26,5 @@
         }
     }
 }
+
+
