@@ -74,6 +74,7 @@
 	</div> 
 	<!-- End Line between sections -->
 
+	<?php get_template_part('partials/clinical-research/first-post-card', 'page'); ?>
 
 </main>
 
