@@ -1,3 +1,26 @@
 .clinical-research {
+    &__posts {
+        position: relative;
+        height: 29rem;
+        overflow: hidden;
+        margin-bottom: 3rem;
+        img {
+            position: absolute;
+            max-width: none;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
 
+
+@media screen and (min-width: $screen-min-sm) {
+    .clinical-research {
+        &__posts {
+            height: 32rem;
+            img {
+                width:36rem;
+            }
+        }
+    }
 }

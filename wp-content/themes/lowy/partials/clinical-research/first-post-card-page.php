@@ -7,17 +7,27 @@
 ?>
 
 <?php while($featured_catquery->have_posts()) : $featured_catquery->the_post(); ?>
+<section class="single-page-template--content ">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
-                <?php echo '<img src="'.get_the_post_thumbnail_url($post->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
+                <div class="clinical-research__posts ">
+                    <?php echo '<img src="'.get_the_post_thumbnail_url($post->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
+                </div>
             </div>
 
             <div class="col-12 col-md-6 col-lg-8">
-                <h3><?php the_title(); ?></h3>
+                <div class="single-page-template__card-title">
+                    <h3><?php the_title(); ?></h3>
+                </div>
                 
                 <?php //echo '<p>'. apply_filters( 'the_content',( $clinical_research_cards_id->post_content ) ) .'</p>'; ?> 
-                <?php echo '<p>'. apply_filters( 'post_content', wp_trim_words( $post->post_content, 35, "" ) ) .'</p>';  ?>
+                
+                <?php echo '<p>'. strip_shortcodes( apply_filters( 'post_content', wp_trim_words( $post->post_content, 32, "" ) ) ) .'</p>';  ?>
+
+
+                <?php //echo '<p>'. apply_filters( 'post_content', wp_trim_words( $post->post_content, 32, "" ) ) .'</p>';  ?>
+
                 
                 <?php //echo get_post_field('post_content'); ?>
 
@@ -36,6 +46,7 @@
             </div>
         </div>
     </div>
+ </section>   
 
 <?php endwhile; ?> 
 
