@@ -4,7 +4,7 @@
  $translational_research_hero_img = get_post_meta($post->ID, 'translational-research-hero-img', $single = true); 
 
 ?>
-<?php /* Template Name: translational research template */ get_header(); ?>
+<?php /* Template Name: About LMRI page template */ get_header(); ?>
 
 
 <main role="main">
@@ -59,7 +59,7 @@
 	<!-- End Line between sections -->
 		
 	<!-- 2nd section template content -->
-	<?php get_template_part('partials/translational-research/laboratory-research', 'page'); ?>
+	<?php //get_template_part('partials/translational-research/laboratory-research', 'page'); ?>
 	<!-- end 2nd section template content -->
 
 	<!-- Line between sections -->
@@ -75,7 +75,7 @@
 	<!-- End Line between sections -->
 		
 	<!-- 2nd section template content -->
-	<?php get_template_part('partials/translational-research/research-portal', 'page'); ?>
+	<?php //get_template_part('partials/translational-research/research-portal', 'page'); ?>
 	<!-- end 2nd section template content -->
 
 
@@ -91,7 +91,7 @@
 	</div> 
 	<!-- End Line between sections -->
 
-	<?php get_template_part('partials/translational-research/collaborating-investigators', 'page'); ?>
+	<?php //get_template_part('partials/translational-research/collaborating-investigators', 'page'); ?>
 
 	<!-- Line between sections -->
 	<div class="container">
@@ -105,7 +105,7 @@
 	</div> 
 	<!-- End Line between sections -->
 
-	<?php get_template_part('partials/translational-research/translational-research-posts', 'page'); ?>
+	<?php //get_template_part('partials/translational-research/translational-research-posts', 'page'); ?>
 	
 
 </main>
