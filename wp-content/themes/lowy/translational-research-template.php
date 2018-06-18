@@ -91,7 +91,22 @@
 	</div> 
 	<!-- End Line between sections -->
 
-	<?php get_template_part('partials/clinical-research/first-post-card', 'page'); ?>
+	<?php get_template_part('partials/translational-research/collaborating-investigators', 'page'); ?>
+
+	<!-- Line between sections -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="single-page-template__line">
+					
+				</div>
+			</div>
+		</div>
+	</div> 
+	<!-- End Line between sections -->
+
+	<?php get_template_part('partials/translational-research/translational-research-posts', 'page'); ?>
+	
 
 </main>
 
