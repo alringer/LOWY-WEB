@@ -11,7 +11,7 @@
     $featured_page_bg_page = get_page($featured_page_bg_id);
     $featured_page_bg_img = get_the_post_thumbnail_url($featured_page_bg_page->ID, 'post-thumbnail')
 ?>
-<div class="featured-wrap home__bg-image" style="background-image:url('<?php echo $featured_page_bg_img; ?>')">
+<div class="featured-wrap " style="background-image:url('<?php echo $featured_page_bg_img; ?>')">
 <section class="container">
     <div class="row">
         <div class="col-12">

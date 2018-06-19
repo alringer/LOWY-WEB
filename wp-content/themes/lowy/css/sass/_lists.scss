@@ -245,17 +245,10 @@
             }
         }
         &__news-media-content-no-pad {
-            h3 {
-                padding-top: 3.6rem;
-                padding-bottom: 3rem;
-                padding-left: 3rem;
-            }
-            p {
-                padding-left: 3rem;
-                padding-bottom: 3.4rem
-            }
-            a {
-                padding-left: 3rem;                
+            >li {
+                padding-top: 5rem;
+                padding-left: 6rem;
+                padding-bottom: 6.9rem;
             }
         }
     }
@@ -266,10 +259,6 @@
         &__clinical-research-content-pad {
             padding-bottom: 6.1rem;
         }
-        &__news-media-content-no-pad {
-            p {
-                padding-bottom: 6.5rem;
-            }
-        }
+        
     }
 }
