@@ -537,4 +537,16 @@ function replace_core_jquery_version() {
 add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
 
 
+function bartag_func( $atts ) {
+    $a = shortcode_atts( array(
+        'foo' => 'something',
+        'bar' => 'something else',
+    ), $atts );
+// 1595
+$id = $a['foo'];
+wp_get_attachment_image( 1595 );
+    return "<div class=\"this-is\">foo = {$a['foo']}" . "bar = {$a['bar']}". wp_get_attachment_image($id)."</div>";
+}
+add_shortcode( 'bartag', 'bartag_func' );
+
 ?>

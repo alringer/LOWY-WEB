@@ -1,7 +1,7 @@
  <?php
- $translational_research_hero_img_id = get_the_ID();
- $translational_research_hero_img_url = home_url();
- $translational_research_hero_img = get_post_meta($post->ID, 'translational-research-hero-img', $single = true); 
+ $about_lmri_hero_img_id = get_the_ID();
+ $about_lmri_hero_img_url = home_url();
+ $about_lmri_hero_img = get_post_meta($post->ID, 'about-lmri-hero-img', $single = true); 
 
 ?>
 <?php /* Template Name: About LMRI page template */ get_header(); ?>
@@ -10,7 +10,7 @@
 <main role="main">
 	<!--  Hero section -->
 	<section>
-		<div class="hero hero--templates" style="background-image: url(<?php echo $translational_research_hero_img_url;?><?php echo $translational_research_hero_img; ?>)">
+		<div class="hero hero--templates" style="background-image: url(<?php echo $about_lmri_hero_img_url;?><?php echo $about_lmri_hero_img; ?>)">
 		</div>
 	</section>
 	<!-- End Hero Section -->
@@ -58,8 +58,9 @@
 	</div> 
 	<!-- End Line between sections -->
 		
-	<!-- 2nd section template content -->
-	<?php //get_template_part('partials/translational-research/laboratory-research', 'page'); ?>
+    <!-- 2nd section template content -->
+    
+	<?php get_template_part('partials/about-lmri/about-lmri-history', 'page'); ?>
 	<!-- end 2nd section template content -->
 
 	<!-- Line between sections -->
@@ -75,7 +76,8 @@
 	<!-- End Line between sections -->
 		
 	<!-- 2nd section template content -->
-	<?php //get_template_part('partials/translational-research/research-portal', 'page'); ?>
+    <?php get_template_part('partials/about-lmri/not-for-profit', 'page'); ?>
+    
 	<!-- end 2nd section template content -->
 
 
@@ -90,8 +92,11 @@
 		</div>
 	</div> 
 	<!-- End Line between sections -->
+		
+	<!-- 2nd section template content -->
+    <?php get_template_part('partials/about-lmri/clinical-research-trials', 'page'); ?>
 
-	<?php //get_template_part('partials/translational-research/collaborating-investigators', 'page'); ?>
+
 
 	<!-- Line between sections -->
 	<div class="container">
@@ -105,7 +110,27 @@
 	</div> 
 	<!-- End Line between sections -->
 
-	<?php //get_template_part('partials/translational-research/translational-research-posts', 'page'); ?>
+	<?php get_template_part('partials/about-lmri/partners-medical-research', 'page'); ?>
+
+	<!-- Line between sections -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="single-page-template__line">
+					
+				</div>
+			</div>
+		</div>
+	</div> 
+	<!-- End Line between sections -->
+
+    <?php get_template_part('partials/about-lmri/sponsors-card', 'page'); ?>
+    
+    <?php get_template_part('partials/about-lmri/board-directors', 'page'); ?>
+
+    <?php get_template_part('partials/about-lmri/board-scientific-governors', 'page'); ?>
+
+    <?php get_template_part('partials/about-lmri/lmri-staff-card', 'page'); ?>
 	
 
 </main>
