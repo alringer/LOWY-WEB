@@ -14,6 +14,7 @@
                 <figure class="image-figure">
                     <img src= "<?php echo get_the_post_thumbnail_url($collaborating_investigators->ID, 'post-thumbnail'); ?>" class="img-responsive">
                     <figcaption class="fig-caption">
+                        <!-- echo get_post_meta(get_the_ID(),'image-caption',true) -->
                         <?php echo get_post_meta($collaborating_investigators->ID, 'image-caption', $single = true);  ?>
                     </figcaption>
                 </figure>

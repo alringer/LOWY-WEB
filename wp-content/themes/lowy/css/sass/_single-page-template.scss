@@ -43,6 +43,26 @@
         border: solid 1px #979797; 
         margin-bottom: 4rem;       
     }
+    &__article-content {
+        .wp-caption {
+            padding: 0;
+            border: 0;
+            background-color: $off-white;
+            text-align: left;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            transition: ease .33s all;
+            &:hover {
+                box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.2);
+            }
+            img {
+                max-width: 100%;
+            }
+            &-text {
+                padding : 2rem 2.6rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1024px ) {
