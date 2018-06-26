@@ -6,8 +6,13 @@
         margin: 0;
         > li {
             border-bottom: 1px solid rgba(255,255,255, 0.25);
+            &:hover {
+                a {
+                    color: rgba(255,255,255, 0.40);
+                }
+            }
             a {
-                color: #fff;
+                color: rgba(255,255,255, 1);
             }
             ul {
                 padding: 0;
@@ -19,12 +24,20 @@
                     opacity: 0;
                     transition: ease-in-out 0.33s all;
                     z-index: -1;
-                    li {
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.39);
+                    > li {
                         font-size: 1.8rem;
                         padding: 0;
+                        display: block;
+                        &:hover {
+                            a {
+                                color: #FEB25F;
+                            }
+                        }
                         a {
                             font-weight: 400;
                             display: none;
+                            color: #fff;
                         }
                     }
                 }
@@ -283,6 +296,7 @@
                     background-image: url('../img/icons/close.svg');
                     background-repeat: no-repeat;
                     opacity: 1;
+                    background-repeat: no-repeat;
                     
                     &:hover {
                         cursor: pointer;
