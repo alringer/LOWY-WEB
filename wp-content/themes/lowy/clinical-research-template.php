@@ -76,6 +76,24 @@
 
 	<?php get_template_part('partials/clinical-research/first-post-card', 'page'); ?>
 
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="single-page-template__line">
+					
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<?php get_template_part('partials/reading-centers-related-posts', 'page'); ?>
+	<?php get_template_part('partials/moorfields-reading-center', 'page'); ?>
+
+	
+
+	
+
 </main>
 
 

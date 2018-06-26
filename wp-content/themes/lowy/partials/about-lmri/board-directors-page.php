@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="translational-research__posts ">
+                <div class="cards__posts ">
                     <?php echo '<img src="'.get_the_post_thumbnail_url($board_directors_page->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
                 </div>
             </div>

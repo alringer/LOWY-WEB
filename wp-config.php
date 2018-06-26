@@ -80,6 +80,28 @@ define('DB_COLLATE', '');
 
 
 
+// Live STAGING DB/RDS
+
+// define('DB_NAME', 'lowy-staging-db');
+
+// /** MySQL database username */
+// define('DB_USER', 'lowy_db_admin');
+
+// /** MySQL database password */
+// define('DB_PASSWORD', '1xBp2n3w2');
+
+// /** MySQL hostname */
+// define('DB_HOST', 'lowy-db-staging.cj9nzdslandv.us-west-2.rds.amazonaws.com');
+
+
+// /** Database Charset to use in creating database tables. */
+// define('DB_CHARSET', 'utf8');
+
+// /** The Database Collate type. Don't change this if in doubt. */
+// define('DB_COLLATE', '');
+
+
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
