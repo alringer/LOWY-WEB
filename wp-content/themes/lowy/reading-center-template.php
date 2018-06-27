@@ -6,7 +6,7 @@
  get_header();
  $reading_center_hero_img_id = get_the_ID();
  $reading_center_hero_img_url = home_url();
- $reading_center_hero_img = get_post_meta($post->ID, 'about-lmri-hero-img', $single = true); 
+ $reading_center_hero_img = get_post_meta($post->ID, 'reading-centers-hero-img', $single = true); 
 ?>
 <main role="main">
 	<!--  Hero section -->
@@ -17,10 +17,10 @@
 	<!-- End Hero Section -->
 
 	<!-- template content section -->
-	<section class="single-page-template--content">
+	<section class="single-page-template--content single-page-template--investigators-card">
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
+			<div class="col-12 col-md-12 col-lg-9">
 				<h1><?php the_title(); ?></h1>
 				<!-- Clinical research Post -->
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -41,58 +41,44 @@
 				<!-- /article -->
 
 				<?php endif; ?>
-            </div>
+			</div>
+			<div class="col-12 col-md-12 col-lg-3">
+				<div>
+					<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
+				</div>
+			</div>
+
+
 		</div>
 	</div>
 	</section>
 	<!-- end template content section -->
 
+
 	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
+	<?php get_template_part('partials/line', 'page'); ?>	
 	<!-- End Line between sections -->
 		
     <!-- 2nd section template content -->
     
-	<?php get_template_part('partials/about-lmri/about-lmri-history', 'page'); ?>
+	<?php get_template_part('partials/reading-centers/moorfields-reading-center', 'page'); ?>
 	<!-- end 2nd section template content -->
 
 	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
+	<?php get_template_part('partials/line', 'page'); ?>	
 	<!-- End Line between sections -->
 		
 	<!-- 2nd section template content -->
-    <?php get_template_part('partials/about-lmri/not-for-profit', 'page'); ?>
+	<?php get_template_part('partials/reading-centers/duke-reading-center', 'page'); ?>	
     
 	<!-- end 2nd section template content -->
-
-
+	
+	
 	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
+	<?php get_template_part('partials/line', 'page'); ?>	
 	<!-- End Line between sections -->
+	<?php get_template_part('partials/reading-centers/reading-centers-related-posts', 'page'); ?>
+	<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
 		
 </main>
 
