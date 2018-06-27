@@ -1,6 +1,6 @@
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');
-    $featured_cat_id =  15;
+    $featured_cat_id =  27;
     $featured_cat_limit = 7;
     $clinical_research_cards_id = get_the_ID();
     $featured_catquery = new WP_Query( 'cat='.$featured_cat_id.'&posts_per_page='.$featured_cat_limit.'');
@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="clinical-research__posts ">
+                <div class="cards__posts ">
                     <?php echo '<img src="'.get_the_post_thumbnail_url($post->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
                 </div>
             </div>

@@ -91,6 +91,12 @@
             margin-right: 2rem;
         }
     }
+    &--clinical-research-featured {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 5rem;
+
+    }
 }
 
 @media screen and (min-width: $screen-min-sm) {
@@ -193,7 +199,12 @@
                 }
             }
         }
+        &--clinical-research-featured {
+            margin-bottom: 7rem;
+
+        }
     }
+
 }
 
 @media screen and (min-width: 992px) {
