@@ -1,3 +1,4 @@
+<section class="container">
 <aside class="row">
     <div class="investigators col-sm col-lg-12">
         <div class="investigators__thumbs">
@@ -42,3 +43,4 @@
      -->
 </aside>
 
+</section>
