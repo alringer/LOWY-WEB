@@ -7,6 +7,7 @@
  $reading_center_hero_img_id = get_the_ID();
  $reading_center_hero_img_url = home_url();
  $reading_center_hero_img = get_post_meta($post->ID, 'reading-centers-hero-img', $single = true); 
+//  $reading_centers_content_img = get_post_meta($post->ID, 'reading-centers-content-img', $single = true); 
 ?>
 <main role="main">
 	<!--  Hero section -->
@@ -17,7 +18,7 @@
 	<!-- End Hero Section -->
 
 	<!-- template content section -->
-	<section class="single-page-template--content single-page-template--investigators-card">
+	<section class="single-page-template--content single-page-template--smaill-img-card">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-12 col-lg-9">
@@ -27,6 +28,13 @@
 					<!-- article -->
 						<article id="post-<?php the_ID(); ?>" class="single-page-template__article-content ">
 							<?php the_content(); ?>
+
+							<!-- <div class="single-page-template--centered-image ">
+								<figure class="wp-caption-text">
+									<img src="<?php //echo $reading_center_hero_img_url;?><?php //echo $reading_centers_content_img; ?>">
+								</figure>
+							</div> -->
+							
 							<br class="clear">
 							<?php edit_post_link(); ?>
 						</article>
@@ -42,8 +50,8 @@
 
 				<?php endif; ?>
 			</div>
-			<div class="col-12 col-md-12 col-lg-3">
-				<div>
+			<div class="col-12 col-md-12 col-lg-3 d-none d-lg-block">
+				<div class="single-page-template__investigators-cards">
 					<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
 				</div>
 			</div>
@@ -75,10 +83,22 @@
 	
 	
 	<!-- Line between sections -->
+	<div class="d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+		<?php //get_template_part('partials/line', 'page'); ?>	
+	</div>
+	<!-- End Line between sections -->
+	
+	<div class="col-12  d-block d-sm-none d-none d-sm-block d-md-none d-md-block d-lg-none">
+		<div class="single-page-template__investigators-cards">
+			<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
+		</div>
+	</div>
+	
+	<!-- Line between sections -->
 	<?php get_template_part('partials/line', 'page'); ?>	
 	<!-- End Line between sections -->
+
 	<?php get_template_part('partials/reading-centers/reading-centers-related-posts', 'page'); ?>
-	<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
 		
 </main>
 

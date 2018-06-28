@@ -67,6 +67,7 @@
             }
         }
     }
+
 }
 
 @media screen and (min-width: 1024px ) {
@@ -82,10 +83,20 @@
             margin-bottom: 5rem;
         }
 
-        &--investigators-card {
+        &--smaill-img-card {
             figure {
                 width: 34rem;
             }
+        }
+        &--centered-image {
+            figure {
+                width: 65rem;
+                float: none;
+                margin-right: 5.5rem;
+            }
+        }
+        &__investigators-cards {
+            margin-top: 15rem;
         }
     }
 }

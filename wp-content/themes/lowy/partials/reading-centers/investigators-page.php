@@ -1,5 +1,5 @@
-<aside class="">
-    <div class="investigators">
+<aside class="row">
+    <div class="investigators col-sm col-lg-12">
         <div class="investigators__thumbs">
             <img src="/wp-content/uploads/2015/11/Martin-Friedlander1.jpg" alt="">
         </div>
@@ -16,8 +16,8 @@
             </div>
         </div>
     </div>
-    <?php //get_template_part('partials/line', 'page'); ?>
-    <div class="investigators">
+    
+    <div class="investigators col-sm col-lg-12">
         <div class="investigators__thumbs">
             <img src="/wp-content/uploads/2015/11/Martin-Friedlander1.jpg" alt="">
         </div>
