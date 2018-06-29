@@ -61,13 +61,15 @@
 		
     <!-- 2nd section template content -->
     
-	<?php get_template_part('partials/about-macular/mactel-project', 'page'); ?>
+	<?php get_template_part('partials/eye-donation/how-to-donate', 'page'); ?>
 	<!-- end 2nd section template content -->
 
 	<!-- Line between sections -->
 	<?php get_template_part('partials/line', 'page'); ?>	
 	<!-- End Line between sections -->
 		
+    <?php get_template_part('partials/eye-donation/instructions', 'page'); ?>
+    <?php //get_template_part('partials/line', 'page'); ?>	
     <?php get_template_part('partials/reading-centers/reading-centers-related-posts', 'page'); ?>
 
 		
