@@ -276,7 +276,7 @@
                 min-width: 5rem;
                 padding-right: 5.8rem;
                 input {
-                    position: initial;
+                    position: relative;
                     display: block;
                     padding-right: 11rem;
                     opacity: 1;
@@ -306,6 +306,7 @@
                     &.btn--desktop {
                         display: block;
                         position: absolute;
+                        top: 0;
                         right: 5.8rem;
                         width: 11rem;
                         height: 4.6rem;
