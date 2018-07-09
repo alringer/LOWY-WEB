@@ -24,7 +24,6 @@
                     opacity: 0;
                     transition: ease-in-out 0.33s all;
                     z-index: -1;
-                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.39);
                     > li {
                         font-size: 1.8rem;
                         padding: 0;
@@ -155,6 +154,12 @@
         &-nav {
             display: inline-block;
             min-width: 80rem;
+
+            ul {
+                &.sub-menu {
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.39);
+                }
+            }
             > li {
                 border-bottom: 0;
                 padding: 0 2rem 0 1rem;
