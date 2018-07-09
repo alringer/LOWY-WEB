@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="cards__posts ">
+                <div class="cards__posts">
                     <?php echo '<img src="'.get_the_post_thumbnail_url($post->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
                 </div>
             </div>
@@ -31,12 +31,11 @@
                 
                 <?php //echo get_post_field('post_content'); ?>
 
+                <div>
+                    <a href="<?php echo get_permalink($clinical_research_cards_id->ID); ?>" class="read-more-btn"> Read More  <span class=""></span></a>
+                </div>
 
-                <button class="read-more-btn">
-                    <a href="<?php echo get_permalink($clinical_research_cards_id->ID); ?>" class=""> Read More  <span class=""></span></a>
-                </button>  
-
-                <div class=" ">
+                <div class="can-edit-wrap">
                     <?php if($canBeEdited) {
                         echo '<a href=" '.get_edit_post_link($clinical_research_cards_id->ID, 'none').' ">Edit</a>';
                     } ?>

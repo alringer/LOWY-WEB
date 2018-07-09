@@ -13,6 +13,9 @@
 .can-edit {
     bottom: 0;
     left: 0;
+    &-wrap {
+        margin: 2rem 0;
+    }
 }
 
 .visible {

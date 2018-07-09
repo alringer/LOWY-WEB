@@ -1,1 +1,0 @@
-!function($,o,t){console.log("test")}(jQuery,this);

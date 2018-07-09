@@ -27,7 +27,7 @@
             </div>
 
 
-            <div class=" ">
+            <div class="can-edit-wrap">
                 <?php if($canBeEdited) {
                     echo '<a href=" '.get_edit_post_link($about_lmri_history_page->ID, 'none').' ">Edit</a>';
                 } ?>
