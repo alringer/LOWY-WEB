@@ -1,11 +1,16 @@
 
 .investigators {
-    border-bottom: 1px solid rgba(27,27,27, 0.3);
+    padding-left: 1rem;
+    // padding-right: 4rem;
+    border-bottom: none;
+    font-size: 1.4rem;
+    max-width: 22rem;
+    margin-left: 4.4rem;
+    // border-bottom: 1px solid rgba(27,27,27, 0.3);
 
     &:last-of-type {
         border-bottom: 1px solid transparent;
     }
-
 
     &__thumbs {
         display: inline-block;
@@ -13,6 +18,7 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
+        margin-bottom: 2rem;
     }
     &__desc {
         p {
@@ -22,3 +28,14 @@
     padding-bottom: 4.5rem;
     margin-bottom: 4rem;
 }
+
+
+@media screen and (min-width: 1024px) {
+    .investigators {
+        padding-left:  0;
+        padding-right: 0;
+        border-bottom: 1px solid rgba(27, 27, 27, 0.3);
+    }
+}
+
+

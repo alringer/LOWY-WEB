@@ -31,6 +31,14 @@
         h4 {
             margin-bottom: 2rem;
         }
+
+        li {
+            font-size: 1.6rem;
+            line-height: 1.46;
+            margin-bottom: 3rem;
+            line-height: 1.94;
+            letter-spacing: 0.3px;
+        }
     }
     &__card-title {
         h3 {
@@ -67,6 +75,7 @@
             }
         }
     }
+
 }
 
 @media screen and (min-width: 1024px ) {
@@ -80,6 +89,22 @@
     }
         &__line {
             margin-bottom: 5rem;
+        }
+
+        &--smaill-img-card {
+            figure {
+                width: 34rem;
+            }
+        }
+        &--centered-image {
+            figure {
+                width: 65rem;
+                float: none;
+                margin-right: 5.5rem;
+            }
+        }
+        &__investigators-cards {
+            margin-top: 15rem;
         }
     }
 }

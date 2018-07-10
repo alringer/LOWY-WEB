@@ -1,5 +1,6 @@
-<aside>
-    <div class="investigators">
+<section class="container">
+<aside class="row">
+    <div class="investigators col-sm col-lg-12">
         <div class="investigators__thumbs">
             <img src="/wp-content/uploads/2015/11/Martin-Friedlander1.jpg" alt="">
         </div>
@@ -16,7 +17,8 @@
             </div>
         </div>
     </div>
-    <div class="investigators">
+    
+    <div class="investigators col-sm col-lg-12">
         <div class="investigators__thumbs">
             <img src="/wp-content/uploads/2015/11/Martin-Friedlander1.jpg" alt="">
         </div>
@@ -41,3 +43,4 @@
      -->
 </aside>
 
+</section>

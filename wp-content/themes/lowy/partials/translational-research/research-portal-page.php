@@ -1,7 +1,5 @@
 <?php $research_portal_page = get_page(323); ?>
-<?php
 
-?>
 
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');

@@ -1,7 +1,5 @@
 <?php $laboratory_research_translational_page = get_page(1589); ?>
-<?php
 
-?>
 
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');

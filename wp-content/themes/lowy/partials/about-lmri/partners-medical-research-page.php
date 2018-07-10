@@ -1,7 +1,4 @@
 <?php $partners_medical_research_page = get_page(42); ?>
-<?php
-
-?>
 
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');
