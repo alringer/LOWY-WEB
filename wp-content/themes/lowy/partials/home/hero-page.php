@@ -1,3 +1,9 @@
 <div class="hero hero--home position--relative">
-    <h1 class="position--absolute serif-txt "><?php the_title(); ?></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="serif-txt "><?php the_title(); ?></h1>
+            </div>
+        </div>
+    </div>
 </div>

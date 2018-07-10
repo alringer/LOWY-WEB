@@ -28,7 +28,7 @@
 
                 <a href="<?php echo get_permalink($clinical_research_page->ID); ?>" class="read-more"> Read More <span class="icn icn--arrow"></span> </a>
 
-                <div class=" ">
+                <div class="can-edit-wrap">
                     <?php if($canBeEdited) {
                         echo '<a href=" '.get_edit_post_link($clinical_research_page->ID, 'none').' ">Edit</a>';
                     } ?>

@@ -22,6 +22,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-12 col-lg-9">
+
+				<?php 
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('
+						<div class="breadcrumbs">','</div>
+						');
+					}
+				?>
 				<h1><?php the_title(); ?></h1>
 				<!-- Clinical research Post -->
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>

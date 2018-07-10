@@ -25,12 +25,10 @@
             </div>
 
             <div class="">
-                <button class="read-more-btn">
-                    <a href="<?php echo get_permalink($how_to_participate_page->ID); ?>" class=""> Read More  <span class=""></span></a>
-                </button>
+                    <a href="<?php echo get_permalink($how_to_participate_page->ID); ?>" class="read-more-btn"> Read More  <span class=""></span></a>
             </div>
 
-            <div class=" ">
+            <div class="can-edit-wrap">
                 <?php if($canBeEdited) {
                     echo '<a href=" '.get_edit_post_link($how_to_participate_page->ID, 'none').' ">Edit</a>';
                 } ?>

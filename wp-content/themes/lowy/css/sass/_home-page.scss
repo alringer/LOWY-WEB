@@ -2,11 +2,9 @@
     h1 {
         font-size: 4.5rem;
         color: #fff;
-        left: 1.5rem;
-        right: 1.5rem;
-        bottom: 0;
         font-size: 2.7rem;
         max-width: 32rem;
+        margin-top: 50rem;
     }
 }
 
@@ -197,6 +195,7 @@
         h1 {
             font-size: 6rem;
             max-width: 65rem;
+            margin-top: 44rem;
         }
     }
     .reach-out {
@@ -331,10 +330,9 @@
     .hero--home {
         h1 {
             font-size: 5rem;
-            left: 0;
-            right: 0;
-            max-width: 91.3rem;
-            margin: 5.4rem auto;
+            max-width: none;
+            text-align: center;
+            margin-top: 52rem;
         }
     }
 }
@@ -357,7 +355,7 @@
     .hero--home {
         h1 {
             font-size: 6rem;
-            max-width: 110rem;
+            margin-top: 71rem;
         }
     }
     .home {

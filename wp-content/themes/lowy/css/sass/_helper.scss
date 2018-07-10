@@ -13,6 +13,9 @@
 .can-edit {
     bottom: 0;
     left: 0;
+    &-wrap {
+        margin: 2rem 0;
+    }
 }
 
 .visible {
@@ -41,6 +44,18 @@
     }
 }
 
+.breadcrumbs {
+    position: absolute;
+    right: -100rem;
+    top: 2rem;
+    transition: ease-out 3s right;
+    font-size: 1.4rem;
+    color: $dark-sky-blue;
+}
+
+.breadcrumb_last {
+    color: $dark-grey-blue;
+}
 
 
 @media screen and (max-width: 727px) {
@@ -74,5 +89,9 @@
             display: inline-block;
             min-height: 44px;
         }
+    }
+
+    .breadcrumbs {
+        right: 0;
     }
 }

@@ -26,7 +26,7 @@
             </div>
 
 
-            <div class=" ">
+            <div class="can-edit-wrap">
                 <?php if($canBeEdited) {
                     echo '<a href=" '.get_edit_post_link($partners_medical_research_page->ID, 'none').' ">Edit</a>';
                 } ?>
