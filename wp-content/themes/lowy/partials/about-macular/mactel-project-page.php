@@ -1,7 +1,5 @@
 <?php $about_macular = get_page(66); ?>
-<?php
 
-?>
 
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');

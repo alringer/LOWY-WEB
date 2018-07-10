@@ -1,7 +1,4 @@
 <?php $how_to_participate_page = get_page(82); ?>
-<?php
-
-?>
 
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');

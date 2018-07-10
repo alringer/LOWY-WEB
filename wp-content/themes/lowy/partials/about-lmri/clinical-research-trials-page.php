@@ -1,7 +1,5 @@
 <?php $clinical_research_trials_page = get_page(1615); ?>
-<?php
 
-?>
 
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');

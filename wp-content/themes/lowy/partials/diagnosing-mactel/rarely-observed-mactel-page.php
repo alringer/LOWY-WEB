@@ -1,7 +1,5 @@
 <?php $rarely_observed_mactel = get_page(1669); ?>
-<?php
 
-?>
 
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');

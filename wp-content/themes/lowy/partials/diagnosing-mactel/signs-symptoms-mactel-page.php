@@ -1,7 +1,5 @@
 <?php $signs_symptoms_mactel = get_page(1663); ?>
-<?php
 
-?>
 
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');
