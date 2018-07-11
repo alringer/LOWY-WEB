@@ -6,7 +6,6 @@
  $lmri_staff_img_id = get_the_ID();
  $lmri_staff_img_url = home_url();
  $lmri_staff_img = get_post_meta($post->ID, 'alternate-hero-img', $single = true); 
-//  $diagnosing_mactels_content_img = get_post_meta($post->ID, 'reading-centers-content-img', $single = true); 
 ?>
 <main role="main">
 	<!--  Hero section -->
@@ -65,17 +64,25 @@
 			<div class="row justify-content-center">
 				<?php while($lmri_staff_cat_query->have_posts()) : $lmri_staff_cat_query->the_post(); ?>
 					<div class="col-8 col-md-6 col-lg-4">
-					<div class="cards--staff" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'post-thumbnail'); ?>')">
+					<div class="cards--staff" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>')">
 					<a href="<?php echo get_permalink($lmri_staff_cards_id->ID); ?>"><div class="cards--staff__img"></div></a>
 						<div class="cards--staff__content">
 							<div class="cards--staff__content__title text-center">
-								<h3 class="truncate"><?php the_title(); ?></h3>
+								<h3><?php the_title(); ?></h3>
 								<?php 
 									$bio_title = get_post_meta($post->ID, 'bio_title', true);
 								?>
-								<strong><?php echo wp_trim_words($bio_title, 5, "..." ); ?></strong>
+								<strong><?php echo $bio_title; ?></strong>
 							</div>
-							<div class="text-center"><p><?php  echo /*the_excerpt(); */ '<p>'. wp_trim_words( $post->post_content, 32, "..." ). '</p>';  ?></p></div>
+							<div class="text-center"><p><?php  
+										if (strlen($bio_title) > 100 ) {
+											echo wp_trim_words( $post->post_content, 15, "..." ); 
+										} else if(strlen($bio_title) > 90) {
+											echo wp_trim_words( $post->post_content, 32, "..." );
+										} else {
+											echo wp_trim_words( $post->post_content, 35, "..." );
+										}
+							?></p></div>
 							<div class="cards--staff__content__read-more text-center">
 								<a href="<?php echo get_permalink($lmri_staff_cards_id->ID); ?>" class="read-more-btn"> Read More  <span class=""></span></a>
 							</div>
