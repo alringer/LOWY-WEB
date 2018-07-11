@@ -57,6 +57,11 @@
     color: $dark-grey-blue;
 }
 
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
 @media screen and (max-width: 727px) {
     .visible {
@@ -90,8 +95,9 @@
             min-height: 44px;
         }
     }
-
-    .breadcrumbs {
-        right: 0;
+    .single-page-template--content {
+        .breadcrumbs {
+            right: 0;
+        }
     }
 }
