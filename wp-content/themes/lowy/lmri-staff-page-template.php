@@ -87,14 +87,15 @@
 											echo wp_trim_words( $post->post_content, 40, "..." );
 										}
 							?></p></div>
-							<div class="cards--staff__content__read-more text-center">
+							
+						</div>
+						<div class="cards--staff__content__read-more text-center">
 								<a href="<?php echo get_permalink($lmri_staff_cards_id->ID); ?>" class="read-more-btn"> Read More  <span class=""></span></a>
 							</div>
 							<div class="can-edit-wrap">
 								<?php if($canBeEdited) {
 									echo '<a href=" '.get_edit_post_link($lmri_staff_cards_id->ID, 'none').' ">Edit</a>';
 								} ?>
-							</div>
 						</div>
 
 						
