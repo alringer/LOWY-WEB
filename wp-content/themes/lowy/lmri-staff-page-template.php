@@ -75,12 +75,16 @@
 								<strong><?php echo $bio_title; ?></strong>
 							</div>
 							<div class="text-center"><p><?php  
-										if (strlen($bio_title) > 100 ) {
+										if (strlen($bio_title) > 200 ) {
 											echo wp_trim_words( $post->post_content, 15, "..." ); 
-										} else if(strlen($bio_title) > 90) {
+										} else if(strlen($bio_title) > 110) {
+											echo wp_trim_words( $post->post_content, 20, "..." );
+										} else if(strlen($bio_title) > 80) {
 											echo wp_trim_words( $post->post_content, 32, "..." );
-										} else {
+										} else if(strlen($bio_title) < 70 && strlen($bio_title) > 21) {
 											echo wp_trim_words( $post->post_content, 35, "..." );
+										}  else {
+											echo wp_trim_words( $post->post_content, 40, "..." );
 										}
 							?></p></div>
 							<div class="cards--staff__content__read-more text-center">
