@@ -62,9 +62,18 @@
 	<section class="single-page-template--content ">
 		<div class="container">
 			<div class="row justify-content-center">
+				<div class="col-12">
+					<?php
+						$page_slug = get_post_field( 'post_name', get_post());
+					?>
+				</div>
 				<?php while($lmri_staff_cat_query->have_posts()) : $lmri_staff_cat_query->the_post(); ?>
-					<div class="col-8 col-md-6 col-lg-4">
-					<div class="cards--staff" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>')">
+					<div class="col-12 col-md-6 col-lg-4">
+					<div class="cards--staff <?php 
+					if($page_slug === 'board-of-directors' || $page_slug ===  'sponsors') {
+						echo 'cards--staff--bod';
+					}
+					?>" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>')">
 					<a href="<?php echo get_permalink($lmri_staff_cards_id->ID); ?>"><div class="cards--staff__img"></div></a>
 						<div class="cards--staff__content">
 							<div class="cards--staff__content__title text-center">
@@ -76,15 +85,15 @@
 							</div>
 							<div class="text-center"><p><?php  
 										if (strlen($bio_title) > 200 ) {
-											echo wp_trim_words( $post->post_content, 15, "..." ); 
+											echo wp_trim_words( $post->post_content, 10, "..." ); 
 										} else if(strlen($bio_title) > 110) {
-											echo wp_trim_words( $post->post_content, 20, "..." );
+											echo wp_trim_words( $post->post_content, 18, "..." );
 										} else if(strlen($bio_title) > 80) {
-											echo wp_trim_words( $post->post_content, 32, "..." );
+											echo wp_trim_words( $post->post_content, 20, "..." );
 										} else if(strlen($bio_title) < 70 && strlen($bio_title) > 21) {
-											echo wp_trim_words( $post->post_content, 35, "..." );
+											echo wp_trim_words( $post->post_content, 30, "..." );
 										}  else {
-											echo wp_trim_words( $post->post_content, 40, "..." );
+											echo wp_trim_words( $post->post_content, 30, "..." );
 										}
 							?></p></div>
 							

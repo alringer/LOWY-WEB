@@ -46,11 +46,12 @@
 
 .breadcrumbs {
     position: absolute;
-    right: -100rem;
+    right: 0;
     top: 2rem;
     transition: ease-out 3s right;
     font-size: 1.4rem;
     color: $dark-sky-blue;
+    opacity: 0;
 }
 
 .breadcrumb_last {
@@ -97,7 +98,7 @@
     }
     .single-page-template--content {
         .breadcrumbs {
-            right: 0;
+            opacity: 1;
         }
     }
 }

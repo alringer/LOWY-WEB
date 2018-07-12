@@ -59,6 +59,12 @@
         position: relative;
         box-shadow: 0 4px 14px rgba(0,0,0,0.2);
         transition: 0.33s ease-out box-shadow;
+        max-width: 320px;
+        margin: 0 auto 4rem;
+
+        &--bod {
+            height: 65rem; 
+        }
         &:hover {
             box-shadow: 0 14px 40px rgba(0,0,0,0.2);
         }
@@ -109,13 +115,42 @@
     }
 
 }
-
+@media screen and (min-width: $screen-iphone-x) {
+    .cards {
+        &--staff {
+            max-width: 375px;
+            &--bod {
+                height: 68rem; 
+            }
+        }
+    }
+}
 @media screen and (min-width: $screen-min-sm) {
     .cards {
         &__posts {
             height: 29rem;
             img {
                 width: 46rem;
+            }
+        }
+
+        &--staff {
+            max-width: none;
+            &--bod {
+                height: 64rem; 
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: $screen-min-lg) {
+    .cards {
+
+        &--staff {
+            height: 69rem; 
+            &--bod {
+                height: 62rem; 
             }
         }
     }
