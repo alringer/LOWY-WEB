@@ -1,34 +1,5 @@
-.cards {
-    &--contact-form {
-        background-color: #4f9fff;
-        border-radius: 3px;
-        color: #fff;
-        padding: 3rem 2rem;
-        form  {
-            input[type="text"], textarea {
-                width: 100% !important;
-            }
-            input {
-                height: 4rem;
-            }
-
-            textarea {
-                height: 16rem;
-                resize: none;
-            }
-            &.fm-form {
-                div {
-                    margin: 0 !important;
-                }
-                input {
-                    &.submit {
-                        float: none;
-                        padding: 0;
-                        margin: 0;
-                    }
-                }
-                
-            }
-        }
+.google-map-wrap {
+    iframe {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     }
 }

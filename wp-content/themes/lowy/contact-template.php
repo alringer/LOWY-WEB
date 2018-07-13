@@ -27,9 +27,9 @@
 					}
                 ?>
             </div>
-			<div class="col-12 col-md-6">
+			<div class="col-12 col-lg-6">
                 <h1><?php the_title(); ?></h1>
-                <div class="">
+                <div class="google-map-wrap">
                     <?php get_template_part('/partials/contact/contact-map-page', 'page'); ?>
                 </div>
 				
@@ -53,7 +53,7 @@
 
 				<?php endif; ?>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
                     <?php get_template_part('/partials/contact/contact-form-page', 'page'); ?>
                 </div>
             </div>
