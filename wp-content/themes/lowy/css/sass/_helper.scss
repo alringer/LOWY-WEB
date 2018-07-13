@@ -46,17 +46,23 @@
 
 .breadcrumbs {
     position: absolute;
-    right: -100rem;
+    right: 0;
     top: 2rem;
     transition: ease-out 3s right;
     font-size: 1.4rem;
     color: $dark-sky-blue;
+    opacity: 0;
 }
 
 .breadcrumb_last {
     color: $dark-grey-blue;
 }
 
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
 @media screen and (max-width: 727px) {
     .visible {
@@ -90,8 +96,9 @@
             min-height: 44px;
         }
     }
-
-    .breadcrumbs {
-        right: 0;
+    .single-page-template--content {
+        .breadcrumbs {
+            opacity: 1;
+        }
     }
 }
