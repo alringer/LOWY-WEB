@@ -74,6 +74,56 @@
                 font-size: 1.2rem;
             }
         }
+
+        &--contact {
+            ul {
+                padding: 0 7rem;
+                > li {
+                    list-style-type: none;
+                    margin-bottom: 5rem;
+                }
+            }
+
+            .address, .phone, .general-info {
+                position: relative;
+                &:before {
+                    content:'';
+                    position: absolute;
+                    top: 0.2rem;
+                    left: -7rem;
+                    right: auto;
+                    width: 3rem;
+                    height: 3.5rem;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position-x: center;
+                }
+            }
+
+            .address {
+                &:before {
+                    background-image: url(../img/icons/address-icon.png);
+                }
+            }
+
+            .phone {
+                &:before {
+                    background-image: url(../img/icons/phone-icon.png);
+                }
+            }
+
+            .general-info {
+                &:before {
+                    background-image: url(../img/icons/mail-icon.png);
+                }
+            }
+        }
+
+        ul {
+            > li {
+                list-style-type: none;
+            }
+        }
     }
 
 }

@@ -36,13 +36,15 @@
 						<h3 class="footer__heading">Subscribe To Newsletter</h3>
 						<p>Latest discoveries, events & more.</p>
 						<div class="footer__subscribe">
-							<form action="">
+								
+							<!-- <form action="">
 								<input type="text" placeholder="email address" class="form-control">
 								<button type="submit" class="btn btn--form-submit"><?php _e('Submit', 'html5blank'); ?></button>
-							</form>
+							</form> -->
 						</div>
 
 						<div class="sidebar-widget">
+						<?php echo do_shortcode("[form-3]"); ?>
 							<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-3')) ?>
 						</div>
 						
