@@ -15,7 +15,9 @@ sort($about_lmri_pages);
                 <?php foreach ( $about_lmri_pages as $about_lmri_page ) : ?>
                     <!-- <li style="background-image: url('<?php //echo get_the_post_thumbnail_url($about_lmri_page->ID, 'post-thumbnail') ?>')"> -->
                     <li class="position--relative  list__item-image-pos">
+                    <a href="<?php echo get_permalink($about_lmri_page->ID); ?>">
                         <?php echo '<img src="'.get_the_post_thumbnail_url($about_lmri_page->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
+                    </a>
                     </li>
                     <li class="position--relative home__card-grid__content-wrap list__item-pad home__card-grid__content-wrap-right-arrow ">
                         <h3><?php echo apply_filters( 'the_title', $about_lmri_page->post_title, $about_lmri_page->ID )  ?></h3>
