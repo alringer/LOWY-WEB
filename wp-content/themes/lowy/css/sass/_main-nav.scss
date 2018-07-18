@@ -188,7 +188,7 @@
 
 @media screen and (min-width: 768px) {
     .header {
-        padding: 1.5rem 0;
+        padding: 2rem 0;
         &__inner {
             max-width: 72rem;
             margin: 0 auto;
@@ -200,6 +200,7 @@
 
 @media screen and (min-width: 1024px) {
     .header {
+        padding: 3rem 0;
         .logo {
             display: inline-block;
             position: initial;
@@ -229,6 +230,13 @@
             right: auto;
             padding: 0;
             display: inline-block;
+        }
+
+        &--black {
+            &:after {
+                height: 10.5rem;
+                background-color: #000;
+            }
         }
     }
 }

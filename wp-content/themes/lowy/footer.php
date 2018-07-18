@@ -41,11 +41,6 @@
 									// footer content
 										get_template_part('partials/home/footer-form', 'page'); 
 									?>
-								
-							<!-- <form action="">
-								<input type="text" placeholder="email address" class="form-control">
-								<button type="submit" class="btn btn--form-submit"><?php _e('Submit', 'html5blank'); ?></button>
-							</form> -->
 						</div>
 					</div>
 				</div>
