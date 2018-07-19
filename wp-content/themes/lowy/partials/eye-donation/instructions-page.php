@@ -25,13 +25,13 @@
                     ?>
                 </div>
 
-                <button class="read-more-btn">
-                    <a href="http://www.lmri.net/wp-content/uploads/2015/10/Eye-Donation-Retrieval-Shipping-Instructions-revised-6-12-2018-jt.pdf" class=""> Download  <span class=""></span></a>
-                </button>  
-
+                <div>
+                    <a href="http://www.lmri.net/wp-content/uploads/2015/10/Eye-Donation-Retrieval-Shipping-Instructions-revised-6-12-2018-jt.pdf" class="read-more-btn"> Download  <span class=""></span></a>
+                </div>  
+                <br class="clear">
                 
 
-                <div class=" ">
+                <div class="can-edit-wrap">
                     <?php if($canBeEdited) {
                         echo '<a href=" '.get_edit_post_link($instructions_page->ID, 'none').' ">Edit</a>';
                     } ?>
