@@ -13,7 +13,7 @@
 			    <div class="col-12">
 				    <div class="tab-content" id="countryTabContent">
                     <?php while($featured_catquery->have_posts()) : $featured_catquery->the_post(); ?>
-                        <div class="tab-pane fade <?php echo $counter_02 === 0 ? 'show active' : '';  ?>" id="<?php the_ID(); ?>" role="tabpanel" aria-labelledby="<?php the_ID(); ?>-tab">
+                        <div class="tab-pane tab-pane--single-page-tab fade <?php echo $counter_02 === 0 ? 'show active' : '';  ?>" id="<?php the_ID(); ?>" role="tabpanel" aria-labelledby="<?php the_ID(); ?>-tab">
                             <div class="single-page-template__card-title">
                                 <h3><?php the_title(); ?></h3>
                             </div>
