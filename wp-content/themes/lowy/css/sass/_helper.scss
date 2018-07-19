@@ -52,6 +52,7 @@
     font-size: 1.4rem;
     color: $dark-sky-blue;
     opacity: 0;
+    z-index: 3;
 }
 
 .breadcrumb_last {
@@ -88,7 +89,13 @@
         }
     }
 }
-
+@media screen and (min-width: 768px) {
+    .single-page-template--content {
+        .breadcrumbs {
+            opacity: 1;
+        }
+    }
+}
 @media screen and (min-width: 1024px) {
     .display {
         &--desktop {

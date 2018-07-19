@@ -114,13 +114,95 @@
         }
     }
 
+    &--contact-form {
+        background-color: $dark-sky-blue;
+        border-radius: 0.3rem;
+        color: #fff;
+        padding: 2rem;
+        box-shadow:  0 3px 19px 6px rgba(0, 0, 0, 0.13);
+        max-width: 32rem;
+        margin: 0 auto 6rem;
+        form  {
+            input[type="text"], textarea {
+                width: 100% !important;
+            }
+            input {
+                height: 4rem;
+            }
+            input[type="submit"] {
+                background-color: $pale-orange;
+                padding: 0 2.6rem;
+            }
+
+            textarea {
+                height: 16rem !important;
+                resize: none;
+            }
+            &.fm-form {
+                legend {
+                    display: none;
+                }
+                fieldset {
+                    border: 0;
+                    padding: 0;
+                }
+
+                td {
+                    display: block;
+                    min-width: 250px;
+                }
+
+                div {
+                    margin: 0 !important;
+                }
+                input {
+                    &.submit {
+                        float: none;
+                        padding: 0 2.6rem;
+                        margin: 0;
+                        border-radius: 3px;
+                        color: $dark-grey-blue;
+                        border: 0;
+                    }
+                }
+                
+            }
+        }
+    }
+
 }
+@media screen and (min-width: 375px) {
+    .cards {
+        &--contact-form {
+            max-width: 35rem;
+            form  {
+                &.fm-form {
+                    td {
+                        min-width: 305px; 
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: $screen-iphone-x) {
     .cards {
         &--staff {
             max-width: 375px;
             &--bod {
                 height: 62rem; 
+            }
+        }
+
+        &--contact-form {
+            max-width: 37rem;
+            form  {
+                &.fm-form {
+                    td {
+                        min-width: 325px;
+                    }
+                }
             }
         }
     }
@@ -140,8 +222,44 @@
                 height: 64rem; 
             }
         }
+
+        &--contact-form {
+            max-width: 67rem;
+            form  {
+                &.fm-form {
+                    td {
+                        min-width: 625px;
+                    }
+                }
+            }
+        }
     }
 
+}
+
+@media screen and (min-width: 992px) {
+    .cards {
+        &--contact-form {
+            max-width: 45rem;
+            margin-top: 12.5rem;
+            form  {
+                &.fm-form {
+                    td {
+                        min-width: 410px;;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: $screen-min-md) {
+    .cards {
+        &--contact-form {
+            margin-top: 15.8rem;
+        }
+    }
 }
 
 @media screen and (min-width: $screen-min-lg) {

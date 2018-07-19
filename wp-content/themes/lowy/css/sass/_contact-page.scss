@@ -1,0 +1,25 @@
+.google-map-wrap {
+    iframe {
+        box-shadow: 0 3px 19px 6px rgba(0, 0, 0, 0.13);
+        height: 16rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .google-map-wrap {
+        iframe {
+            box-shadow: 0 3px 19px 6px rgba(0, 0, 0, 0.13);
+            height: 37.7rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .google-map-wrap {
+        iframe {
+            box-shadow: 0 3px 19px 6px rgba(0, 0, 0, 0.13);
+            height: 27.4rem;
+        }
+    }
+}

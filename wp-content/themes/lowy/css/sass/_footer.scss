@@ -57,7 +57,7 @@
         form {
             position: relative;
             max-width: 27.6rem;
-            input {
+            input[type="text"] {
                 width: 100%;
                 padding: 0 1.5rem;
                 padding-right: 11rem;
@@ -66,12 +66,35 @@
 
 
             }
-            button {
+            input[type="submit"] {
                 position: absolute;
                 top: 0;
-                right: 0;
+                right: -2.8rem;
                 height: 4.4rem;
                 width: 11rem;
+                background-color: $pale-orange;
+                border: 0;
+            }
+
+            &.fm-form {
+                legend {
+                    display: none;
+                }
+
+                fieldset {
+                    border: 0;
+                    padding: 0;
+                    width: 100%;
+                     li {
+                         table {
+                             td {
+                                 &:first-child {
+                                     display: none;
+                                 }
+                             }
+                         }
+                     }
+                }
             }
         }
     }

@@ -36,23 +36,11 @@
 						<h3 class="footer__heading">Subscribe To Newsletter</h3>
 						<p>Latest discoveries, events & more.</p>
 						<div class="footer__subscribe">
-							<form action="">
-								<input type="text" placeholder="email address" class="form-control">
-								<button type="submit" class="btn btn--form-submit"><?php _e('Submit', 'html5blank'); ?></button>
-							</form>
-						</div>
 
-						<div class="sidebar-widget">
-							<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-3')) ?>
-						</div>
-						
-							<!-- copyright
-							<p class="copyright">
-								&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.
-								<?php _e('Powered by', 'html5blank'); ?>
-								<a href="//www.seamgen.com" target="_blank" title="seamgen">seamgen.com</a>.
-							</p> -->
-							<!-- /copyright -->
+									<?php
+									// footer content
+										get_template_part('partials/home/footer-form', 'page'); 
+									?>
 						</div>
 					</div>
 				</div>

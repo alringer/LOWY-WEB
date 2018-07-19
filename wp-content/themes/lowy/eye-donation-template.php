@@ -29,9 +29,9 @@
 						<article id="post-<?php the_ID(); ?>" class="single-page-template__article-content ">
                             <?php the_content(); ?>	
                             
-                            <button class="read-more-btn">
-                                <a href="http://www.lmri.net/wp-content/uploads/2015/11/eye-donation-brochure-FINAL-8-21-2015.pdf" class=""> Download  <span class=""></span></a>
-                            </button>  
+                            <div class="">
+                                <a href="http://www.lmri.net/wp-content/uploads/2015/11/eye-donation-brochure-FINAL-8-21-2015.pdf" class="read-more-btn"> Download  <span class=""></span></a>
+                            </div>  
 
 							<br class="clear">
 							<?php edit_post_link(); ?>

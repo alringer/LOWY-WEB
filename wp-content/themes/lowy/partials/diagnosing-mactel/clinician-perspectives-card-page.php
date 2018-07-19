@@ -30,11 +30,11 @@
                 <?php //echo get_post_field('post_content'); ?>
 
 
-                <button class="read-more-btn">
-                    <a href="<?php echo get_permalink($clinician_perspectives_card_page->ID); ?>" class=""> Read More  <span class=""></span></a>
-                </button>  
+                <div>
+                    <a href="<?php echo get_permalink($clinician_perspectives_card_page->ID); ?>" class="read-more-btn"> Read More  <span class=""></span></a>
+                </div>  
 
-                <div class=" ">
+                <div class="can-edit-wrap">
                     <?php if($canBeEdited) {
                         echo '<a href=" '.get_edit_post_link($clinician_perspectives_card_page->ID, 'none').' ">Edit</a>';
                     } ?>

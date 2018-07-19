@@ -15,7 +15,9 @@
 
 
             <li class="position--relative  list__item-clinical-image-pos">
+            <a href="<?php echo get_permalink($clinical_research_page->ID); ?>">
                 <?php echo '<img src="'.get_the_post_thumbnail_url($clinical_research_page->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
+            </a>
             </li>
 
             <li class="position--relative home__card-grid__content-wrap list__item-pad">
