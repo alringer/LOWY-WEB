@@ -18,19 +18,29 @@
 	</section>
 	<!-- End Hero Section -->
 
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<?php 
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb('
+							<div class="breadcrumbs">','</div>
+							');
+						}
+					?>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- template content section -->
 	<section class="single-page-template--content single-page-template--bio-page">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-lg-10 ">
 
-			<?php 
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb('
-						<div class="breadcrumbs">','</div>
-						');
-					}
-				?>
+
                 <div class="text-center">
                     <?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?>
                 </div>
