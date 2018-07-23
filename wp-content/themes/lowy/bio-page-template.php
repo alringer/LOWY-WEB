@@ -41,8 +41,10 @@
 			<div class="col-12 col-lg-10 ">
 
 
-                <div class="text-center">
-                    <?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?>
+                <div class="text-center bio-img-wrap">
+					<div class="bio-img-inner-wrap">
+						<?php echo get_the_post_thumbnail($post->ID, 'full'); ?>
+					</div>
                 </div>
 				<h1><?php the_title(); ?></h1>
                 <div class="text-center">

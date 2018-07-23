@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: LMRI Staff
+ * Template Name: News
  */
  get_header();
  $lmri_staff_img_id = get_the_ID();
@@ -73,7 +73,7 @@
 					if($page_slug === 'board-of-directors' || $page_slug ===  'sponsors') {
 						echo 'cards--staff--bod';
 					}
-					?>" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>')">
+					?>" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>')">
 					<a href="<?php echo get_permalink($lmri_staff_cards_id->ID); ?>"><div class="cards--staff__img"></div></a>
 						<div class="cards--staff__content">
 							<div class="cards--staff__content__title text-center">
