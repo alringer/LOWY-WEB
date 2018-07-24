@@ -544,7 +544,6 @@ function bartag_func( $atts ) {
     ), $atts );
 // 1595
 $id = $a['foo'];
-wp_get_attachment_image( 1595 );
     return "<div class=\"this-is\">foo = {$a['foo']}" . "bar = {$a['bar']}". wp_get_attachment_image($id)."</div>";
 }
 add_shortcode( 'bartag', 'bartag_func' );
@@ -569,5 +568,29 @@ function category_and_tag_archives( $wp_query ) {
     if ( $wp_query->get( 'tag' ) )
     $wp_query->set( 'post_type', $my_post_array );
 }
+
+function custom_image_func($attrs, $content = null) {
+
+    $attr = shortcode_atts(array(
+        'mobile' => 'false'
+    ), $attrs);
+
+    $mobile = $attr['mobile'];
+    $html  = '';
+    if ($mobile === 'true') {
+        $html .= '<figure class="d-block d-sm-none d-sm-block d-md-none d-md-block d-lg-none">';
+        $html .= '<!-- Shortcode custom image -->';
+    } else {
+        $html .= '<figure class="d-none d-lg-block d-xl-block">';
+        $html .= '<!-- Shortcode custom image -->';
+    }
+    $html .= $content;
+    $html .= '</figure>';
+    $html = do_shortcode($html);
+    return $html;
+}
+
+add_shortcode( 'custom_img', 'custom_image_func' );
+
 
 ?>
