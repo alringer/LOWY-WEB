@@ -20,15 +20,21 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<?php 
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb('
-						<div class="breadcrumbs">','</div>
-						');
-                    }
-                    //do something like this for order
-                    //$community_pages = get_pages( array( 'child_of' => $community_page_id, 'sort_order' => 'desc', 'sort_column' => 'ID'  ) );
-				?>
+
+
+                <div class="breadcrumbs breadcrumbs--news">  
+                    <span>
+                        <a href="<?php echo home_url(); ?><?php echo '/news-and-media/institute-news/';?>" class="<?php if (htmlspecialchars($_GET["popular"]) == 'true') {echo ''; }else{echo 'active';} ?>">
+                            Newest  
+                        </a>
+                    </span>
+                    <span>
+                        <a href="<?php echo home_url(); ?><?php echo '/news-and-media/institute-news/?popular=true';?>" class="<?php if (htmlspecialchars($_GET["popular"]) == 'true') {echo 'active'; }else{echo '';} ?>">
+                            Most Popular
+                        </a>
+                    </span>
+                </div>
+
 				<h1><?php the_title(); ?></h1>
 				<!-- Clinical research Post -->
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -64,10 +70,56 @@
 <?php 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');
     $featured_cat_id =  17;
-    $featured_cat_limit = 30;
     $clinical_research_cards_id = get_the_ID();
-    $featured_catquery = new WP_Query( 'cat='.$featured_cat_id.'&posts_per_page='.$featured_cat_limit.'');
-?>
+    $featured_catquery = new WP_Query( 'cat='.$featured_cat_id.'&order=desc');
+    if (htmlspecialchars($_GET["popular"]) == 'true' ) {
+ ?>
+<section class="single-page-template--content ">
+<div class="container">
+        <?php
+            
+            
+            $args = array(
+                'taxonomy' => 'post_category',
+                'term_id' => '17',
+                'header' => 'Most Popular', 
+                'header_start' => '<h3 class="title">',
+                'header_end' => '</h3>',
+                'thumbnail_width' => 290,
+                'thumbnail_height' => 290,
+                'excerpt_length' => 250,
+                'post_html' => '
+
+                <div class="row">    
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="cards__posts">
+                            {thumb}
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-8">
+                        <div class="single-page-template__card-title">
+                            <h3>{text_title}</h3>
+                            <p>{summary}</p>
+
+                             <div>
+                                <a href="{url}" class="read-more-btn"> Read More  <span class=""></span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                '
+                
+            );
+
+            wpp_get_mostpopular( $args );
+       
+        ?>
+</div>
+</section>
+
+ <?php } else { ?>
 
 <?php while($featured_catquery->have_posts()) : $featured_catquery->the_post(); ?>
 <section class="single-page-template--content ">
@@ -113,80 +165,7 @@
  <?php get_template_part('partials/line', 'page'); ?>
 
 <?php endwhile; ?> 
-        
-
-
-
-
-
-
-
-
-<?php 
-    $canBeEdited = current_user_can('editor') || current_user_can('administrator');
-    $lmri_staff_cat_id =  get_post_meta($post->ID, 'cat_id', true);;
-    $lmri_staff_cards_id = get_the_ID();
-    $lmri_staff_cat_query = new WP_Query( 'cat='.$lmri_staff_cat_id.'&order=asc');
-?>
-	<section class="single-page-template--content ">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-12">
-					<?php
-						$page_slug = get_post_field( 'post_name', get_post());
-					?>
-				</div>
-				<?php while($lmri_staff_cat_query->have_posts()) : $lmri_staff_cat_query->the_post(); ?>
-					<div class="col-12 col-md-6 col-lg-4">
-					<div class="cards--staff <?php 
-					if($page_slug === 'board-of-directors' || $page_slug ===  'sponsors') {
-						echo 'cards--staff--bod';
-					}
-					?>" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'thumbnail'); ?>')">
-					<a href="<?php echo get_permalink($lmri_staff_cards_id->ID); ?>"><div class="cards--staff__img"></div></a>
-						<div class="cards--staff__content">
-							<div class="cards--staff__content__title text-center">
-								<h3><?php the_title(); ?></h3>
-								<?php 
-									$bio_title = get_post_meta($post->ID, 'bio_title', true);
-								?>
-								<strong><?php echo $bio_title; ?></strong>
-							</div>
-							<div class="text-center"><p><?php  
-										if (strlen($bio_title) > 200 ) {
-											echo wp_trim_words( $post->post_content, 10, "..." ); 
-										} else if(strlen($bio_title) > 110) {
-											echo wp_trim_words( $post->post_content, 18, "..." );
-										} else if(strlen($bio_title) > 80) {
-											echo wp_trim_words( $post->post_content, 20, "..." );
-										} else if(strlen($bio_title) < 70 && strlen($bio_title) > 21) {
-											echo wp_trim_words( $post->post_content, 30, "..." );
-										}  else {
-											echo wp_trim_words( $post->post_content, 30, "..." );
-										}
-							?></p></div>
-							
-						</div>
-						<div class="cards--staff__content__read-more text-center">
-								<a href="<?php echo get_permalink($lmri_staff_cards_id->ID); ?>" class="read-more-btn"> Read More  <span class=""></span></a>
-							</div>
-							<div class="can-edit-wrap">
-								<?php if($canBeEdited) {
-									echo '<a href=" '.get_edit_post_link($lmri_staff_cards_id->ID, 'none').' ">Edit</a>';
-								} ?>
-						</div>
-
-						
-
-					</div>
-					</div>
-				<?php endwhile; ?> 
-			</div>
-		</div>
-	</section>  
-
-
-
+<?php } ?>
 </main>
 
 

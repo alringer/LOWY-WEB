@@ -53,6 +53,17 @@
     color: $dark-sky-blue;
     opacity: 0;
     z-index: 3;
+
+    &--news {
+        span {
+            margin-right: 1.4rem;
+        }
+        a {
+            &.active {
+                color:#295168;
+            }
+        }
+    }
 }
 
 .breadcrumb_last {
