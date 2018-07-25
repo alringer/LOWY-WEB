@@ -302,12 +302,6 @@
                     transform: rotate(90deg) translate(-50%, -50%);
                 }
             }
-            // &__content-wrap-right-arrow {
-            //     &:after {
-            //         left: 95%;
-            //         border-width: 0 20px 20px 20px;
-            //     }
-            // }
         }
     }
             
@@ -329,10 +323,15 @@
     }
     .hero--home {
         h1 {
-            font-size: 5rem;
+            // font-size: 5rem;
+            // max-width: none;
+            // text-align: center;
+            // margin-top: 52rem;
+
+            font-size: 8rem;
             max-width: none;
-            text-align: center;
-            margin-top: 52rem;
+            margin-top: 31rem;
+            font-weight: bold;
         }
     }
 }
@@ -349,13 +348,30 @@
             }
         }
     }
+
+    .hero--home {
+        h1 {
+            // font-size: 5rem;
+            // max-width: none;
+            // text-align: center;
+            // margin-top: 52rem;
+
+            font-size: 10rem;
+            max-width: none;
+            margin-top: 31rem;
+            font-weight: bold;
+        }
+    }
 }
 
 @media screen and (min-width: 1440px) {
     .hero--home {
         h1 {
-            font-size: 6rem;
-            margin-top: 71rem;
+            // font-size: 6rem;
+            // margin-top: 71rem;
+
+            font-size: 10rem;
+            margin-top: 48rem;
         }
     }
     .home {
