@@ -94,8 +94,9 @@
 		</div>
 	</div> 
 
-	<?php get_template_part('partials/reading-centers-related-posts', 'page'); ?>
-	<?php get_template_part('partials/moorfields-reading-center', 'page'); ?>
+	
+
+	<?php //get_template_part('partials/line', 'page'); ?>
 
 	
 
