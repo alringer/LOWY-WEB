@@ -1,72 +1,89 @@
+<?php
+	$single_hero_img_id = get_the_ID();
+	$single_hero_img_url = home_url();
+	$single_hero_img = get_post_meta($post->ID, 'alternate-hero-img', $single = true);
+?>
 <?php get_header(); ?>
 
 	<main role="main">
-		<!-- section -->
+
+		<!-- Hero section -->
 		<section>
+			<?php $single_hero_img_bg  =  strlen($single_hero_img) > 0 ? $single_hero_img :  '/wp-content/themes/lowy/img/default/nature-pines.jpg'; ?>
+				<div class="hero hero--templates" style="background-image: url(<?php echo $single_hero_img_url; ?><?php echo $single_hero_img_bg; ?>)">
+				</div>
+		</section>
+		<!-- section -->
+		<section class="single-page-template--content">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+					<?php if (have_posts()): the_post(); ?>
 
-		<?php if (have_posts()): the_post(); ?>
+					<h1><?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?></h1>
 
-			<h1><?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?></h1>
+					<?php if ( get_the_author_meta('description')) : ?>
 
-		<?php if ( get_the_author_meta('description')) : ?>
+					<?php echo get_avatar(get_the_author_meta('user_email')); ?>
 
-		<?php echo get_avatar(get_the_author_meta('user_email')); ?>
+					<h2><?php _e( 'About ', 'html5blank' ); echo get_the_author() ; ?></h2>
 
-			<h2><?php _e( 'About ', 'html5blank' ); echo get_the_author() ; ?></h2>
+					<?php echo wpautop( get_the_author_meta('description') ); ?>
 
-			<?php echo wpautop( get_the_author_meta('description') ); ?>
+					<?php endif; ?>
 
-		<?php endif; ?>
+					<?php rewind_posts(); while (have_posts()) : the_post(); ?>
 
-		<?php rewind_posts(); while (have_posts()) : the_post(); ?>
+					<!-- article -->
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<!-- post thumbnail -->
+						<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
+							</a>
+						<?php endif; ?>
+						<!-- /post thumbnail -->
 
-				<!-- post thumbnail -->
-				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-					</a>
-				<?php endif; ?>
-				<!-- /post thumbnail -->
+						<!-- post title -->
+						<h2>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+						</h2>
+						<!-- /Post title -->
 
-				<!-- post title -->
-				<h2>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-				</h2>
-				<!-- /Post title -->
+						<!-- post details -->
+						<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
+						<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+						<!-- <span class="comments"><?php // comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span> -->
+						<!-- /post details -->
 
-				<!-- post details -->
-				<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-				<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-				<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-				<!-- /post details -->
+						<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
 
-				<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+						<br class="clear">
 
-				<br class="clear">
+						<?php edit_post_link(); ?>
 
-				<?php edit_post_link(); ?>
+					</article>
+					<!-- /article -->
 
-			</article>
-			<!-- /article -->
+					<?php endwhile; ?>
 
-		<?php endwhile; ?>
+					<?php else: ?>
 
-		<?php else: ?>
+					<!-- article -->
+					<article>
 
-			<!-- article -->
-			<article>
+						<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+					</article>
+					<!-- /article -->
 
-			</article>
-			<!-- /article -->
+					<?php endif; ?>
 
-		<?php endif; ?>
-
-			<?php get_template_part('pagination'); ?>
+					<?php get_template_part('pagination'); ?>
+					</div>
+				</div>
+			</div>
 
 		</section>
 		<!-- /section -->

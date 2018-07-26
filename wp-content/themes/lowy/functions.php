@@ -228,7 +228,9 @@ function html5wp_pagination()
         'base' => str_replace($big, '%#%', get_pagenum_link($big)),
         'format' => '?paged=%#%',
         'current' => max(1, get_query_var('paged')),
-        'total' => $wp_query->max_num_pages
+        'total' => $wp_query->max_num_pages,
+        'prev_text' => __( '<img src="/wp-content/themes/lowy/img/icons/left-page.svg">', 'textdomain' ),
+        'next_text' => __( '<img src="/wp-content/themes/lowy/img/icons/right-page.svg">', 'textdomain' ),
     ));
 }
 
@@ -592,5 +594,14 @@ function custom_image_func($attrs, $content = null) {
 
 add_shortcode( 'custom_img', 'custom_image_func' );
 
+/* Filter search to exclude pages/posts */
+
+function jp_search_filter( $query ) {
+    if ( $query->is_search && $query->is_main_query() ) {
+        $query->set( 'post__not_in', array( 1714,1712, 1728, 1734, 978 ) );
+    }
+}
+    
+ add_action( 'pre_get_posts', 'jp_search_filter' );
 
 ?>
