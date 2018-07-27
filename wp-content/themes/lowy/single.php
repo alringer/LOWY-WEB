@@ -1,6 +1,20 @@
+<?php
+ $single_hero_img_id = get_the_ID();
+ $single_hero_img_url = home_url();
+ $single_hero_img = get_post_meta($post->ID, 'alternate-hero-img', $single = true); 
+
+?>
+
 <?php get_header(); ?>
 
 	<main role="main">
+		<!--  Hero section -->
+		<section>
+		<!-- /Users/davidtellotemporary/projects/work_sites/lowy-website/wp-content/themes/lowy/img/default/nature-pines.jpg -->
+		<?php $single_hero_img_bg  =  strlen($single_hero_img) > 0 ? $single_hero_img :  '/wp-content/themes/lowy/img/default/nature-pines.jpg'; ?>
+			<div class="hero hero--templates" style="background-image: url(<?php echo $single_hero_img_url; ?><?php echo $single_hero_img_bg; ?>)">
+			</div>
+		</section>
 	<!-- section -->
 	<section>
 
@@ -8,38 +22,39 @@
 
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<section class="single-page-template--content">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<!-- post thumbnail -->
+							<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+									<?php // the_post_thumbnail(); // Fullsize image for the single post ?>
+							<?php endif; ?>
+							<!-- /post thumbnail -->
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+							<!-- post title -->
+							<h1>
+								<?php the_title(); ?>
+							</h1>
+							<!-- /post title -->
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+							<!-- post details -->
+							<h4 class="date"><?php the_time('F j, Y'); ?> <?php //the_time('g:i a'); ?></h4>
+							<span class="author"><?php // _e( 'Published by', 'html5blank' ); ?> <?php // the_author_posts_link(); ?></span>
+							<!-- /post details -->
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
+							<?php the_content(); // Dynamic Content ?>
 
-			<?php the_content(); // Dynamic Content ?>
+							<!-- back button  -->
+							<?php get_template_part('partials/back-link', 'page'); ?>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+							<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+							
 
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
-			<?php comments_template(); ?>
+						</div>
+					</div>
+				</div>
+			</section>
 
 		</article>
 		<!-- /article -->

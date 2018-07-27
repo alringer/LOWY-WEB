@@ -228,7 +228,9 @@ function html5wp_pagination()
         'base' => str_replace($big, '%#%', get_pagenum_link($big)),
         'format' => '?paged=%#%',
         'current' => max(1, get_query_var('paged')),
-        'total' => $wp_query->max_num_pages
+        'total' => $wp_query->max_num_pages,
+        'prev_text' => __( '<img src="/wp-content/themes/lowy/img/icons/left-page.svg">', 'textdomain' ),
+        'next_text' => __( '<img src="/wp-content/themes/lowy/img/icons/right-page.svg">', 'textdomain' ),
     ));
 }
 
@@ -544,7 +546,6 @@ function bartag_func( $atts ) {
     ), $atts );
 // 1595
 $id = $a['foo'];
-wp_get_attachment_image( 1595 );
     return "<div class=\"this-is\">foo = {$a['foo']}" . "bar = {$a['bar']}". wp_get_attachment_image($id)."</div>";
 }
 add_shortcode( 'bartag', 'bartag_func' );
@@ -569,5 +570,38 @@ function category_and_tag_archives( $wp_query ) {
     if ( $wp_query->get( 'tag' ) )
     $wp_query->set( 'post_type', $my_post_array );
 }
+
+function custom_image_func($attrs, $content = null) {
+
+    $attr = shortcode_atts(array(
+        'mobile' => 'false'
+    ), $attrs);
+
+    $mobile = $attr['mobile'];
+    $html  = '';
+    if ($mobile === 'true') {
+        $html .= '<figure class="d-block d-sm-none d-sm-block d-md-none d-md-block d-lg-none">';
+        $html .= '<!-- Shortcode custom image -->';
+    } else {
+        $html .= '<figure class="d-none d-lg-block d-xl-block">';
+        $html .= '<!-- Shortcode custom image -->';
+    }
+    $html .= $content;
+    $html .= '</figure>';
+    $html = do_shortcode($html);
+    return $html;
+}
+
+add_shortcode( 'custom_img', 'custom_image_func' );
+
+/* Filter search to exclude pages/posts */
+
+function jp_search_filter( $query ) {
+    if ( $query->is_search && $query->is_main_query() ) {
+        $query->set( 'post__not_in', array( 1714,1712, 1728, 1734, 978 ) );
+    }
+}
+    
+ add_action( 'pre_get_posts', 'jp_search_filter' );
 
 ?>

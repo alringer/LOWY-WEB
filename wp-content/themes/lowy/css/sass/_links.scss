@@ -21,3 +21,52 @@
         background-color: $dark-sky-blue-light;
     }
 }
+
+.link {
+    &--back {
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: $dark-sky-blue;
+        font-weight: normal;
+        padding-left: 2.5rem;
+        position: relative;
+        
+        &:hover {
+            span {
+                transform: translateX(-1.5rem);
+            }
+        }
+        span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 0.2rem;
+            width: 2rem;
+            display: inline-block;
+            background-color: $dark-sky-blue-light;
+            transition: 0.33s ease-out all;
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                height: 0.2rem;
+                width: 1rem;
+                display: inline-block;
+                background-color: $dark-sky-blue-light;
+            }
+            &:before {
+                transform: rotate(-45deg);
+                top: -0.4rem;
+            }
+            &:after {
+                transform: rotate(45deg);
+                top: 0.4rem;
+            }
+        }
+        &-wrap {
+            margin-bottom: 2rem;
+        }
+    }
+}

@@ -1,5 +1,7 @@
 <!-- pagination -->
 <div class="pagination">
-	<?php html5wp_pagination(); ?>
+	<div class="pagination__inner-wrap">
+		<?php html5wp_pagination(); ?>
+	</div>
 </div>
 <!-- /pagination -->

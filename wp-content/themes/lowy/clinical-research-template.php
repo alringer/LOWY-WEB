@@ -16,7 +16,7 @@
 	<!-- End Hero Section -->
 
 	<!-- template content section -->
-	<section class="single-page-template--content">
+	<section class="single-page-template--content single-page-template">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
