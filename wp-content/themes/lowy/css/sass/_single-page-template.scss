@@ -293,6 +293,7 @@
                     background-color: rgba(255, 255, 255, 0.6);
                     border: solid 1px #ffffff;
                     color: rgba(0,0,0,0.6);
+                    border-radius: 4px;
                 }
 
                 ul {
@@ -466,11 +467,12 @@
             form {
                 &.searchandfilter {
                     ul {
-
+                        margin: 0;
                     }
                     li {
                         display: inline-block;
                         margin-right: 3rem;
+                        margin-bottom: 0;
                     }
                     input[name="ofsearch"], input[type="text"] {
                         width: 40rem;
