@@ -1,10 +1,9 @@
 .hero--home {
     h1 {
-        font-size: 4.5rem;
         color: #fff;
-        font-size: 3rem;
+        font-size: 2.5rem;
         max-width: 32rem;
-        margin-top: 50rem;
+        margin-top: 40rem;
     }
 }
 
@@ -185,27 +184,25 @@
             margin-top: 60rem;
         }
     }
+    .hero--home {
+        h1 {
+            color: #fff;
+            font-size: 3rem;
+            max-width: 32rem;
+            margin-top: 50rem;
+        }
+    }
 }
 
 @media screen and (min-width: 414px) {
     .hero--home {
         h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             max-width: 65rem;
-            margin-top: 47rem;
         }
     }
 }
 
-// @media screen and (min-width: 414px) {
-//     .hero--home {
-//         h1 {
-//             font-size: 4rem;
-//             max-width: 65rem;
-//             margin-top: 47rem;
-//         }
-//     }
-// }
 
 @media screen and (min-width: 768px) {
     .hero--home {

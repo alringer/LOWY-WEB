@@ -83,7 +83,10 @@
 								?>
 								<strong><?php echo $bio_title; ?></strong>
 							</div>
-							<div class="text-center"><p><?php  
+							<?php if (($page_slug ==  'board-of-directors') || ($page_slug == 'sponsors')) { ?>
+							<div class="text-center">
+								<p>
+									<?php  
 										if (strlen($bio_title) > 200 ) {
 											echo wp_trim_words( $post->post_content, 10, "..." ); 
 										} else if(strlen($bio_title) > 110) {
@@ -95,7 +98,11 @@
 										}  else {
 											echo wp_trim_words( $post->post_content, 30, "..." );
 										}
-							?></p></div>
+									?>
+								</p>
+							</div>
+							<?php }?>
+
 							
 						</div>
 						<div class="cards--staff__content__read-more text-center">
