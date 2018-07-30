@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-12">
                 <h3>
-                Choose a country or region:
+                    <?php _e('Choose a country or region: ', 'html5blank'); ?>
                 </h3>
             </div>
         </div>
