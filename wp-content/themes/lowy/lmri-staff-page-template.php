@@ -55,7 +55,7 @@
 	</section>
 	<?php 
 		$canBeEdited = current_user_can('editor') || current_user_can('administrator');
-		$lmri_staff_cat_id =  get_post_meta($post->ID, 'cat_id', true);;
+		$lmri_staff_cat_id =  get_post_meta($post->ID, 'cat_id', true);
 		$lmri_staff_cards_id = get_the_ID();
 		$lmri_staff_cat_query = new WP_Query( 'cat='.$lmri_staff_cat_id.'&order=asc');
 	?>
@@ -83,7 +83,10 @@
 								?>
 								<strong><?php echo $bio_title; ?></strong>
 							</div>
-							<div class="text-center"><p><?php  
+							<?php if (($page_slug ==  'board-of-directors') || ($page_slug == 'sponsors')) { ?>
+							<div class="text-center">
+								<p>
+									<?php  
 										if (strlen($bio_title) > 200 ) {
 											echo wp_trim_words( $post->post_content, 10, "..." ); 
 										} else if(strlen($bio_title) > 110) {
@@ -95,7 +98,11 @@
 										}  else {
 											echo wp_trim_words( $post->post_content, 30, "..." );
 										}
-							?></p></div>
+									?>
+								</p>
+							</div>
+							<?php }?>
+
 							
 						</div>
 						<div class="cards--staff__content__read-more text-center">

@@ -23,7 +23,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h1>Search</h1>
+						<h1><?php _e( 'Search', 'html5blank' ); ?></h1>
 						<div class="single-page-template__search-results-meta">
 							<?php echo  'Showing '. $paged . ' - ' ; echo $total_pages = $total_pages > 0 ? $total_pages : 1; if($allsearch->found_posts > 0): echo ' of '. $allsearch->found_posts; endif; echo " Results for <i>'".get_search_query()."'</i>"; ?>
 						</div>
