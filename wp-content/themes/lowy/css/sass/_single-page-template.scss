@@ -353,6 +353,23 @@
             display: table;
             clear: both;
         }
+
+        ul {
+            > li {
+                margin-right: 2rem;
+                &:first-child {
+                    img {
+                        transform: translate(-0.5rem, -0.5rem);
+                    }
+
+                }
+                &:last-child {
+                    img {
+                        transform: translate(0.5rem, -0.5rem);
+                    }
+                }
+            }
+        }
     }
     .page-numbers { 
         list-style:none;
@@ -381,31 +398,34 @@
             display:block;
             float:left;
         }
-        > li{ 
-            display:inline; 
-            a { 
-                display:block;
-                float:left;
-                padding: 6px 15px;
-                border:1px solid #efefef;
-            }
-            span {
-                &.current { 
+        ul {
+            > li{ 
+                display:inline; 
+                a { 
                     display:block;
                     float:left;
                     padding: 6px 15px;
-                    border:1px solid $dark-sky-blue-light;
-                    background-color:$dark-sky-blue-light;
-                    color: #fff;
-                    font-weight: bold;
+                    border:1px solid #efefef;
                 }
-                &.dots {
-                    display:block;
-                    float:left;
-                    padding: 6px 15px;
+                span {
+                    &.current { 
+                        display:block;
+                        float:left;
+                        padding: 6px 15px;
+                        border:1px solid $dark-sky-blue-light;
+                        background-color:$dark-sky-blue-light;
+                        color: #fff;
+                        font-weight: bold;
+                    }
+                    &.dots {
+                        display:block;
+                        float:left;
+                        padding: 6px 15px;
+                    }
                 }
             }
         }
+        
     }
 }
 	
