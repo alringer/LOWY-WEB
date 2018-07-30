@@ -436,13 +436,6 @@
             h3 {
                 max-width: none;
             }
-
-            ul {
-                &.nav-tabs {
-                    display: flex;
-                    justify-content: space-around;
-                }
-            }
         }
     }
 }
@@ -496,6 +489,19 @@
                     input[name="ofsearch"], input[type="text"] {
                         width: 40rem;
                     }
+                }
+            }
+        }
+
+        &__country-list-tabs {
+            h3 {
+                max-width: none;
+            }
+
+            ul {
+                &.nav-tabs {
+                    display: flex;
+                    justify-content: space-around;
                 }
             }
         }
