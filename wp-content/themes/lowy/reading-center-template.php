@@ -21,7 +21,11 @@
 	<section class="single-page-template--content single-page-template--smaill-img-card">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-12 col-lg-9">
+			<div class="col-12">
+				<!-- **********************************************
+					add back if investigators section is added back
+					col-md-12 col-lg-9 
+				*************************************************** -->
 
 				<?php 
 					if ( function_exists('yoast_breadcrumb') ) {
@@ -58,11 +62,11 @@
 
 				<?php endif; ?>
 			</div>
-			<div class="col-12 col-md-12 col-lg-3 d-none d-lg-block">
+			<!-- <div class="col-12 col-md-12 col-lg-3 d-none d-lg-block">
 				<div class="single-page-template__investigators-cards">
-					<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
+					<?php //get_template_part('partials/reading-centers/investigators', 'page'); ?>
 				</div>
-			</div>
+			</div> -->
 
 
 		</div>

@@ -1,13 +1,11 @@
 <?php 
     $publications_cat_id =  get_post_meta($post->ID, 'cat_id', true);
-    $mostpopular_args['paged'] = get_query_var( 'page' ) ? get_query_var( 'page' ) : 1;
+    $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
     $publications_cat_query_args = array(
-        // 'post_type'        => 'cat',
+		'paged'         => $paged, 
         'orderby'          => 'desc',
-        // 'meta_key'         => 'view_count',
-        'posts_per_page'   => '100',
+        'posts_per_page'   => '10',
         'post_type'     => 'post',
-        'paged' => $mostpopular_args,
         'cat' => $publications_cat_id
     );
     //$paged['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
@@ -45,6 +43,20 @@
     
 
 <?php endwhile; ?>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<div class="pagination">
+				<div class="pagination__inner-wrap">
+					<ul class="list list--unstyled list--inline">
+						<li><?php next_posts_link( '<img src="/wp-content/themes/lowy/img/icons/left-page.svg"> <span>Older Publications</span>	', $publications_cat_query->max_num_pages ); ?></li>
+						<li><?php previous_posts_link( '<span>Newer Publications</span> <img src="/wp-content/themes/lowy/img/icons/right-page.svg">' );  ?></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php else: ?>
 

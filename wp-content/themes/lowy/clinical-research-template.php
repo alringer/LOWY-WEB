@@ -66,11 +66,11 @@
 	<!-- End Line between sections -->
 		
 	<!-- 2nd section template content -->
-	<?php get_template_part('partials/clinical-research/how-to-participate', 'page'); ?>
+	<?php // get_template_part('partials/clinical-research/how-to-participate', 'page'); ?>
 	<!-- end 2nd section template content -->
 
 	<!-- Line between sections -->
-	<div class="container">
+	<!-- <div class="container">
 		<div class="row">
 			<div class="col-12">
 				<div class="single-page-template__line">
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 		</div>
-	</div> 
+	</div>  -->
 	<!-- End Line between sections -->
 
 	<?php get_template_part('partials/clinical-research/first-post-card', 'page'); ?>

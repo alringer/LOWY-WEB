@@ -30,11 +30,11 @@
                     //echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $collaborating_investigators->post_content, 100, "" ) ) .'</p>'; 
                     ?>
                     <div class="">
-                        <button class="read-more-btn">
-                            <a href="<?php echo get_permalink($collaborating_investigators->ID); ?>" class=""> Read More  <span class=""></span></a>
-                        </button>
+                        <div>
+                            <a href="<?php echo get_permalink($collaborating_investigators->ID); ?>" class="read-more-btn"> Read More  <span class=""></span></a>
+                        </div>
                     </div>
-                    <div class=" ">
+                    <div class="can-edit-wrap">
                         <?php if($canBeEdited) {
                             echo '<a href=" '.get_edit_post_link($collaborating_investigators->ID, 'none').' ">Edit</a>';
                         } ?>
