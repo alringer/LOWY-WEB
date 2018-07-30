@@ -54,16 +54,19 @@ $publications_hero_img = get_post_meta($post->ID, 'alternate-hero-img', $single 
 			</div>
 
 
+
 		</div>
 	</div>
     </section>
   
 
     <!-- Line between sections -->
-    <?php get_template_part('partials/publications/filter', 'page'); ?>
+	<?php get_template_part('partials/publications/filter', 'page'); ?>
+	
 
     <!-- Line between sections -->
-    <?php get_template_part('partials/publications/publications-cat', 'page'); ?>
+	<?php get_template_part('partials/publications/publications-cat', 'page'); ?>
+	<?php get_template_part('pagination'); ?>
 
 </main>
 
