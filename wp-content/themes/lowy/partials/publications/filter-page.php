@@ -6,7 +6,7 @@
                         <ul>
                             <li>
                                 <input type="hidden" name="cat" id="cat" value="20" />
-                                <input type="text" size="16" name="s" value="" placeholder="SERCH TITLE OR AUTHOR" />
+                                <input type="text" size="16" name="s" value="" placeholder="SEARCH TITLE OR AUTHOR" />
                             </li>
                             <li>
                                 <input type="submit" value="Submit" />

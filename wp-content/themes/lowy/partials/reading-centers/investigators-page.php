@@ -1,40 +1,32 @@
+<?php 
+    // Collaborating Investigators
+    $investigators = get_post_meta($post->ID, 'investigator_id', $single = false);
+
+?>
 <section class="container">
 <aside class="row">
-    <div class="investigators col-sm col-lg-12">
-        <div class="investigators__thumbs">
-            <img src="/wp-content/uploads/2015/11/Martin-Friedlander1.jpg" alt="">
-        </div>
-        <div class="investigators__desc">
-            <div class="investigators__desc__title">
-                <h4>Martin Friedlander, M.D., Ph.D</h4>
-                <p>
-                    Professor; Department of Cell and Molecular Biology
-                    The Scripps Research Institute
-                </p>
-                <p>
-                    <a href="#" class="read-more-btn">Read more</a>
-                </p>
+<?php 
+    if (count($investigators) > 0 ):
+        foreach ($investigators as $key): ?>
+        <?php $investigator = get_page($key); ?>
+            <div class="investigators col-lg-12">
+                <div class="investigators__thumbs">
+                <?php echo '<img src="'.get_the_post_thumbnail_url($investigator->ID, 'full').'">'; ?>
+                </div>
+                <div class="investigators__desc">
+                    <div class="investigators__desc__title">
+                        <h4><?php echo apply_filters( 'the_title', $investigator->post_title, $investigator->ID ); ?></h4>
+                        <p>
+                            <?php echo get_post_meta($investigator->ID, 'bio_title', $single = true);?>
+                        </p>
+                        <p>
+                            <a href="<?php echo get_permalink($investigator->ID); ?>" class="read-more-btn">Read more</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="investigators col-sm col-lg-12">
-        <div class="investigators__thumbs">
-            <img src="/wp-content/uploads/2015/11/Martin-Friedlander1.jpg" alt="">
-        </div>
-        <div class="investigators__desc">
-            <div class="investigators__desc__title">
-                <h4>Martin Friedlander, M.D., Ph.D</h4>
-                <p>
-                    Professor; Department of Cell and Molecular Biology
-                    The Scripps Research Institute
-                </p>
-                <p>
-                <a href="#" class="read-more-btn">Read more</a>
-                </p>
-            </div>
-        </div>
-    </div>
+        <?php endforeach; ?>
+    <?php endif; ?>
     <!-- 
         <div class="col-4">
             <h4>Investigators:</h4>
