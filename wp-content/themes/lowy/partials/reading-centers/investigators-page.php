@@ -9,9 +9,12 @@
     if (count($investigators) > 0 ):
         foreach ($investigators as $key): ?>
         <?php $investigator = get_page($key); ?>
+        <?php 
+            $image_default = strlen(get_the_post_thumbnail_url($investigator->ID, 'full')) > 0 ? 
+                                    get_the_post_thumbnail_url($investigator->ID, 'full') : '/wp-content/themes/lowy/img/icons/abstract_user.svg'; ?>
             <div class="investigators">
                 <div class="investigators__thumbs">
-                <?php echo '<img src="'.get_the_post_thumbnail_url($investigator->ID, 'full').'">'; ?>
+                <?php echo '<img src="'.$image_default.'">'; ?>
                 </div>
                 <div class="investigators__desc">
                     <div class="investigators__desc__title">
