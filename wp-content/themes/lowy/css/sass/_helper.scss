@@ -74,7 +74,17 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+}
+
+.clearfix {
+    &--section {
+        &:before, &:after {
+            content:'';
+            display: table;
+            clear: both;
+        }
+    }
+}
 
 @media screen and (max-width: 727px) {
     .visible {

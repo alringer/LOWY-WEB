@@ -3,13 +3,13 @@
     $investigators = get_post_meta($post->ID, 'investigator_id', $single = false);
 
 ?>
-<section class="container">
-<aside class="row">
+<!-- <section class="container">
+<aside class="row"> -->
 <?php 
     if (count($investigators) > 0 ):
         foreach ($investigators as $key): ?>
         <?php $investigator = get_page($key); ?>
-            <div class="investigators col-lg-12">
+            <div class="investigators">
                 <div class="investigators__thumbs">
                 <?php echo '<img src="'.get_the_post_thumbnail_url($investigator->ID, 'full').'">'; ?>
                 </div>
@@ -33,6 +33,6 @@
                 <?php //get_template_part('partials/reading-centers/investigators', 'page'); ?>
             </div>
      -->
-</aside>
+<!-- </aside>
 
-</section>
+</section> -->

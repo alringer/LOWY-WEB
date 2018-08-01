@@ -52,12 +52,16 @@
 				<?php endif; ?>
 			</div>
 			<?php if(count($investigators) > 0): ?>
-				<div class="col-12 col-md-12 col-lg-3 d-none d-lg-block">
+				<div class="col-12 col-md-12 col-lg-3">
 					<h3>&nbsp;</h3>
 					<h4><?php _e('Investigators:', 'html5blank');?></h4>
-					<div class="single-page-template__investigators-cards">
-						<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
+					<div class="clearfix--section">
+						<div class="single-page-template__investigators-cards">
+							<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
+						</div>
 					</div>
+					
+					
 				</div>
 			<?php endif; ?>
 
