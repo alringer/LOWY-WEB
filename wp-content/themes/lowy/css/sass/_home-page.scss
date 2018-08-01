@@ -12,36 +12,42 @@
         // padding: 1.2rem;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
         margin-bottom: 3rem;
-                
         transition: ease .33s all;
+
         &:hover {
             box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.2);
-            
         }
+
         p {
             line-height: 1.94;
-            // padding-bottom: 2rem;           
+
+            // padding-bottom: 2rem;
+       
         }
-         &__content-wrap {
-             background-color: #fff;
-             &:after {
-                 position: absolute;
-                 content: '';
-                 top: -.4rem;
-                 left: 50%;
-                 transform: translate(-50%, -50%);
-                 width: 0;
-                 height: 0;
-                 border-style: solid;
-                 border-width: 0 10px 10px 10px;
-                 border-color: transparent transparent #ffffff transparent;
-             }
-         }
+
+        &__content-wrap {
+            background-color: #fff;
+
+            &:after {
+                position: absolute;
+                content: '';
+                top: -.4rem;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent #ffffff transparent;
+            }
+        }
+
         .read-more {
             color: $dark-sky-blue;
             font-size: 1.3rem;
         }
     }
+
     // &__about-card {
 
     // }
@@ -51,7 +57,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        
+
         &--hero {
             background-attachment: unset;
             position: fixed;
@@ -63,7 +69,7 @@
         }
     }
 
-     &__main-front-page-content {
+    &__main-front-page-content {
         margin-top: 49rem;
         padding-top: 3rem;
         background-color: #fff;
@@ -71,15 +77,14 @@
         top: 0;
         left: 0;
         right: 0;
-     }
+    }
 
-     &__main-conten {
-         p {
-             font-size: 3rem;
-         }
-     }
+    &__main-conten {
+        p {
+            font-size: 3rem;
+        }
+    }
 }
-
 
 .reach-out {
     height: 50rem;
@@ -87,11 +92,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     &__title {
         font-size: 3.5rem;
         font-weight: 700;
         margin-bottom: 1.5rem;
     }
+
     &__content {
         font-size: 2rem;
         font-weight: 700;
@@ -103,20 +110,23 @@
     &--wrap {
         h2 {
             font-size: 3rem;
-            font-weight: 300;
-            margin: 2rem 0 2.4rem; 
+            font-weight: bold;
+            margin: 2rem 0 2.4rem;
+            // font-weight: 500;
         }
+
         p {
             margin-bottom: 2.5rem;
             line-height: 1.94;
         }
+
         .img-margin-top-mobile {
             margin-top: 3rem;
         }
+
         .img-margin-bottom-desktop {
             margin-bottom: 0;
         }
-        
     }
 }
 
@@ -133,9 +143,11 @@
             font-weight: 300;
             text-transform: capitalize;
         }
+
         #featuredCatCarousel {
             .carousel-indicators {
                 bottom: -3.2rem;
+
                 li {
                     margin-left: 1rem;
                     margin-right: 1rem;
@@ -143,20 +155,23 @@
             }
         }
     }
+
     &__outter-wrap {
         overflow: auto;
     }
-    &__inner-wrap {
-        
-    }
+
+    &__inner-wrap {}
+
     &__card-content {
         padding: 2.5rem 1rem 1rem;
         height: 21.4rem;
         position: relative;
         background-color: #fff;
     }
+
     &__card-img {
         overflow: hidden;
+
         img {
             width: 100%;
         }
@@ -174,6 +189,7 @@
         color: #fff;
     }
 }
+
 @media screen and (min-width: 375px) {
     .home {
         &__bg-image {
@@ -181,10 +197,12 @@
                 height: 60rem;
             }
         }
+
         &__main-front-page-content {
             margin-top: 60rem;
         }
     }
+
     .hero--home {
         h1 {
             color: #fff;
@@ -204,7 +222,6 @@
     }
 }
 
-
 @media screen and (min-width: 768px) {
     .hero--home {
         h1 {
@@ -213,9 +230,11 @@
             margin-top: 44rem;
         }
     }
+
     .reach-out {
         padding: 16.8rem 0 14rem;
     }
+
     .home {
         &__card-grid {
             &__content-wrap-right-arrow {
@@ -226,15 +245,18 @@
                     left: 95%;
                     border-width: 0 15px 15px 15px;
                     border-color: transparent transparent #ffffff transparent;
-                    // border-color: transparent transparent red transparent; 
+
+                    // border-color: transparent transparent red transparent;
                     transform: rotate(90deg) translate(-50%, -50%);
                 }
             }
+
             &__content-wrap {
                 &:after {
                     border-width: 0 15px 15px 15px;
                 }
             }
+
             &__content-wrap-left-arrow {
                 &:after {
                     position: absolute;
@@ -242,7 +264,7 @@
                     top: 42%;
                     left: -4%;
                     border-width: 0 15px 15px 15px;
-                    border-color: transparent transparent #ffffff transparent; // border-color: transparent transparent red transparent; 
+                    border-color: transparent transparent #ffffff transparent; // border-color: transparent transparent red transparent;
                     transform: rotate(-90deg) translate(-50%, -50%);
                 }
             }
@@ -252,11 +274,13 @@
     .perspective {
         &--wrap {
             h2 {
-                margin: 4rem 0 3rem; 
+                margin: 4rem 0 3rem;
             }
+
             .img-margin-top-mobile {
                 margin-top: 5rem;
             }
+
             p {
                 margin-bottom: 3rem;
             }
@@ -278,6 +302,7 @@
                     left: 95%;
                 }
             }
+
             &__content-wrap-right-arrow-about-mactel {
                 &:after {
                     top: 53%;
@@ -285,6 +310,7 @@
                     transform: rotate(90deg) translate(-50%, -50%);
                 }
             }
+
             &__content-wrap-left-arrow-news-media {
                 &:after {
                     top: 41%;
@@ -293,13 +319,14 @@
                     transform: rotate(-90deg) translate(-50%, -50%);
                 }
             }
+
             &__content-wrap {
                 background-color: #fff;
+
                 &:after {
                     border-width: 0 20px 20px 20px;
                 }
             }
-
         }
     }
 }
@@ -316,23 +343,27 @@
             }
         }
     }
-            
+
     .perspective {
         &--wrap {
             h2 {
-                margin: 0.5rem 0 3.5rem; 
+                margin: 0.5rem 0 3.5rem;
             }
+
             .img-margin-top-mobile {
                 margin-top: 0;
             }
+
             .img-margin-bottom-desktop {
                 margin-bottom: 5rem;
             }
+
             p {
                 margin-bottom: 4.3rem;
             }
         }
     }
+
     .hero--home {
         h1 {
             font-size: 8rem;
@@ -343,11 +374,11 @@
     }
 }
 
-
 @media screen and (min-width: 1200px) {
     .reach-out {
         padding: 16.8rem 0 16.8rem;
     }
+
     .perspective {
         &--wrap {
             .img-margin-bottom-desktop {
@@ -373,12 +404,14 @@
             margin-top: 52rem;
         }
     }
+
     .home {
         &__bg-image {
             &--hero {
                 height: 80rem;
             }
         }
+
         &__main-front-page-content {
             margin-top: 80rem;
         }
