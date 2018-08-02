@@ -6,8 +6,8 @@
 ?>
 <section class="reach-out" style="background-image: url(<?php echo get_the_post_thumbnail_url($reach_out_page->ID); ?>)">
     <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-12 col-lg-10 text-center">
+        <div class="row">
+            <div class="col-12 col-lg-10">
                 <h3 class="reach-out__title"><?php echo apply_filters('post_title', $reach_out_title);  ?></h3>
                 <div class="reach-out__content">
                    <?php echo apply_filters('the_content', $reach_out_page->post_content); ?>
