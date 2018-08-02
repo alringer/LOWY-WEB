@@ -1,9 +1,7 @@
 <?php $clinical_research_page = get_page(11); ?>
+
 <?php
-// sorts by page added
-// sort($clinical_research_pages);
-// $clinical_research_i = 0;
-// $clinical_research_limit = 1;
+$page_meta_data = get_post_meta($clinical_research_page->ID, 'custom-text', $single = true); 
 ?>
 
 <?php 
@@ -25,8 +23,10 @@
                 <h3><?php echo apply_filters( 'the_title', $clinical_research_page->post_title, $clinical_research_page->ID )  ?></h3>
 
                 <?php
-                echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $clinical_research_page->post_content, 20, "" ) ) .'</p>'; 
+                // echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $clinical_research_page->post_content, 20, "" ) ) .'</p>'; 
                 ?>
+
+                <?php echo '<p>'.$page_meta_data.'</p>'; ?>
 
                 <a href="<?php echo get_permalink($clinical_research_page->ID); ?>" class="read-more"> Read More <span class="icn icn--arrow"></span> </a>
 

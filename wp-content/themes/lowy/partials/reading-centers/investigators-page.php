@@ -5,8 +5,8 @@
 
 <?php 
     if (count($investigators) > 0 ):
-        foreach ($investigators as $key): ?>
-        <?php $investigator = get_page($key); ?>
+        foreach ($investigators as $investigator_id): ?>
+        <?php $investigator = get_page($investigator_id); ?>
         <?php 
             $image_default = strlen(get_the_post_thumbnail_url($investigator->ID, 'full')) > 0 ? 
                                     get_the_post_thumbnail_url($investigator->ID, 'full') : '/wp-content/themes/lowy/img/icons/abstract_user.svg'; ?>
