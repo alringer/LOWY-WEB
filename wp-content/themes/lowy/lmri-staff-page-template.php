@@ -68,12 +68,16 @@
 					?>
 				</div>
 				<?php while($lmri_staff_cat_query->have_posts()) : $lmri_staff_cat_query->the_post(); ?>
+				<?php $bg_staff_image = strlen(get_the_post_thumbnail_url($post->ID, 'full')) > 0 ?  
+					get_the_post_thumbnail_url($post->ID, 'full') : 
+					'/wp-content/themes/lowy/img/icons/abstract_user.svg';
+				 ?>
 					<div class="col-12 col-md-6 col-lg-4">
 					<div class="cards--staff <?php 
 					if($page_slug === 'board-of-directors' || $page_slug ===  'sponsors') {
 						echo 'cards--staff--bod';
 					}
-					?>" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>')">
+					?>" style="background-image: url('<?php echo $bg_staff_image; ?>')">
 					<a href="<?php echo get_permalink($lmri_staff_cards_id->ID); ?>"><div class="cards--staff__img"></div></a>
 						<div class="cards--staff__content">
 							<div class="cards--staff__content__title text-center">
@@ -83,25 +87,25 @@
 								?>
 								<strong><?php //echo $bio_title; ?></strong>
 							</div>
-							<?php if (($page_slug ==  'board-of-directors') || ($page_slug == 'sponsors')) { ?>
-							<div class="text-center">
-								<p>
-									<?php  
-										if (strlen($bio_title) > 200 ) {
-											echo wp_trim_words( $post->post_content, 10, "..." ); 
-										} else if(strlen($bio_title) > 110) {
-											echo wp_trim_words( $post->post_content, 18, "..." );
-										} else if(strlen($bio_title) > 80) {
-											echo wp_trim_words( $post->post_content, 20, "..." );
-										} else if(strlen($bio_title) < 70 && strlen($bio_title) > 21) {
-											echo wp_trim_words( $post->post_content, 30, "..." );
-										}  else {
-											echo wp_trim_words( $post->post_content, 30, "..." );
-										}
-									?>
-								</p>
-							</div>
-							<?php }?>
+							<?php if (($page_slug ==  'board-of-directors') || ($page_slug == 'sponsors')): ?>
+								<div class="text-center">
+									<p>
+										<?php  
+											if (strlen($bio_title) > 200 ) {
+												echo wp_trim_words( $post->post_content, 10, "..." ); 
+											} else if(strlen($bio_title) > 110) {
+												echo wp_trim_words( $post->post_content, 18, "..." );
+											} else if(strlen($bio_title) > 80) {
+												echo wp_trim_words( $post->post_content, 20, "..." );
+											} else if(strlen($bio_title) < 70 && strlen($bio_title) > 21) {
+												echo wp_trim_words( $post->post_content, 30, "..." );
+											}  else {
+												echo wp_trim_words( $post->post_content, 30, "..." );
+											}
+										?>
+									</p>
+								</div>
+							<?php endif; ?>
 
 							
 						</div>
