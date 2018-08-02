@@ -12,7 +12,8 @@
 <main role="main">
 	<!--  Hero section -->
 	<section>
-		<div class="hero hero--templates" style="background-image: url(<?php echo $imaging_hero_img_url;?><?php echo $imaging_hero_img; ?>)">
+		<?php $hero_img_bg  =  strlen($imaging_hero_img) > 0 ? $imaging_hero_img :  '/wp-content/themes/lowy/img/default/nature-pines.jpg'; ?>
+		<div class="hero hero--templates" style="background-image: url(<?php echo $imaging_hero_img_url;?><?php echo $hero_img_bg; ?>)">
 		</div>
 	</section>
 	<!-- End Hero Section -->
@@ -21,7 +22,16 @@
 	<section class="single-page-template--content single-page-template--smaill-img-card">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-12 col-lg-9">
+			<div class="col-12">
+			<?php 
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('
+						<div class="breadcrumbs">','</div>
+						');
+					}
+				?>
+			</div>
+			<div class="col-12 col-md-12 <?php if(count($investigators) > 0) { echo 'col-lg-9'; }?>">
 				<h1><?php the_title(); ?></h1>
 				<!-- Clinical research Post -->
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -50,11 +60,19 @@
 
 				<?php endif; ?>
 			</div>
-			<div class="col-12 col-md-12 col-lg-3 d-none d-lg-block">
-				<div class="single-page-template__investigators-cards">
-					<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
+			<?php if(count($investigators) > 0): ?>
+				<div class="col-12 col-md-12 col-lg-3">
+					<h3>&nbsp;</h3>
+					<h4><?php _e('Investigators:', 'html5blank');?></h4>
+					<div class="clearfix--section">
+						<div class="single-page-template__investigators-cards">
+							<?php get_template_part('partials/reading-centers/investigators', 'page'); ?>
+						</div>
+					</div>
+					
+					
 				</div>
-			</div>
+			<?php endif; ?>
 
 
 		</div>
