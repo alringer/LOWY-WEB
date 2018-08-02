@@ -1,10 +1,8 @@
 <?php 
     // Collaborating Investigators
     $investigators = get_post_meta($post->ID, 'investigator_id', $single = false);
-
 ?>
-<!-- <section class="container">
-<aside class="row"> -->
+
 <?php 
     if (count($investigators) > 0 ):
         foreach ($investigators as $key): ?>
@@ -36,6 +34,3 @@
                 <?php //get_template_part('partials/reading-centers/investigators', 'page'); ?>
             </div>
      -->
-<!-- </aside>
-
-</section> -->
