@@ -38,7 +38,7 @@
 							<!-- /post title -->
 
 							<!-- post details -->
-							<h4 class="date"><?php the_time('F j, Y'); ?> <?php //the_time('g:i a'); ?></h4>
+							<!-- <h4 class="date"><?php //the_time('F j, Y'); ?> <?php //the_time('g:i a'); ?></h4> -->
 							<span class="author"><?php // _e( 'Published by', 'html5blank' ); ?> <?php // the_author_posts_link(); ?></span>
 							<!-- /post details -->
 
