@@ -389,10 +389,10 @@
 
     .hero--home {
         h1 {
-            font-size: 9rem;
+            font-size: 6rem;
             max-width: none;
-            margin-top: 37rem;
-            font-weight: bold;
+            margin-top: 45rem;
+            font-weight: 500;
         }
     }
 }
@@ -400,8 +400,8 @@
 @media screen and (min-width: 1440px) {
     .hero--home {
         h1 {
-            font-size: 9rem;
-            margin-top: 52rem;
+            font-size: 6rem;
+            margin-top: 65rem;
         }
     }
 

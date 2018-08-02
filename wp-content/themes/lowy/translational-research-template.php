@@ -82,7 +82,7 @@
 	<!-- End Line between sections -->
 		
 	<!-- 2nd section template content -->
-	<?php get_template_part('partials/translational-research/research-portal', 'page'); ?>
+	<?php get_template_part('partials/translational-research/collaborating-investigators', 'page'); ?>
 	<!-- end 2nd section template content -->
 
 
@@ -98,7 +98,7 @@
 	</div> 
 	<!-- End Line between sections -->
 
-	<?php get_template_part('partials/translational-research/collaborating-investigators', 'page'); ?>
+	<?php get_template_part('partials/translational-research/research-portal', 'page'); ?>
 
 	<!-- Line between sections -->
 	<div class="container">
