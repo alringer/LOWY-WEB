@@ -6,15 +6,17 @@
 				<div class="col-12">
 					<!-- post title -->
 					<h2>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+						<?php the_title(); ?>
 					</h2>
-
-					<!-- post details -->
-					<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-					<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-					<!-- /post details -->
-					<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
-
+					<a href="<?php 
+						if (has_category('publications',$post->ID)){
+							echo get_post_meta($post->ID, 'link-offsite', $single = true); 
+						} else {
+							the_permalink(); 
+						} ?>" title="<?php the_title(); ?>">
+						<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+					</a>
+					
 					<?php edit_post_link(); ?>
 				</div>
 			</div>

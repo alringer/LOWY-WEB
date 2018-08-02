@@ -253,7 +253,7 @@
 
     &--search-results {
         h2 {
-            font-size: 3.5rem;
+            font-size: 2rem;
         }
     }
 
@@ -307,6 +307,11 @@
                 }
             }
         }
+    }
+    &__investigators-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 }
 
@@ -437,6 +442,19 @@
                 max-width: none;
             }
         }
+
+        &__investigators-cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .single-page-template {
+        &__investigators-cards {
+            flex-direction: column;
+        }
     }
 }
 
@@ -472,9 +490,6 @@
             }
         }
 
-        &__investigators-cards {
-            margin-top: 15rem;
-        }
         &__filter {
             form {
                 &.searchandfilter {
