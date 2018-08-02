@@ -33,13 +33,13 @@
 							</div>
 						</div>
 						<div class="col-12  col-md-6 col-xl-4">
-						<h3 class="footer__heading">News</h3>
-						<p>Latest discoveries, events & more.</p>
+						<!-- <h3 class="footer__heading">News</h3> -->
+						<!-- <p>Latest discoveries, events & more.</p> -->
 						<div class="footer__subscribe">
 
 									<?php
 									// footer content
-										get_template_part('partials/home/footer-form', 'page'); 
+										get_template_part('partials/home/footer-news', 'page'); 
 									?>
 						</div>
 					</div>
