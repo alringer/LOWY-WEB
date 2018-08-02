@@ -68,6 +68,16 @@
 	<!-- Line between sections -->
 	<?php get_template_part('partials/line', 'page'); ?>	
 	<!-- End Line between sections -->
+	<div class="single-page-template--content">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h3><?php _e('Learn More about MacTel', 'html5blank'); ?></h3>
+					<p>&nbsp;</p>
+				</div>
+			</div>
+		</div>
+	</div>
 		
     <?php get_template_part('partials/diagnosing-mactel/about-macular-card', 'page'); ?>
     <?php get_template_part('partials/diagnosing-mactel/patient-perspectives-card', 'page'); ?>
