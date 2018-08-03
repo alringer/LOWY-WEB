@@ -57,7 +57,7 @@
 		$canBeEdited = current_user_can('editor') || current_user_can('administrator');
 		$lmri_staff_cat_id =  get_post_meta($post->ID, 'cat_id', true);
 		$lmri_staff_cards_id = get_the_ID();
-		$lmri_staff_cat_query = new WP_Query( 'cat='.$lmri_staff_cat_id.'&order=asc');
+		$lmri_staff_cat_query = new WP_Query( 'cat='.$lmri_staff_cat_id.'&order=asc&posts_per_page=30');
 	?>
 	<section class="single-page-template--content ">
 		<div class="container">
