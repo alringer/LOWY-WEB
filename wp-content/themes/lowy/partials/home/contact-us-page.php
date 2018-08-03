@@ -1,5 +1,8 @@
-<?php $contact_us_page = get_page(19); ?>
+<?php //$contact_us_page = get_page(19); ?>
+<?php $contact_us_page = get_page(82); ?>
+
 <?php 
+    $page_meta_data = get_post_meta($contact_us_page->ID, 'custom-text', $single = true); 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');
 ?>
        
@@ -14,11 +17,14 @@
 
     <li class="position--relative home__card-grid__content-wrap list__item-pad">
 
-        <h3><?php echo apply_filters( 'the_title', $contact_us_page->post_title, $contact_us_page->ID )  ?></h3>
+        <!-- <h3><?php //echo apply_filters( 'the_title', $contact_us_page->post_title, $contact_us_page->ID )  ?></h3> -->
+        <h3><?php echo $page_meta_data_title; ?></h3>
 
         <?php
-        echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $contact_us_page->post_content, 3, "" ) ) .'</p>'; 
+        //echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $contact_us_page->post_content, 3, "" ) ) .'</p>'; 
         ?>
+
+        <?php echo '<p>'.$page_meta_data.'</p>'; ?>
 
         <a href="<?php echo get_permalink($contact_us_page->ID); ?>" class="read-more"> Read More  <span class="icn icn--arrow"></span></a>
 

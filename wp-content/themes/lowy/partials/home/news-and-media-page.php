@@ -1,6 +1,7 @@
 <?php $news_and_media_page = get_page(17); ?>
 
 <?php 
+    $page_meta_data = get_post_meta($news_and_media_page->ID, 'custom-text', $single = true); 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');
 ?>
        
@@ -18,8 +19,10 @@
                 <h3><?php echo apply_filters( 'the_title', $news_and_media_page->post_title, $news_and_media_page->ID )  ?></h3>
 
                 <?php
-                echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $news_and_media_page->post_content, 20, "" ) ) .'</p>'; 
+                //echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $news_and_media_page->post_content, 20, "" ) ) .'</p>'; 
                 ?>
+
+                <?php echo '<p>'.$page_meta_data.'</p>'; ?>
 
                 <a href="<?php echo get_permalink($news_and_media_page->ID); ?>" class="read-more"> Read More <span class="icn icn--arrow"></span> </a>
 
