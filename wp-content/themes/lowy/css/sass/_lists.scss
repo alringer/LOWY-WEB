@@ -39,7 +39,9 @@
         }
     }
     &__item-pad {
-        padding: 2rem 1.6rem 1.2rem;
+        // padding: 2rem 1.6rem 1.2rem;
+        padding: 2rem 4.6rem 1.2rem;
+
  
     }
     &__item-image-pos {
@@ -142,7 +144,7 @@
 
         &__item-lab-research-image-pos {
             img {
-                width: 39rem;
+                width: 41rem;
             }
         }
 
@@ -268,7 +270,9 @@
 @media screen and (min-width: 1200px) {
     .list {
         &__clinical-research-content-pad {
-            padding-bottom: 4.5rem;
+            // padding-bottom: 4.5rem;
+            padding-bottom: 1.3rem;
+
         }
         
     }
