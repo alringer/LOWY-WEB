@@ -2,6 +2,7 @@
 <?php $contact_us_page = get_page(82); ?>
 
 <?php 
+    $page_meta_data_title = get_post_meta($contact_us_page->ID, 'custom-title', $single = true); 
     $page_meta_data = get_post_meta($contact_us_page->ID, 'custom-text', $single = true); 
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');
 ?>
