@@ -56,7 +56,7 @@
         background-size: contain;
         background-color: #fff;
         // height: 72rem;
-        height: 48rem;
+        height: 60rem;
         position: relative;
         box-shadow: 0 4px 14px rgba(0,0,0,0.2);
         transition: 0.33s ease-out box-shadow;
@@ -70,12 +70,13 @@
             box-shadow: 0 14px 40px rgba(0,0,0,0.2);
         }
         &__content {
-            padding: 0 2rem;
+            // padding: 0 1rem;
             border-top-right-radius: 3px;
             border-top-left-radius: 3px;
             background-color: #fff;
             position: relative;
             min-height: 171px;
+            font-size: 1.4rem;
             &:after {
                 content: '';
                 position: absolute;
@@ -88,6 +89,9 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
+            p {
+                padding: 0 1rem;
+            }
 
             &__title {
                 h3 {
@@ -95,6 +99,11 @@
                     font-weight: bold !important;
                     padding-bottom: 2rem;
                     padding-top: 1rem;
+                    letter-spacing: normal !important;
+                }
+                h4 {
+                    font-size: 1.4rem !important;
+                    padding: 0 1rem;
                 }
             }
 
@@ -269,7 +278,7 @@
 
         &--staff {
             // height: 69rem;
-            height: 48rem;
+            height: 60rem;
             &--bod {
                 height: 62rem; 
             }

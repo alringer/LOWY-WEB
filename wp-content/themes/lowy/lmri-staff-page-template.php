@@ -85,7 +85,7 @@
 								<?php 
 									$bio_title = get_post_meta($post->ID, 'bio_title', true);
 								?>
-								<strong><?php //echo $bio_title; ?></strong>
+								<h4><?php echo $bio_title; ?></h4>
 							</div>
 							<?php if (($page_slug ==  'board-of-directors') || ($page_slug == 'sponsors')): ?>
 								<div class="text-center">
