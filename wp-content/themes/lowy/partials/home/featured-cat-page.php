@@ -64,6 +64,9 @@
                             <h3><?php the_title(); ?></h3>
                             
                             <a href="<?php echo get_post_meta($post->ID, 'link-offsite', true);  ?>" class="read-more">Read More <span class="icn icn--arrow"></span> </a>
+                            <div>
+                            <?php edit_post_link(); ?>
+                            </div>
                         </div>
                     </div>
                 <?php endwhile; ?> 

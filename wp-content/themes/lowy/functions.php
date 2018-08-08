@@ -574,16 +574,19 @@ function category_and_tag_archives( $wp_query ) {
 function custom_image_func($attrs, $content = null) {
 
     $attr = shortcode_atts(array(
-        'mobile' => 'false'
+        'mobile' => ''
     ), $attrs);
 
     $mobile = $attr['mobile'];
     $html  = '';
     if ($mobile === 'true') {
         $html .= '<figure class="d-block d-sm-none d-sm-block d-md-none d-md-block d-lg-none">';
+        $html .= '<!-- Shortcode custom image test -->';
+    } else if ($mobile === 'false'){
+        $html .= '<figure class="d-none d-lg-block d-xl-block">';
         $html .= '<!-- Shortcode custom image -->';
     } else {
-        $html .= '<figure class="d-none d-lg-block d-xl-block">';
+        $html .= '<figure>';
         $html .= '<!-- Shortcode custom image -->';
     }
     $html .= $content;
