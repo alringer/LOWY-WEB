@@ -1,7 +1,7 @@
  <?php
  $clinical_research_hero_img_id = get_the_ID();
  $clinical_research_hero_img_url = home_url();
- $clinical_research_hero_img = get_post_meta($post->ID, 'alternate-hero-img', $single = true); 
+ $clinical_research_hero_img = get_post_meta($post->ID, 'clinical-research-hero-img', $single = true); 
 
 ?>
 <?php /* Template Name: clinical research template */ get_header(); ?>
@@ -9,7 +9,8 @@
 
 <main role="main">
 	<!--  Hero section -->
-	<section>
+	<section>  
+
 		<div class="hero hero--templates" style="background-image: url(<?php echo $clinical_research_hero_img_url;?><?php echo $clinical_research_hero_img; ?>)">
 		</div>
 	</section>
