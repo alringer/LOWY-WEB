@@ -1,0 +1,68 @@
+0000.001 (0) Opened log file at time: Tue, 07 Aug 2018 21:20:03 +0000 on http://localhost
+0000.100 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.14.12 WP: 4.9.6 PHP: 7.2.1 (apache2handler, Darwin SilverCenturion.local 17.6.0 Darwin Kernel Version 17.6.0: Tue May  8 15:22:16 PDT 2018; root:xnu-4570.61.1~1/RELEASE_X86_64 x86_64) MySQL: 5.7.21 WPLANG: en_US Server: Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 25.6M | 4M) multisite: N openssl: OpenSSL 1.0.2j  26 Sep 2016 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.156 (0) Free space on disk containing Updraft's temporary directory: 23582.8 MB
+0000.266 (0) Tasks: Backup files: 1 (schedule: manual) Backup DB: 0 (schedule: manual)
+0000.372 (0) Semaphore (f, wp_options) being initialised
+0000.634 (0) Requesting semaphore lock (f) (apparently not via scheduler)
+0000.845 (0) Set semaphore last lock (f) time to 2018-08-07 21:20:04
+0000.901 (0) Semaphore lock (f) complete
+0001.206 (0) Backup run: resumption=0, nonce=23affac3eeea, begun at=1533676803 (1s ago), job type=backup
+0001.330 (0) Scheduling a resumption (1) after 300 seconds (1533677104) in case this run gets aborted
+0001.470 (0) Checking if we have a zip executable available
+0001.523 (0) Testing: /usr/bin/zip
+0001.601 (0) Output: zip warning: binziptest/test.zip not found or empty
+0001.667 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0001.725 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0001.776 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0001.836 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0001.906 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0001.965 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0002.041 (0) Working binary zip found: /usr/bin/zip
+0002.150 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0002.201 (0) Creation of backups of directories: beginning
+0002.306 (0) No backup of plugins: excluded by user's options
+0002.358 (0) No backup of themes: excluded by user's options
+0002.461 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0002.513 (0) Looking for candidates to backup in: /Users/frankgarcia/Documents/Seamgen/wordpress/lowy/wp-content/uploads
+0002.563 (0) finding files: 2015: adding to list (1)
+0002.613 (0) finding files: .DS_Store: adding to list (2)
+0002.669 (0) finding files: 2017: adding to list (3)
+0002.720 (0) finding files: 2018: adding to list (4)
+0002.775 (0) finding files: 2016: adding to list (5)
+0002.833 (0) finding files: wordpress-popular-posts: adding to list (6)
+0002.895 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0003.041 (0) Total entities for the zip file: 17 directories, 532 files (0 skipped as non-modified), 92.7 MB
+0003.109 (0) Zip: backup_2018-08-07-1420_The_Lowy_Medical_Research_Instit_23affac3eeea-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0003.177 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (25.8 MB, 532 files batched, 192 (192) added so far); re-opening (prior size: 0 KB)
+0003.801 (0) backup_2018-08-07-1420_The_Lowy_Medical_Research_Instit_23affac3eeea-uploads.zip.tmp: size is now: 25.80 MB
+0003.904 (0) A useful amount of data was added after this amount of zip processing: 1.5 s (normalised: 1.4 s, rate: 18041.7 KB/s)
+0004.015 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.4640069007874, normalised_time=1.4189346797157, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=110848231)
+0004.121 (0) Zip: backup_2018-08-07-1420_The_Lowy_Medical_Research_Instit_23affac3eeea-uploads.zip.tmp: 200 files added (on-disk size: 26447.4 KB)
+0004.180 (0) Zip: backup_2018-08-07-1420_The_Lowy_Medical_Research_Instit_23affac3eeea-uploads.zip.tmp: 300 files added (on-disk size: 26447.4 KB)
+0004.234 (0) Zip: backup_2018-08-07-1420_The_Lowy_Medical_Research_Instit_23affac3eeea-uploads.zip.tmp: 400 files added (on-disk size: 26447.4 KB)
+0004.294 (0) Zip: backup_2018-08-07-1420_The_Lowy_Medical_Research_Instit_23affac3eeea-uploads.zip.tmp: 500 files added (on-disk size: 26447.4 KB)
+0005.605 (0) backup_2018-08-07-1420_The_Lowy_Medical_Research_Instit_23affac3eeea-uploads.zip.tmp: size is now: 92.80 MB
+0008.287 (0) Created uploads zip (0) - 95058.4 KB in 5.3 s (17836.5 KB/s) (sha1: e5fdec5bd47c072ca59e3d233d8b579cc1c68cc0, sha256: e46e2b12a4acbb8de2c3270179646174688c957a58e060575faeb6ffb71c86ac)
+0008.344 (0) No backup of others: excluded by user's options
+0008.566 (0) Saving backup status to database (elements: 2)
+0008.828 (0) No database backup (wp) - not part of this run
+0008.975 (0) backup_2018-08-07-1420_The_Lowy_Medical_Research_Instit_23affac3eeea-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0009.027 (0) Saving backup history. Total backup size: 92.8 MB
+0009.303 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0009.479 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0009.536 (0) No remote despatch: user chose no remote backup service
+0009.698 (0) Recording as successfully uploaded: backup_2018-08-07-1420_The_Lowy_Medical_Research_Instit_23affac3eeea-uploads.zip (e5ac667fc22c1243d2299845e0afe89b)
+0010.024 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0010.129 (0) Number of backup sets in history: 1; groups (db): 1
+0010.180 (0) Examining (for databases) backup set with group_id=0, nonce=23affac3eeea, datestamp=1533676803 (Aug 07 2018 21:20:03)
+0010.236 (0) Number of backup sets in history: 1; groups (files): 1
+0010.286 (0) Examining (for files) backup set with nonce=23affac3eeea, datestamp=1533676803 (Aug 07 2018 21:20:03)
+0010.286 (0) This backup set is the backup set just made, so will not be deleted.
+0010.337 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0010.391 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0010.553 (0) Resume backup (23affac3eeea, 0): finish run
+0010.761 (0) Decremented the semaphore (f) by 1
+0010.861 (0) Semaphore (f) unlocked
+0010.911 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0011.070 (0) No email will/can be sent - the user has not configured an email address.
+0011.118 (0) The backup apparently succeeded and is now complete
