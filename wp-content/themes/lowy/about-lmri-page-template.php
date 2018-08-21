@@ -65,71 +65,56 @@
 	</div> 
 	<!-- End Line between sections -->
 		
+
+
+	<?php 
+		$about_lmri_template_sections = get_post_meta($post->ID, 'page_id', $single = false);
+	?>				
+
+	<?php if (count($about_lmri_template_sections) > 0 ): ?>
+			<?php foreach ($about_lmri_template_sections as $about_lmri_template_section_id) : ?>
+			<?php $about_lmri_template_section =  get_page($about_lmri_template_section_id); ?>
+			
+			<section class="single-page-template--content"> 
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							
+							<div>
+								<?php //echo '<img src="'.get_the_post_thumbnail_url($about_lmri_history_page->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
+							</div>
+
+							<div>
+								<h3><?php echo apply_filters( 'the_title', $about_lmri_template_section ->post_title, $about_lmri_template_section ->ID )  ?></h3>
+
+							</div>
+
+							<div class="single-page-template__article-content">
+								<?php
+								echo '<p>'. apply_filters( 'the_content',( $about_lmri_template_section ->post_content ) ) .'</p>';                  
+								//echo '<p>'. apply_filters( 'the_excerpt', wp_trim_words( $about_lmri_history_page->post_content, 100, "" ) ) .'</p>'; 
+								?>
+							</div>
+
+
+							<div class="can-edit-wrap">
+								<?php if($canBeEdited) {
+									echo '<a href=" '.get_edit_post_link($about_lmri_template_section->ID, 'none').' ">Edit</a>';
+								} ?>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>       
+			
+			<?php get_template_part('partials/line', 'page'); ?>
+			<?php endforeach; ?>
+		<?php endif; ?>
+				
+		
     <!-- 2nd section template content -->
     
-	<?php get_template_part('partials/about-lmri/about-lmri-history', 'page'); ?>
-	<!-- end 2nd section template content -->
-
-	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
-	<!-- End Line between sections -->
-		
-	<!-- 2nd section template content -->
-    <?php get_template_part('partials/about-lmri/not-for-profit', 'page'); ?>
-    
-	<!-- end 2nd section template content -->
-
-
-	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
-	<!-- End Line between sections -->
-		
-	<!-- 2nd section template content -->
-    <?php get_template_part('partials/about-lmri/clinical-research-trials', 'page'); ?>
-
-
-
-	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
-	<!-- End Line between sections -->
-
-	<?php get_template_part('partials/about-lmri/partners-medical-research', 'page'); ?>
-
-	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
-	<!-- End Line between sections -->
 
     <?php get_template_part('partials/about-lmri/sponsors-card', 'page'); ?>
     
