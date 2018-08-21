@@ -22,7 +22,7 @@
     <?php
     
     ?>
-        <h3 class="footer__subheading"><?php the_title(); ?></h3>
+        <h3 class="footer__subheading"><?php echo mb_strimwidth(get_the_title(),0, 42, "..." ); ?></h3>
         <a href="<?php the_permalink() ?>" rel="bookmark" class="read-more">Read More <span class="icn icn--arrow"></span> </a>
     </div>
 </div>

@@ -9,7 +9,8 @@
 
 <main role="main">
 	<!--  Hero section -->
-	<section>
+	<section>  
+
 		<div class="hero hero--templates" style="background-image: url(<?php echo $clinical_research_hero_img_url;?><?php echo $clinical_research_hero_img; ?>)">
 		</div>
 	</section>
