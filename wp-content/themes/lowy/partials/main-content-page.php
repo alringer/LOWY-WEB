@@ -1,9 +1,17 @@
-	<!--  Hero section -->
+<?php
+ $lmri_main_hero_img_id = get_the_ID();
+ $lmri_main_hero_img_url = home_url();
+ $lmri_main_hero_img = get_post_meta($post->ID, 'alternate-hero-img', $single = true); 
+
+?>
+    
+    <!--  Hero section -->
 	<section>
-		<div class="hero hero--templates" style="background-image: url(<?php echo $lmri_staff_img_url;?><?php echo $lmri_staff_img; ?>)">
+		<div class="hero hero--templates" style="background-image: url(<?php echo $lmri_main_hero_img_url;?><?php echo $lmri_main_hero_img; ?>)">
 		</div>
 	</section>
-	<!-- End Hero Section -->
+    <!-- End Hero Section -->
+
 
 	<!-- template content section -->
 	<section class="single-page-template--content single-page-template--smaill-img-card">
