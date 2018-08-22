@@ -78,6 +78,9 @@
 	</div>
 	</section>
 	<!-- end template content section -->
+	<?php get_template_part('partials/line', 'page'); ?>
+
+	<?php get_template_part('partials/cards-sections'); ?>
 
 		
 </main>
