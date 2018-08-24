@@ -138,7 +138,10 @@
                 
                 <?php //echo '<p>'. apply_filters( 'the_content',( $clinical_research_cards_id->post_content ) ) .'</p>'; ?> 
                 
-                <?php echo '<p>'. strip_shortcodes( apply_filters( 'post_content', wp_trim_words( $post->post_content, 32, "" ) ) ) .'</p>';  ?>
+                <?php //echo '<p>'. strip_shortcodes( apply_filters( 'post_content', wp_trim_words( $post->post_content, 32, "" ) ) ) .'</p>';  ?>
+
+               <p><?php the_excerpt(); ?></p>
+
 
 
                 <?php //echo '<p>'. apply_filters( 'post_content', wp_trim_words( $post->post_content, 32, "" ) ) .'</p>';  ?>
