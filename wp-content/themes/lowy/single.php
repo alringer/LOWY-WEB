@@ -10,7 +10,6 @@
 	<main role="main">
 		<!--  Hero section -->
 		<section>
-		<!-- /Users/davidtellotemporary/projects/work_sites/lowy-website/wp-content/themes/lowy/img/default/nature-pines.jpg -->
 		<?php $single_hero_img_bg  =  strlen($single_hero_img) > 0 ? $single_hero_img :  '/wp-content/themes/lowy/img/default/nature-pines.jpg'; ?>
 			<div class="hero hero--templates" style="background-image: url(<?php echo $single_hero_img_url; ?><?php echo $single_hero_img_bg; ?>)">
 			</div>

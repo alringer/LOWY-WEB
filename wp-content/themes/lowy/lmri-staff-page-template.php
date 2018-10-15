@@ -27,7 +27,15 @@
 						');
 					}
 				?>
+
+				<?php 
+				//$title_meta_data = get_post_meta($post->ID, 'custom_bio_title', $single = true);
+				?>
+
 				<h1><?php the_title(); ?></h1>
+				<?php //echo '<h1>'.$title_meta_data.'</h1>'; ?>
+
+
 				<!-- Clinical research Post -->
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 					<!-- article -->
@@ -83,7 +91,7 @@
 							<div class="cards--staff__content__title text-center">
 								<h3><?php the_title(); ?></h3>
 								<?php 
-									$bio_title = get_post_meta($post->ID, 'bio_title', true);
+									$bio_title = get_post_meta($post->ID, 'card_bio_title', true);
 								?>
 								<h4><?php echo $bio_title; ?></h4>
 							</div>
