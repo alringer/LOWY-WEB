@@ -1,7 +1,9 @@
 <?php 
+    $small_card_cat = get_post_meta($post->ID, 'cat_id', $single = true);
+	$small_card_cat_limit = get_post_meta($post->ID, 'cat_limit', $single = true);    
     $canBeEdited = current_user_can('editor') || current_user_can('administrator');
-    $featured_cat_id =  27;
-    $featured_cat_limit = 3;
+    $featured_cat_id =  $small_card_cat;
+    $featured_cat_limit = $small_card_cat_limit;
     $reading_centers_related_posts = get_the_ID();
     $featured_catquery = new WP_Query( 'cat='.$featured_cat_id.'&posts_per_page='.$featured_cat_limit.'');
 ?>

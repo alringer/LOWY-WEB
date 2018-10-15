@@ -54,91 +54,17 @@
 	<!-- end template content section -->
 
 	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
+	<?php get_template_part('partials/line-page'); ?>	
 	<!-- End Line between sections -->
 		
-    <!-- 2nd section template content -->
-    
-	<?php get_template_part('partials/about-lmri/about-lmri-history', 'page'); ?>
-	<!-- end 2nd section template content -->
 
-	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
-	<!-- End Line between sections -->
-		
-	<!-- 2nd section template content -->
-    <?php get_template_part('partials/about-lmri/not-for-profit', 'page'); ?>
-    
-	<!-- end 2nd section template content -->
+	<!-- Full page sections -->
+	<?php get_template_part('partials/sections-pages'); ?>	
 
-
-	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
-	<!-- End Line between sections -->
-		
-	<!-- 2nd section template content -->
-    <?php get_template_part('partials/about-lmri/clinical-research-trials', 'page'); ?>
-
-
-
-	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
-	<!-- End Line between sections -->
-
-	<?php get_template_part('partials/about-lmri/partners-medical-research', 'page'); ?>
-
-	<!-- Line between sections -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="single-page-template__line">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
-	<!-- End Line between sections -->
-
-    <?php get_template_part('partials/about-lmri/sponsors-card', 'page'); ?>
-    
-    <?php get_template_part('partials/about-lmri/board-directors', 'page'); ?>
-
-    <?php get_template_part('partials/about-lmri/board-scientific-governors', 'page'); ?>
-
-    <?php get_template_part('partials/about-lmri/lmri-staff-card', 'page'); ?>
 	
+	<!-- Left img cards -->
+	<?php get_template_part('partials/cards-sections'); ?>	
+
 
 </main>
 

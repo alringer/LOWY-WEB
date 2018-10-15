@@ -72,7 +72,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3><?php _e('Learn More about MacTel', 'html5blank'); ?></h3>
+					<h3><?php _e('Learn More About MacTel', 'html5blank'); ?></h3>
 					<p>&nbsp;</p>
 				</div>
 			</div>

@@ -20,7 +20,7 @@
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID(); ?>" class="single-page-template__article-content">
 			<section class="single-page-template--content">
 				<div class="container">
 					<div class="row">
