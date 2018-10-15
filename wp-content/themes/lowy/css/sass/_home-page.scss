@@ -167,6 +167,10 @@
         height: 21.4rem;
         position: relative;
         background-color: #fff;
+
+        &--adjust-no-img {
+            padding: 3.5rem 1rem 1rem;
+        }
     }
 
     &__card-img {
@@ -187,6 +191,10 @@
         text-align: center;
         padding: 1px 0;
         color: #fff;
+
+        &--adjust {
+            top: 0.4rem;
+        }
     }
 }
 
