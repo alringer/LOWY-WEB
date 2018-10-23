@@ -1,6 +1,7 @@
 <?php 
 		$page_template_sections = get_post_meta($post->ID, 'page_id', $single = false);
-	?>				
+		$canBeEdited = current_user_can('editor') || current_user_can('administrator');
+?>				
 
 	<?php if (count($page_template_sections) > 0 ): ?>
 			<?php foreach ($page_template_sections as $page_template_section_id) : ?>

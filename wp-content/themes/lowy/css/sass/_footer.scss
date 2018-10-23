@@ -25,7 +25,6 @@
             }
             &:nth-child(2) {
                 transform: translateY(0.4rem);
-                //font-family: serif;
             }
         }
 
@@ -37,20 +36,24 @@
 
     &__community {
         margin-bottom: 1.3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         &__thumb {
             width: 6.4rem;
-            height: 6.4rem;
-            display: inline-block;
+            height: 4.4rem;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateY(-0.6rem);
             margin-right: 1rem;
-            transform: translateY(-1.5rem);
         }
     
 
         .footer__community__desc {
             display: inline-block;
             max-width: 20.2rem;
-            transform: translateY(0.5rem);
-
         }
     }
     &__subscribe {
