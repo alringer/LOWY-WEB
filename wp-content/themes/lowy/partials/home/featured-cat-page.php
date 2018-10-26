@@ -32,12 +32,19 @@
                 </ol>
                 <div class="carousel-inner">
                     <?php while($featured_catquery->have_posts()) : $featured_catquery->the_post(); ?>
+                        <?php
+                            $image = get_the_post_thumbnail_url($post->ID, 'post-thumbnail');
+                        ?>
                         <div class="carousel-item <?php if($featured_index == 0) { echo 'active'; } ?>">
                             <div class="featured__card-img">
-                                <?php echo '<img src="'.get_the_post_thumbnail_url($post->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
+                                <?php
+                                    if (strlen($image) > 0) {
+                                        echo '<img src="'.get_the_post_thumbnail_url($post->ID, 'post-thumbnail').'" class="img-responsive">';  
+                                    }
+                                ?>
                             </div>
-                            <div class="featured__card-content">
-                                <div class="featured__card-date"><?php echo get_the_date( 'M Y' ); ?></div>
+                            <div class="featured__card-content <?php if (strlen($image) === 0) {echo 'featured__card-content--adjust-no-img';}?>">
+                                <div class="featured__card-date <?php if (strlen($image) === 0) {echo 'featured__card-date--adjust';}?>"><?php echo get_the_date( 'M Y' ); ?></div>
                                 <h3><?php the_title(); ?></h3>
                                 <a href="<?php echo get_post_meta($post->ID, 'link-offsite', true);  ?>" class="read-more">Read More <span class="icn icn--arrow"></span> </a>
                             </div>
@@ -55,12 +62,21 @@
         <div class="container">
             <div class="row justify-content-center">
                 <?php while($featured_catquery->have_posts()) : $featured_catquery->the_post(); ?>
+                    <?php
+                        $desktop_image = get_the_post_thumbnail_url($post->ID, 'post-thumbnail');
+                    ?>
                     <div class="col-4">
                         <div class="featured__card-img">
-                        <?php echo '<img src="'.get_the_post_thumbnail_url($post->ID, 'post-thumbnail').'" class="img-responsive">'; ?>
+                        <?php 
+                            if (strlen($desktop_image) > 0 ) {
+                                echo '<img src="'.get_the_post_thumbnail_url($post->ID, 'post-thumbnail').'" class="img-responsive">';
+                            } 
+                        ?>
                         </div>
-                        <div class="featured__card-content">
-                        <div class="featured__card-date"><?php echo get_the_date( 'M Y' ); ?></div>
+                        <div class="featured__card-content <?php if (strlen($desktop_image) === 0) {echo 'featured__card-content--adjust-no-img';}?>">
+                        <div class="featured__card-date <?php if (strlen($desktop_image) === 0) {echo 'featured__card-date--adjust';}?>">
+                        <?php echo get_the_date( 'M Y' ); ?>
+                        </div>
                             <h3><?php the_title(); ?></h3>
                             
                             <a href="<?php echo get_post_meta($post->ID, 'link-offsite', true);  ?>" class="read-more">Read More <span class="icn icn--arrow"></span> </a>

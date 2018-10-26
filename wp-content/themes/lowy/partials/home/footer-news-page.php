@@ -15,7 +15,11 @@
 ?>
 <div class="footer__community">
     <div class="footer__community__thumb">
-        <img src="<?php echo $community_img; ?>" alt="">
+        <?php if (has_post_thumbnail()) {
+                the_post_thumbnail( 'thumbnail' ); 
+            } else { ?>
+            <img src="<?php echo $community_img; ?>" alt="">  
+           <?php } ?>
     </div>
     <div class="footer__community__desc">
         <h3 class="footer__subheading"><?php echo mb_strimwidth(get_the_title(),0, 42, "..." ); ?></h3>

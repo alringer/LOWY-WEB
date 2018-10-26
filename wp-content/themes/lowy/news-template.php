@@ -24,12 +24,12 @@
 
                 <div class="breadcrumbs breadcrumbs--news">  
                     <span>
-                        <a href="<?php echo home_url(); ?><?php echo '/news-and-media/institute-news/';?>" class="<?php if (htmlspecialchars($_GET["popular"]) == 'true') {echo ''; }else{echo 'active';} ?>">
+                        <a href="<?php echo home_url(); ?><?php echo '/news/news-and-media/';?>" class="<?php if (htmlspecialchars($_GET["popular"]) == 'true') {echo ''; }else{echo 'active';} ?>">
                             Newest  
                         </a>
                     </span>
                     <span>
-                        <a href="<?php echo home_url(); ?><?php echo '/news-and-media/institute-news/?popular=true';?>" class="<?php if (htmlspecialchars($_GET["popular"]) == 'true') {echo 'active'; }else{echo '';} ?>">
+                        <a href="<?php echo home_url(); ?><?php echo '/news/news-and-media/?popular=true';?>" class="<?php if (htmlspecialchars($_GET["popular"]) == 'true') {echo 'active'; }else{echo '';} ?>">
                             Most Popular
                         </a>
                     </span>
